@@ -1,0 +1,12 @@
+$font-path: '../assets/fonts';
+
+@font-face {
+    font-family: 'xique-juzhen';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}/xique-juzhen.ttf') format('truetype');
+}
+
+* {
+    font-family: 'xique-juzhen';
+}

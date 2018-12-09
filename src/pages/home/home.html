@@ -1,18 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle [ngStyle]="{color: themeColor}">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>2019 字体日历</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content padding [ngStyle]="{'background-color': themeColor}">
+  <div class="date-info">
+    <div class="date-info--chinese">农历 {{dayInfo.lunarDate}}</div>
+    <div class="date-info--month">{{dayInfo.month}}</div>
+    <div class="date-info--day-of-week">{{dayInfo.dayOfWeek}}</div>
+  </div>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <div class="date">{{dayInfo.date}}</div>
+  <div class="font-name">喜鹊聚珍体</div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="detail">
+    <div class="detail--advice">
+      <div class="detail--advice--box">宜·{{dayInfo.adviceToDo}}</div>
+      <div class="detail--advice--box">忌·{{dayInfo.adviceNotToDo}}</div>
+    </div>
+    <div class="detail--sentence">
+      {{dayInfo.sentence}}
+    </div>
+  </div>
 </ion-content>

@@ -24,8 +24,10 @@
     "@ionic-native/splash-screen": "~4.17.0",
     "@ionic-native/status-bar": "~4.17.0",
     "@ionic/storage": "2.2.0",
+    "chinese-lunar": "^0.1.4",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "moment": "^2.22.2",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"

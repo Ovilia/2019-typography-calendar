@@ -22,7 +22,8 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
+$distance-md: 20px;
+$distance-sm: 10px;
 
 
 // Named Color Variables
@@ -41,6 +42,10 @@ $colors: (
   dark:       #222
 );
 
+$clr-txt-md: #ccc;
+$clr-txt-light: #ddd;
+$clr-txt-lighter: #eee;
+$clr-txt-lightest: #fff;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -86,3 +91,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@import "font";
