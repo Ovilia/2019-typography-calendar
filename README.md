@@ -2,6 +2,8 @@
 
 这是目前正在着手做的移动端 App，预计 2018 年年底上线，欢迎关注制作的进展。
 
+如果想第一时间收到 App 上线通知，请关注[这个 issue](https://github.com/Ovilia/2019-typography-calendar/issues/4) 以及我的微博[羡辙](http://weibo.com/plainjane)。
+
 ![Design](./design/design.png)
 
 ## TODOs
