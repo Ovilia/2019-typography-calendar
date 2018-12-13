@@ -15,7 +15,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     this.themeColor = '#7E6E86';
 
-    this.dayInfo = new DayInfo(new Date());
+    this.dayInfo = new DayInfo('2019-01-02');
     console.log(this.dayInfo);
   }
 
