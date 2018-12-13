@@ -1,6 +1,8 @@
-# 2019-typography-calendar
+# 2019 字体日历 App
 
-2019 字体日历 App
+这是目前正在着手做的移动端 App，预计 2018 年年底上线，欢迎关注制作的进展。
+
+![Design](./design/design.png)
 
 ## TODOs
 
@@ -11,9 +13,4 @@
     [x] 从 ttf 生成 svg
     [ ] 读取 svg 中的 d="(?)"，存在统一的文件中
 [ ] 字体版权说明页
-[ ] App Store 物料准备（23号前）
-
-### 可选
-
-[] 关联牙哈哈
-
+[ ] App Store 物料准备
