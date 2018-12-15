@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.1",
+    "shelljs": "^0.8.3",
     "typescript": "~2.6.2"
   },
   "description": "An Ionic project",
