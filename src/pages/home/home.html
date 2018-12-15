@@ -6,8 +6,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding [ngStyle]="{'background-color': themeColor}">
-  <div class="date-info">
+<ion-content>
+  <canvas #mainCanvas></canvas>
+  <!-- <div class="date-info">
     <div class="date-info--chinese">农历 {{dayInfo.lunarDate}}</div>
     <div class="date-info--month">{{dayInfo.month}}</div>
     <div class="date-info--day-of-week">{{dayInfo.dayOfWeek}}</div>
@@ -24,5 +25,5 @@
     <div class="detail--sentence">
       {{dayInfo.story}}
     </div>
-  </div>
+  </div> -->
 </ion-content>

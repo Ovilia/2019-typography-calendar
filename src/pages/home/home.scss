@@ -3,71 +3,13 @@ page-home {
         overflow-y: hidden;
     }
 
-    .date-info {
+    canvas {
         position: absolute;
-        left: $distance-md;
-        top: $distance-md;
-        color: $clr-txt-lighter;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
-
-        .date-info--chinese {
-            font-size: 14px;
-            color: $clr-txt-md;
-        }
-
-        .date-info--month {
-            font-size: 30px;
-        }
-
-        .date-info--day-of-week {
-            font-size: 18px;
-        }
-
-    .date {
-        position: absolute;
-        top: -40px;
-        right: -30px;
-        font-size: 320px;
-        text-align: right;
-        color: $clr-txt-lightest;
-    }
-
-    .font-name {
-        position: absolute;
-        top: 310px;
-        right: $distance-md;
-        font-size: 20px;
-        color: $clr-txt-light;
-    }
-
-    .detail {
-        position: absolute;
-        bottom: $distance-md;
-        left: $distance-md;
-        right: $distance-md;
-        font-size: 15px;
-    }
-
-        .detail--advice {
-            display: inline-block;
-            margin-right: $distance-md;
-            color: $clr-txt-lighter;
-        }
-
-            .detail--advice--box {
-                display: inline-block;
-                width: 32px;
-                margin-right: $distance-sm;
-                padding: 12px 8px;
-                text-align: center;
-                border: 1px solid $clr-txt-lighter;
-            }
-
-        .detail--sentence {
-            position: absolute;
-            right: 0;
-            bottom: 12px;
-            left: 100px;
-            color: $clr-txt-lightest;
-        }
 }

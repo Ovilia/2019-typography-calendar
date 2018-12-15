@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import * as moment from 'moment';
 
-import DayInfo from '../../entities/dayInfo';
+import CalendarCanvas from '../../entities/calendarCanvas';
 
 @Component({
   selector: 'page-home',
@@ -10,13 +11,20 @@ import DayInfo from '../../entities/dayInfo';
 export class HomePage {
 
   themeColor: string;
-  dayInfo: DayInfo;
+
+  @ViewChild('mainCanvas') mainCanvasEl: ElementRef;
+
+  protected mainCanvas: HTMLCanvasElement;
+  protected mainCalendar: CalendarCanvas;
 
   constructor(public navCtrl: NavController) {
-    this.themeColor = '#7E6E86';
+  }
 
-    this.dayInfo = new DayInfo('2019-01-02');
-    console.log(this.dayInfo);
+  ionViewDidLoad() {
+    this.mainCanvas = this.mainCanvasEl.nativeElement;
+    console.log(this.mainCanvas.width, this.mainCanvas.height);
+
+    this.mainCalendar = new CalendarCanvas(moment('2019-01-01'), this.mainCanvas);
   }
 
 }

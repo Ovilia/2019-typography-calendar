@@ -7,26 +7,27 @@ const themes = [/*'light', */'dark'];
 for (let theme of themes) {
     const color = theme === 'light' ? '#fff' : '#666';
 
-    for (let i = 1; i <= 365; ++i) {
-        const day = moment.parseZone('2019-01-01T00:00:00+08:00').year(2019).dayOfYear(i)
-            .hour(0).minute(0).second(0);
+    // for (let i = 1; i <= 365; ++i) {
+    //     const day = moment.parseZone('2019-01-01T00:00:00+08:00').year(2019).dayOfYear(i)
+    //         .hour(0).minute(0).second(0);
 
-        // Lunar date info
-        const lunar = chineseLunar.solarToLunar(day.toDate());
-        const lunarText = '农历' + chineseLunar.format(lunar, 'Md');
-        shot(lunarText, `../src/assets/imgs/fonts/ui/${theme}/lunar/${i}.png`, 14, color);
-    }
+    //     // Lunar date info
+    //     const lunar = chineseLunar.solarToLunar(day.toDate());
+    //     const lunarText = '农历' + chineseLunar.format(lunar, 'Md');
+    //     shot(lunarText, `../src/assets/imgs/fonts/ui/${theme}/lunar/${i}.png`, 14, color);
+    // }
 
-    for (let i = 0; i < 7; ++i) {
-        const day = moment().day(i);
-        const name = day.format('dddd');
-        const output = `../src/assets/imgs/fonts/ui/${theme}/dayOfWeek/${i}.png`;
-        shot(name, output, 18, color);
-    }
+    // for (let i = 0; i < 7; ++i) {
+    //     const day = moment().day(i);
+    //     const name = day.format('dddd');
+    //     const output = `../src/assets/imgs/fonts/ui/${theme}/dayOfWeek/${i}.png`;
+    //     shot(name, output, 18, color);
+    // }
 
-    for (let i = 1; i <= 12; ++i) {
+    for (let i = 0; i < 1; ++i) {
         const day = moment().month(i);
         const month = day.format('MMMM');
+        console.log(day, month);
         const output = `../src/assets/imgs/fonts/ui/${theme}/month/${i}.png`;
         shot(month, output, 30, color);
     }
