@@ -7,23 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <canvas #mainCanvas></canvas>
-  <!-- <div class="date-info">
-    <div class="date-info--chinese">农历 {{dayInfo.lunarDate}}</div>
-    <div class="date-info--month">{{dayInfo.month}}</div>
-    <div class="date-info--day-of-week">{{dayInfo.dayOfWeek}}</div>
-  </div>
-
-  <div class="date">{{dayInfo.date}}</div>
-  <div class="font-name">喜鹊聚珍体</div>
-
-  <div class="detail">
-    <div class="detail--advice">
-      <div class="detail--advice--box">宜·{{dayInfo.adviceToDo}}</div>
-      <div class="detail--advice--box">忌·{{dayInfo.adviceNotToDo}}</div>
-    </div>
-    <div class="detail--sentence">
-      {{dayInfo.story}}
-    </div>
-  </div> -->
+  <canvas #mainCanvas
+    (touchstart)="touchStart($event)"
+    (touchmove)="touchMove($event)"
+    (touchend)="touchEnd($event)"
+  >
+  </canvas>
 </ion-content>
