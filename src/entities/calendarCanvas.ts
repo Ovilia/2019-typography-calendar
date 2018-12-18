@@ -12,8 +12,8 @@ export default class CalendarCanvas {
 
         this.ctx = canvas.getContext('2d');
 
-        this.scale = canvas.width / DESIGN_WIDTH / DPR;
-        const padding = 24;
+        // this.scale = canvas.width / DESIGN_WIDTH / DPR;
+        const padding = 20;
         const dayOfYear = dateMoment.dayOfYear();
         const date = dateMoment.format('M.D');
 
@@ -25,25 +25,31 @@ export default class CalendarCanvas {
         this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
         this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
         this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -10 : padding);
-        this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 280, padding);
+        this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
     }
 
     protected _renderImage(path: string, left?: number, top?: number, right?: number, bottom?: number) {
         const img = new Image();
 
         img.onload = () => {
-            let x = left * DPR;
-            let y = top * DPR;
+            const width = this._px(img.width / DPR);
+            const height = this._px(img.height / DPR);
+            let x = this._px(left);
+            let y = this._px(top);
             if (left == null) {
-                x = this.canvas.width - img.width - right * DPR;
+                x = this.canvas.width - width - this._px(right);
             }
             if (top == null) {
-                y = this.canvas.height - img.height - bottom * DPR;
+                y = this.canvas.height - height - this._px(bottom);
             }
-            this.ctx.drawImage(img, x, y, img.width * this.scale, img.height * this.scale);
+            this.ctx.drawImage(img, x, y, width, height);
         };
 
         img.src = path;
+    }
+
+    protected _px(designPx: number): number {
+        return designPx / DESIGN_WIDTH * this.canvas.width;
     }
 
     protected _getBackground(): string {
