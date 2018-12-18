@@ -34,7 +34,7 @@ export default class CalendarCanvas {
         this._renderImage(`../assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
         this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
         this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
-        this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -10 : padding);
+        this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -20 : padding);
         this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
     }
 
