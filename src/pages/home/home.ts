@@ -1,12 +1,12 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController, Toast } from 'ionic-angular';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
-import { STORE_KEY } from '../../utils/constants';
+import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
 
 @Component({
     selector: 'page-home',
@@ -23,10 +23,29 @@ export class HomePage {
 
     private touchStartX: number;
     private touchStartY: number;
+    private toast: Toast;
 
-    constructor(public navCtrl: NavController, public historyService: HistoryService, storage: StorageService) {
-        storage.set(STORE_KEY.TORN_DATE, '');
-        storage.set(STORE_KEY.HISTORY_PAGE, '');
+    constructor(
+        public navCtrl: NavController,
+        public toastCtrl: ToastController,
+        public historyService: HistoryService,
+        storage: StorageService
+    ) {
+        if (IS_DEBUG) {
+            storage.set(STORE_KEY.TORN_DATE, '');
+            storage.set(STORE_KEY.HISTORY_PAGE, '');
+        }
+
+        this.init();
+    }
+
+    async init() {
+        if (await this.historyService.isFirstTear()) {
+            setTimeout(() => {
+                const text = this.isToday() ? '等日历上的日子过了，就可以下拉撕掉哦！' : '试试下拉撕日历吧！';
+                this._toast(text, 'top');
+            }, 3000);
+        }
     }
 
     ionViewDidLoad() {
@@ -40,11 +59,17 @@ export class HomePage {
             });
     }
 
-    nextPage() {
-        this.historyService.setTornDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+    async nextPage() {
+        await this.historyService.setTornDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
 
         this.currentDate.add(1, 'day');
         this.setDate(this.currentDate);
+    }
+
+    isToday() {
+        const today = moment(new Date());
+        return today.isBefore(this.currentDate)
+            || this.currentDate.format('YYYY.M.D') === today.format('YYYY.M.D');
     }
 
     setDate(date: moment.Moment) {
@@ -67,10 +92,30 @@ export class HomePage {
         const x = event.changedTouches[0].clientX;
         const y = event.changedTouches[0].clientY;
 
+        // TODO: not tested yet
         if (y - this.touchStartY > 20) {
-            console.log('new page');
-            this.nextPage();
+            if (this.isToday() && !IS_DEBUG) {
+                this._toast('明天再来撕嘛！');
+            }
+            else {
+                this.nextPage();
+            }
         }
+        else {
+            this._toast('下拉撕去当前页');
+        }
+    }
+
+    protected _toast(text: string, position?: string) {
+        if (this.toast) {
+            this.toast.dismissAll();
+        }
+        this.toast = this.toastCtrl.create({
+            message: text,
+            duration: 5000,
+            position: position || 'middle'
+        });
+        this.toast.present();
     }
 
 }

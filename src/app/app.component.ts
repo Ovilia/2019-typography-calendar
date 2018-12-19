@@ -7,6 +7,7 @@ import * as moment from 'moment';
 
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
+import { LicensePage } from '../pages/license/license';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,8 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'History', component: HistoryPage }
+      { title: '撕下的页面', component: HistoryPage },
+      { title: '字体版权说明', component: LicensePage }
     ];
 
   }

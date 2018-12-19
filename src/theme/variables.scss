@@ -25,6 +25,13 @@ $app-direction: ltr;
 $distance-md: 20px;
 $distance-sm: 10px;
 
+$toast-width: 90%;
+ion-toast {
+  left: (100% - $toast-width) / 2 !important;
+  top: (100% - $toast-width) / 2 !important;
+  text-align: center;
+}
+
 
 // Named Color Variables
 // --------------------------------------------------
@@ -47,18 +54,31 @@ $clr-txt-light: #ddd;
 $clr-txt-lighter: #eee;
 $clr-txt-lightest: #fff;
 
+$list-border-color: #eee;
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$item-ios-body-text-font-size: 1.5rem;
+$toast-ios-background: rgba(0, 0, 0, 0.7);
 
+.header-ios {
+  &#home-header {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); // TODO: shadow according to page index
+  }
+
+  .toolbar-ios:last-child .toolbar-background-ios {
+    border-bottom: 0;
+  }
+}
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$list-md-border-color: $list-border-color;
 
 
 // App Windows Variables

@@ -35,7 +35,7 @@ export class HistoryPage {
     }
 
     dismiss(): void {
-            this.viewCtrl.dismiss();
+        this.viewCtrl.dismiss();
     }
 
     async _init() {
@@ -49,7 +49,7 @@ export class HistoryPage {
         const pageWidth = window.innerWidth;
         const pageHeight = window.innerHeight - 40; // TODO: navbar height
         const imgSize = await this._getImageSize(pages[0].image) as any;
-        const imgScale = 0.6;
+        const imgScale = 0.75;
         const imgWidth = imgSize.width * imgScale;
         const imgHeight = imgSize.height * imgScale;
 

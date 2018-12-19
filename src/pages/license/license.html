@@ -1,0 +1,22 @@
+<!--
+  Generated template for the LicensePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>字体版权说明</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="openLicense(item)">
+      {{ item.name }}
+    </button>
+  </ion-list>
+</ion-content>

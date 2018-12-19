@@ -9,14 +9,18 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
+import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
+import { FontPage } from '../pages/font/font';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HistoryPage
+    HistoryPage,
+    LicensePage,
+    FontPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { StorageService } from '../services/storage';
   entryComponents: [
     MyApp,
     HomePage,
-    HistoryPage
+    HistoryPage,
+    LicensePage,
+    FontPage
   ],
   providers: [
     StatusBar,
