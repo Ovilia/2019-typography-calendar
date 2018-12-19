@@ -5,6 +5,8 @@ import * as moment from 'moment';
 import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
+import { StorageService } from '../../services/storage';
+import { STORE_KEY } from '../../utils/constants';
 
 @Component({
     selector: 'page-home',
@@ -22,7 +24,9 @@ export class HomePage {
     private touchStartX: number;
     private touchStartY: number;
 
-    constructor(public navCtrl: NavController, public historyService: HistoryService) {
+    constructor(public navCtrl: NavController, public historyService: HistoryService, storage: StorageService) {
+        storage.set(STORE_KEY.TORN_DATE, '');
+        storage.set(STORE_KEY.HISTORY_PAGE, '');
     }
 
     ionViewDidLoad() {
@@ -37,9 +41,10 @@ export class HomePage {
     }
 
     nextPage() {
+        this.historyService.setTornDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+
         this.currentDate.add(1, 'day');
         this.setDate(this.currentDate);
-        this.historyService.setTornDate(this.currentDate.toDate());
     }
 
     setDate(date: moment.Moment) {

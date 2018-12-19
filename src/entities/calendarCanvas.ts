@@ -6,9 +6,17 @@ export default class CalendarCanvas {
 
     protected ctx: CanvasRenderingContext2D;
 
+    private images: Object;
+
     constructor(public dateMoment: moment.Moment, public canvas: HTMLCanvasElement) {
-        canvas.width = canvas.clientWidth * DPR;
-        canvas.height = canvas.clientHeight * DPR;
+        this.images = {};
+
+        if (canvas.clientWidth) {
+            canvas.width = canvas.clientWidth * DPR;
+        }
+        if (canvas.clientHeight) {
+            canvas.height = canvas.clientHeight * DPR;
+        }
 
         this.ctx = canvas.getContext('2d');
         this._render();
@@ -21,7 +29,12 @@ export default class CalendarCanvas {
         this._render();
     }
 
-    protected _render() {
+    async getRenderedBase64() {
+        await this._render();
+        return this.canvas.toDataURL();
+    }
+
+    protected async _render() {
         const dateMoment = this.dateMoment;
         const padding = 20;
         const dayOfYear = dateMoment.dayOfYear();
@@ -30,18 +43,16 @@ export default class CalendarCanvas {
         this.ctx.fillStyle = this._getBackground();
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        this._renderImage(`../assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, padding);
-        this._renderImage(`../assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
-        this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
-        this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
-        this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -20 : padding);
-        this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
+        await this._renderImage(`../assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, padding);
+        await this._renderImage(`../assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
+        await this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
+        await this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
+        await this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -20 : padding);
+        await this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
     }
 
-    protected _renderImage(path: string, left?: number, top?: number, right?: number, bottom?: number) {
-        const img = new Image();
-
-        img.onload = () => {
+    protected async _renderImage(path: string, left?: number, top?: number, right?: number, bottom?: number) {
+        const draw = img => {
             const width = this._px(img.width / DPR);
             const height = this._px(img.height / DPR);
             let x = this._px(left);
@@ -55,7 +66,22 @@ export default class CalendarCanvas {
             this.ctx.drawImage(img, x, y, width, height);
         };
 
-        img.src = path;
+        if (this.images[path]) {
+            // Cached
+            draw(this.images[path]);
+            return;
+        }
+
+        return await new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => {
+                this.images[path] = img;
+                draw(img);
+                resolve();
+            };
+            img.onerror = reject;
+            img.src = path;
+        });
     }
 
     protected _px(designPx: number): number {

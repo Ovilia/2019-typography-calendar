@@ -5,5 +5,6 @@ export const DPR = 2;
 export const DESIGN_WIDTH = 375;
 
 export const STORE_KEY = {
-    TORN_DATE: 'tornDate'
+    TORN_DATE: 'tornDate',
+    HISTORY_PAGE: 'historyPage'
 };

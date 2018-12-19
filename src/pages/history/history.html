@@ -13,6 +13,7 @@
 </ion-header>
 
 
-<ion-content padding>
-this is history page.
+<ion-content id="history-content" padding>
+  <img class="pageImage" *ngFor="let page of historyPages"
+    [src]="page.image" [ngStyle]="page.style">
 </ion-content>
