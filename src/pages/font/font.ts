@@ -36,10 +36,6 @@ export class FontPage {
         }
     }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad FontPage');
-    }
-
     dismiss(): void {
         this.viewCtrl.dismiss();
     }

@@ -13,6 +13,7 @@ import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
 import { FontPage } from '../pages/font/font';
+import { AboutPage } from '../pages/about/about';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FontPage } from '../pages/font/font';
     HomePage,
     HistoryPage,
     LicensePage,
-    FontPage
+    FontPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { FontPage } from '../pages/font/font';
     HomePage,
     HistoryPage,
     LicensePage,
-    FontPage
+    FontPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

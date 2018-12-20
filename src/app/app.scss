@@ -21,6 +21,14 @@
     height: 16px;
 }
 
+.menu-header {
+    border-bottom: $hairlines-width solid #ddd;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
 .back-btn-img {
     z-index: 100;
     position: absolute;

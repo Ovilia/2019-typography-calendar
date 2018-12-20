@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
 import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
     templateUrl: 'app.html'
@@ -51,6 +52,10 @@ export class MyApp {
             title: '字体版权说明',
             img: 'menu-license.png',
             component: LicensePage
+        }, {
+            title: '关于「2019 字体日历」',
+            img: 'menu-about.png',
+            component: AboutPage
         }];
 
         // TODO: new feature here, not tested: Tear multiple pages
