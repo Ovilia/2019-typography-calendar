@@ -1,5 +1,35 @@
-# 月.日 | 字体名称 | 文件名称 | 字体故事
+﻿# 月.日 | 字体名称 | 文件名称 | 字体故事
 # 可以留空行，或以 # 开头注释
 
-1.1 | 喜鹊聚珍体 | xique-juzhen | 第一天是喜鹊聚珍体。
-1.2 | Merriweather | Merriweather-Regular | 这是第二天的字体故事，这个故事可能有点长，需要多行才能写完。希望能变成三行文字的样式。
+1.1 | Calibri | Calibri | 每一个全新的文档，都是从默认字体开始的。新的一年，想好用什么字体了吗？
+1.2 | Trajan | Trajan | 生活就像一盒Godiva，你永远不知道下一颗是什么味道。=Trajan是Godiva Logo所使用的字体
+1.3 | Gloria Hallelujah | Gloria Hallelujah | 每个人都是字体的创作者，因为他们自己的笔迹独一无二=这款字体源于一个普通小学生的笔迹
+1.4 | Baskerville PT | Baskerville PT | 「一个人的命运，也要考虑历史的行程」=作为比Times New Roman更古老更著名的字体，只是因为没被操作系统收入…
+1.5 | Source Han Serif | Source Han Serif | 雁北向,鹊始巢,雉始雊=今日小寒
+1.6 | Bad Script | Bad Script | 自黑有时候也是门艺术，靠“糟糕的手写体”这个名字成为热门字体也算是自黑的巅峰了
+1.7 | Frontage Condenced Outline | Frontage Condenced Outline | 新的一周，色彩由你掌控
+1.8 | OCR B | OCR B | 「两匹马屁股之间的距离，决定了现代铁路的轨距」=最早为提高机器识别准确度而设计的OCR B至今仍被用于商品条形码与信用卡。
+1.9 | Carrara Light | Carrara-Light | 盯着样例许久也没想好字体故事怎么写的时候突然意识到，看那么久也不累不正说明它是一款优秀的阅读字体么。
+1.10 | P22 Underground | P22 Underground | 「Mind the Gap」= 1863年1月10日，世界上第一条地铁——伦敦大都会线开始运营。
+1.11 | Merienda | Merienda | Merienda在西语中是下午茶点心的意思，作者希望这个字体能让大家感受到下午茶时间的愉悦——反正我是饿了
+1.12 | Eurostile | Eurostile | 「Eurostile热门到成为先进自行设计太空船时唯一预设字体的程度」
+1.13 | Monoton  | Monoton  | 重要的事情要说三遍，不让写三行…那就在同一个字母里多写几遍吧
+1.14 | Dancing Script | Dancing Script | 每一个不曾起舞的日子，都是对生命的辜负
+1.15 | Myriad | Myriad | 能够在设计上征服乔布斯的可不多，Myriad大概算其中之一
+1.16 | City Streetwear Free | City Streetwear Free | 谁说冬天就不能轻盈上阵？
+1.17 | Neue Aachen | Neue Aachen | 「饿不饿？要不要给你叫个披萨？」=披萨品牌Pa Pa Johns使用Aachen作为Logo字体
+1.18 | Utopia | Utopia | 人无完人
+1.19 | Lobster | Lobster | "He is her lobster" - Friends
+1.20 | Gastromond | Gastromond | 鸡始乳,鸷鸟厉疾,水泽腹坚=今日大寒
+1.21 | LTC Broadway | LTC Broadway | "City of Stars, are you shining just for me" - La La Land
+1.22 | DIN 1451 Pro | DIN 1451 Pro | 交通领域字体设计原则：1.让司机一眼看清路牌然后专心开车，2.让监控摄像头快速识别然后准确开罚单
+1.23 | Big Caslon | Big Caslon | 「I’ll stick with Caslon until I die.」- 萧伯纳
+1.24 | 羡辙体 | 羡辙体 | 见字如面
+1.25 | Vollkorn | Vollkorn | Vollkorn自2005年发布起就采用了当时尚属新鲜CC协议，相比于某些靠百年老字体躺着数钱的企业而言，可以算是业界良心了。
+1.26 | Musoe Sans | MusoeSans-500 | Musoe Sans是基于因高度对称而著名的Museo的非衬线体。猜猜Museo会在日历里的哪天出现呢？
+1.27 | Versica sans | VersicaSerif | 稍稍变化的笔画粗细和衬线位置，让本来看上去冰冷的印刷字体多了一分灵性
+1.28 | Balloon URW | Balloon URW | 周五了，看点漫画轻松一下吧
+1.29 | Gill Sans Nova | Gill Sans Nova | 人们总喜欢抬头望着月亮，而忘了脚下的六便士也可以买到一本杰作。=企鹅出版集团使用Gill Sans印刷他们那套经典平装图书的封面
+1.30 | Cookie | Cookie | 忘记了之前都提到过哪些字体？你可能需要一些Cookie
+1.31 | Sant Elia Rough-Line Two | SantEliaRough-LineTwo | 淡线勾勒的草图总给人无限遐想，希望一月的31个小故事能让你开启对二月的期待
+
