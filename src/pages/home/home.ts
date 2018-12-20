@@ -51,7 +51,7 @@ export class HomePage {
     ionViewDidLoad() {
         this.mainCanvas = this.mainCanvasEl.nativeElement;
 
-        this.historyService.getTornDate()
+        this.historyService.getTearDate()
             .then(date => {
                 this.currentDate = moment(date || '2019-01-01');
                 this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas);
@@ -60,7 +60,7 @@ export class HomePage {
     }
 
     async nextPage() {
-        await this.historyService.setTornDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+        await this.historyService.setTearDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
 
         this.currentDate.add(1, 'day');
         this.setDate(this.currentDate);
