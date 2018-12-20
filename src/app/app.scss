@@ -20,3 +20,18 @@
     top: 1px;
     height: 16px;
 }
+
+.back-btn-img {
+    z-index: 100;
+    position: absolute;
+    padding: 10px 5px;
+
+    img {
+        height: 16px;
+    }
+}
+
+.back-btn {
+    padding: 5px 10px;
+    background-color: transparent;
+}

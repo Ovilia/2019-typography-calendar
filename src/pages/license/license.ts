@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import licenses from '../../utils/license';
 import { FontPage } from '../font/font';
 
@@ -19,13 +19,18 @@ export class LicensePage {
 
     public items;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
         console.log(licenses);
         this.items = licenses;
     }
 
     ionViewDidLoad() {
         console.log('ionViewDidLoad LicensePage');
+    }
+
+    dismiss(): void {
+        console.log('dismiss');
+        this.viewCtrl.dismiss();
     }
 
     openLicense(license) {
