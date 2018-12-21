@@ -35,15 +35,11 @@ export class HistoryPage {
     }
 
     async _init() {
-        const pages = await this.storage.get(STORE_KEY.HISTORY_PAGE);
-        this.historyPages = [];
-        for (let i = 0; i < 8; ++i) {
-            this.historyPages.push(Object.assign({}, pages[0]));
-        }
+        this.historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE);
 
         const pageWidth = window.innerWidth;
         const pageHeight = window.innerHeight - 40; // TODO: navbar height
-        const imgSize = await this._getImageSize(pages[0].image) as any;
+        const imgSize = await this._getImageSize(this.historyPages[0].image) as any;
         const imgScale = 0.75;
         const imgWidth = imgSize.width * imgScale;
         const imgHeight = imgSize.height * imgScale;

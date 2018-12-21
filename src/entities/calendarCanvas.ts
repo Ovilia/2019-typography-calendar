@@ -47,14 +47,48 @@ export default class CalendarCanvas {
         await this._renderImage(`../assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
         await this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
         await this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
-        await this._renderImage(`../assets/imgs/fonts/date/dark/${date}.png`, null, 40, this._isWideDigit() ? -20 : padding);
         await this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
+
+        await this._renderImage(
+            `../assets/imgs/fonts/date/dark/${date}.png`,
+            null,
+            40,
+            this._isWideDigit() ? -20 : padding,
+            null,
+            img => {
+                const height = this._px(220);
+                const width = height / img.height * img.width;
+                return {
+                    width,
+                    height
+                };
+            }
+        );
     }
 
-    protected async _renderImage(path: string, left?: number, top?: number, right?: number, bottom?: number) {
+    protected async _renderImage(
+        path: string,
+        left?: number,
+        top?: number,
+        right?: number,
+        bottom?: number,
+        targetSizeFormatter?: Function
+    ) {
         const draw = img => {
-            const width = this._px(img.width / DPR);
-            const height = this._px(img.height / DPR);
+            let width;
+            let height;
+            if (targetSizeFormatter) {
+                const size = targetSizeFormatter(img);
+                if (size) {
+                    width = size.width;
+                    height = size.height;
+                }
+            }
+            else {
+                width = this._px(img.width / DPR);
+                height = this._px(img.height / DPR)
+            }
+
             let x = this._px(left);
             let y = this._px(top);
             if (left == null) {
