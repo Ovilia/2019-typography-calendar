@@ -1,5 +1,5 @@
 <ion-menu [content]="content">
-  <ion-header>
+  <ion-header class="menu-header">
     <ion-toolbar>
       <ion-title>2019 字体日历</ion-title>
     </ion-toolbar>
@@ -8,7 +8,7 @@
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <img class="menu-title" [src]="'assets/imgs/fonts/ui/' + p.img">
       </button>
     </ion-list>
   </ion-content>

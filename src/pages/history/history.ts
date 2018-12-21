@@ -30,10 +30,6 @@ export class HistoryPage {
         this._init();
     }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad HistoryPage');
-    }
-
     dismiss(): void {
         this.viewCtrl.dismiss();
     }
@@ -44,7 +40,6 @@ export class HistoryPage {
         for (let i = 0; i < 8; ++i) {
             this.historyPages.push(Object.assign({}, pages[0]));
         }
-        console.log(this.historyPages);
 
         const pageWidth = window.innerWidth;
         const pageHeight = window.innerHeight - 40; // TODO: navbar height
@@ -61,7 +56,6 @@ export class HistoryPage {
                 top: (pageHeight - imgHeight) * Math.random() + 'px',
                 transform: 'rotateZ(' + (Math.random() * 2 - 1) * 30 + 'deg)'
             };
-            console.log(page.style);
         }
     }
 

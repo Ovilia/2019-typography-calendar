@@ -6,7 +6,12 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar hideBackButton>
+      <ion-buttons start>
+        <button (click)="dismiss()" class="back-btn">
+          <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
     <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 
@@ -14,9 +19,15 @@
 
 
 <ion-content>
+  <div class="desc" padding *ngIf="desc.length">
+    <p *ngFor="let p of desc">{{ p }}</p>
+  </div>
   <ion-list>
-    <button ion-item *ngFor="let font of fonts">
+    <ion-item ion-item *ngFor="let font of fonts">
       {{ font }}
-    </button>
+    </ion-item>
   </ion-list>
+  <div class="detail" padding *ngIf="detail.length">
+    <p *ngFor="let p of detail">{{ p }}</p>
+  </div>
 </ion-content>

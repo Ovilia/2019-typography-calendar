@@ -6,7 +6,12 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar hideBackButton>
+    <ion-buttons start>
+      <button (click)="dismiss()" class="back-btn">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>字体版权说明</ion-title>
   </ion-navbar>
 
