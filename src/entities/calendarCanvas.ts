@@ -52,16 +52,40 @@ export default class CalendarCanvas {
         await this._renderImage(
             `../assets/imgs/fonts/date/dark/${date}.png`,
             null,
-            40,
-            this._isWideDigit() ? -20 : padding,
+            null,
+            null,
             null,
             img => {
-                const height = this._px(220);
-                const width = height / img.height * img.width;
-                return {
-                    width,
-                    height
+                const targetWidth = 258;
+                const targetHeight = 225;
+                const result = {
+                    width: 0,
+                    height: 0,
+                    right: null,
+                    top: null
                 };
+
+                if (img.width / img.height > targetWidth / targetHeight) {
+                    result.width = this._px(targetWidth);
+                    result.height = result.width / img.width * img.height;
+                }
+                else {
+                    result.height = this._px(targetHeight);
+                    result.width = result.height / img.height * img.width;
+                }
+
+                if (result.width < this._px(180)) {
+                    result.right = this._px(padding) / 2;
+                }
+                else if (result.width > this._px(260)) {
+                    result.right = -this._px(padding);
+                }
+                else {
+                    result.right = -this._px(padding) / 2;
+                }
+
+                result.top = this._px(130) - result.height / DPR;
+                return result;
             }
         );
     }
@@ -82,11 +106,13 @@ export default class CalendarCanvas {
                 if (size) {
                     width = size.width;
                     height = size.height;
+                    right = size.right == null ? right : size.right;
+                    top = size.top == null ? top : size.top;
                 }
             }
             else {
                 width = this._px(img.width / DPR);
-                height = this._px(img.height / DPR)
+                height = this._px(img.height / DPR);
             }
 
             let x = this._px(left);

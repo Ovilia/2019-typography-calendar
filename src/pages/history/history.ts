@@ -38,7 +38,7 @@ export class HistoryPage {
         this.historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE);
 
         const pageWidth = window.innerWidth;
-        const pageHeight = window.innerHeight - 40; // TODO: navbar height
+        const pageHeight = window.innerHeight;
         const imgSize = await this._getImageSize(this.historyPages[0].image) as any;
         const imgScale = 0.75;
         const imgWidth = imgSize.width * imgScale;
