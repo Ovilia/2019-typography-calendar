@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, ToastController, Toast } from 'ionic-angular';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
@@ -17,13 +18,17 @@ import { DayInfoService } from '../../services/dayInfo';
 export class HomePage {
 
     @ViewChild('mainCanvas') mainCanvasEl: ElementRef;
+    @ViewChild('bgCanvas') bgCanvasEl: ElementRef;
     themeColor: string;
 
     public isFrontPage: boolean;
 
     protected mainCanvas: HTMLCanvasElement;
+    protected bgCanvas: HTMLCanvasElement;
     protected mainCalendar: CalendarCanvas;
+    protected bgCalendar: CalendarCanvas;
     protected currentDate: moment.Moment;
+    protected mainCanvasTop: number;
 
     private touchStartX: number;
     private touchStartY: number;
@@ -34,6 +39,7 @@ export class HomePage {
         public toastCtrl: ToastController,
         public historyService: HistoryService,
         public dateInfoService: DayInfoService,
+        public base64ToGallery: Base64ToGallery,
         public storage: StorageService
     ) {
         if (IS_DEBUG) {
@@ -42,6 +48,7 @@ export class HomePage {
         }
 
         this.isFrontPage = true;
+        this.mainCanvasTop = 0;
 
         this.init();
     }
@@ -57,6 +64,7 @@ export class HomePage {
 
     ionViewDidLoad() {
         this.mainCanvas = this.mainCanvasEl.nativeElement;
+        this.bgCanvas = this.bgCanvasEl.nativeElement;
 
         this.historyService.getTearDate()
             .then(date => {
@@ -64,19 +72,54 @@ export class HomePage {
                     this.isFrontPage = false;
                 }
                 this.currentDate = getDate(date || '2018-12-31');
+
                 this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
+                this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
+                    this.bgCanvas, this.dateInfoService);
                 this.themeColor = date ? getThemeColor(this.currentDate.format('M.D')) : mainColor;
             });
     }
 
-    async nextPage() {
+    async exportCanvas() {
+        const base64 = await this.mainCalendar.getRenderedBase64();
+        this.base64ToGallery.base64ToGallery(base64).then(
+            () => {
+                this._toast('已经保存好啦，快把我从相册分享出去嘛！');
+            },
+            err => {
+                this._toast('啊呀，讨厌！为什么保存失败了呢……');
+                console.error(err);
+            }
+        );
+    }
+
+    nextPage() {
         if (this.currentDate.isSameOrAfter(getDate('2019-01-31'))) {
             this._toast('后面的日历页需要更新一下 App 哦！');
         }
         else {
-            await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
-            this.currentDate = this.currentDate.add(1, 'day');
-            this.setDate(this.currentDate);
+            const setup = async () => {
+                await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+                this.currentDate = this.currentDate.add(1, 'day');
+                this.setDate(this.currentDate);
+                this.mainCanvasTop = 0;
+            };
+
+            const duration = 500;
+            const start = new Date();
+            const tick = () => {
+                const now = new Date();
+                const dtime = now.getTime() - start.getTime();
+                if (dtime < duration) {
+                    this.mainCanvasTop = 100 * Math.sin(dtime / duration * Math.PI / 2);
+                    console.log(this.mainCanvasTop);
+                    requestAnimationFrame(tick);
+                }
+                else {
+                    setup();
+                }
+            };
+            tick();
         }
     }
 
@@ -88,6 +131,7 @@ export class HomePage {
 
     setDate(date: moment.Moment) {
         this.mainCalendar.setDate(date);
+        this.bgCalendar.setDate(date.clone().add(1, 'day'));
         this.themeColor = getThemeColor(date.format('M.D'));
     }
 

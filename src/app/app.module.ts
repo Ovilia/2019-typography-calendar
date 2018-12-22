@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -45,7 +46,8 @@ import { DayInfoService } from '../services/dayInfo';
     NativeStorage,
     HistoryService,
     StorageService,
-    DayInfoService
+    DayInfoService,
+    Base64ToGallery
   ]
 })
 export class AppModule {}

@@ -7,4 +7,13 @@ page-home {
         text-align: center;
         width: auto;
     }
+
+    button {
+        background-color: transparent;
+        font-size: 1.8rem;
+    }
+
+    #bgCanvas {
+        z-index: -10;
+    }
 }

@@ -12,6 +12,7 @@ export default class CalendarCanvas {
 
     constructor(public dateMoment: moment.Moment, public canvas: HTMLCanvasElement, public dayInfo: DayInfoService) {
         this.images = {};
+        this.dateMoment = dateMoment.clone();
 
         if (canvas.clientWidth) {
             canvas.width = canvas.clientWidth * DPR;
@@ -28,7 +29,10 @@ export default class CalendarCanvas {
         this.dateMoment = dateMoment;
 
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this._render();
+
+        if (!dateMoment.isAfter(getDate('2019-01-31'))) {
+            this._render();
+        }
     }
 
     async getRenderedBase64() {
@@ -37,7 +41,7 @@ export default class CalendarCanvas {
     }
 
     protected async _render() {
-        if (this.dateMoment.isBefore(getDate('2019-01-01'))) {
+        if (this.dateMoment.isBefore(getDate('2019-01-01'), 'day')) {
             await this._renderFrontPage();
         }
         else {
