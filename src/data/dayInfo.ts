@@ -1,3 +1,4 @@
+export default `
 # 月.日 | 字体名称 | 文件名称 | 字体故事 | 备注 |
 # 可以留空行，或以 # 开头注释
 
@@ -32,3 +33,4 @@
 1.29 | Gill Sans Nova | Gill Sans Nova | 「人们总喜欢抬头望着月亮，而忘了脚下的六便士也可以买到一本杰作。」——《月亮与六便士》 | 企鹅出版集团使用 Gill Sans 印刷他们那套经典平装图书的封面。 |
 1.30 | Cookie | Cookie-Regular.ttf | 忘记了之前都提到过哪些字体？你可能需要一些 Cookie！ | Cookie 一词在计算机术语里通常表示之前访问的一些记录信息。有一种说法是，这和 Cookie（曲奇饼）的共同之处在于，吃曲奇饼总会留下一些碎屑…… |
 1.31 | Sant Elia Rough-Line Two | SantEliaRough-LineTwo.otf | 淡线勾勒的草图总给人无限遐想，希望一月的 31 个小故事能让你开启对二月的期待！ |  |
+`;
