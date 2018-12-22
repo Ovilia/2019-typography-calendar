@@ -2,6 +2,7 @@ import * as moment from 'moment';
 import {DPR, DESIGN_WIDTH} from '../utils/constants';
 import { getThemeColor, mainColor } from '../utils/colors';
 import { getDate } from '../utils/time';
+import { DayInfoService } from '../services/dayInfo';
 
 export default class CalendarCanvas {
 
@@ -9,7 +10,7 @@ export default class CalendarCanvas {
 
     private images: Object;
 
-    constructor(public dateMoment: moment.Moment, public canvas: HTMLCanvasElement) {
+    constructor(public dateMoment: moment.Moment, public canvas: HTMLCanvasElement, public dayInfo: DayInfoService) {
         this.images = {};
 
         if (canvas.clientWidth) {
@@ -36,7 +37,7 @@ export default class CalendarCanvas {
     }
 
     protected async _render() {
-        if (this.dateMoment.isBefore(getDate(moment('2019-1-1')))) {
+        if (this.dateMoment.isBefore(getDate('2019-01-01'))) {
             await this._renderFrontPage();
         }
         else {
@@ -48,19 +49,7 @@ export default class CalendarCanvas {
         this.ctx.fillStyle = mainColor;
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        let img = this.images['frontPage'];
-        if (!img) {
-            img = await new Promise((resolve, reject) => {
-                const img = new Image();
-                img.onload = () => {
-                    resolve(img);
-                };
-                img.onerror = reject;
-                img.src = '../assets/imgs/front-page.png';
-            }) as HTMLImageElement;
-            this.images['frontPage'] = img;
-        }
-
+        let img = await this._getImage('../assets/imgs/front-page.png');
         const left = (this.canvas.width - img.width) / 2;
         const top = (this.canvas.height - img.height) / 2;
         this.ctx.drawImage(img, left, top);
@@ -78,9 +67,8 @@ export default class CalendarCanvas {
         await this._renderImage(`../assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, padding);
         await this._renderImage(`../assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
         await this._renderImage(`../assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
-        await this._renderImage(`../assets/imgs/fonts/story/dark/${date}.png`, padding, null, null, padding);
         await this._renderImage(`../assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
-
+        await this._renderStory(date, padding);
         await this._renderImage(
             `../assets/imgs/fonts/date/dark/${date}.png`,
             null,
@@ -122,6 +110,24 @@ export default class CalendarCanvas {
         );
     }
 
+    protected async _renderStory(date: string, padding: number) {
+        const storyPath = `../assets/imgs/fonts/story/dark/${date}.png`;
+        const notePath = `../assets/imgs/fonts/note/dark/${date}.png`;
+        const dayInfo = this.dayInfo.getDayInfo(date);
+        if (dayInfo && dayInfo.note) {
+            this.ctx.globalAlpha = 0.6;
+            await this._renderImage(notePath, padding, null, null, padding);
+            this.ctx.globalAlpha = 1;
+
+            const noteImg = await this._getImage(notePath);
+            const storyBottom = padding + noteImg.height / DPR + 10;
+            await this._renderImage(storyPath, padding, null, null, storyBottom);
+        }
+        else {
+            await this._renderImage(storyPath, padding, null, null, padding);
+        }
+    }
+
     protected async _renderImage(
         path: string,
         left?: number,
@@ -130,46 +136,44 @@ export default class CalendarCanvas {
         bottom?: number,
         targetSizeFormatter?: Function
     ) {
-        const draw = img => {
-            let width;
-            let height;
-            if (targetSizeFormatter) {
-                const size = targetSizeFormatter(img);
-                if (size) {
-                    width = size.width;
-                    height = size.height;
-                    right = size.right == null ? right : size.right;
-                    top = size.top == null ? top : size.top;
-                }
+        const img = await this._getImage(path);
+        let width;
+        let height;
+        if (targetSizeFormatter) {
+            const size = targetSizeFormatter(img);
+            if (size) {
+                width = size.width;
+                height = size.height;
+                right = size.right == null ? right : size.right;
+                top = size.top == null ? top : size.top;
             }
-            else {
-                width = this._px(img.width / DPR);
-                height = this._px(img.height / DPR);
-            }
+        }
+        else {
+            width = this._px(img.width / DPR);
+            height = this._px(img.height / DPR);
+        }
 
-            let x = this._px(left);
-            let y = this._px(top);
-            if (left == null) {
-                x = this.canvas.width - width - this._px(right);
-            }
-            if (top == null) {
-                y = this.canvas.height - height - this._px(bottom);
-            }
-            this.ctx.drawImage(img, x, y, width, height);
-        };
+        let x = this._px(left);
+        let y = this._px(top);
+        if (left == null) {
+            x = this.canvas.width - width - this._px(right);
+        }
+        if (top == null) {
+            y = this.canvas.height - height - this._px(bottom);
+        }
+        this.ctx.drawImage(img, x, y, width, height);
+    }
 
+    protected async _getImage(path) {
         if (this.images[path]) {
-            // Cached
-            draw(this.images[path]);
-            return;
+            return this.images[path];
         }
 
         return await new Promise((resolve, reject) => {
             const img = new Image();
             img.onload = () => {
                 this.images[path] = img;
-                draw(img);
-                resolve();
+                resolve(img);
             };
             img.onerror = reject;
             img.src = path;

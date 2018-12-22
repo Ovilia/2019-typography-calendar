@@ -14,6 +14,7 @@ import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
+import { DayInfoService } from '../services/dayInfo';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AboutPage } from '../pages/about/about';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NativeStorage,
     HistoryService,
-    StorageService
+    StorageService,
+    DayInfoService
   ]
 })
 export class AppModule {}

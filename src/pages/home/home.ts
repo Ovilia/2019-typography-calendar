@@ -8,6 +8,7 @@ import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
 import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
 import { getDate } from '../../utils/time';
+import { DayInfoService } from '../../services/dayInfo';
 
 @Component({
     selector: 'page-home',
@@ -32,7 +33,8 @@ export class HomePage {
         public navCtrl: NavController,
         public toastCtrl: ToastController,
         public historyService: HistoryService,
-        storage: StorageService
+        public dateInfoService: DayInfoService,
+        public storage: StorageService
     ) {
         if (IS_DEBUG) {
             storage.set(STORE_KEY.TORN_DATE, '');
@@ -62,7 +64,7 @@ export class HomePage {
                     this.isFrontPage = false;
                 }
                 this.currentDate = getDate(date || '2018-12-31');
-                this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas);
+                this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
                 this.themeColor = date ? getThemeColor(this.currentDate.format('M.D')) : mainColor;
             });
     }

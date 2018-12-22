@@ -8,7 +8,7 @@ const darkNoteColor = 'rgba(51, 51, 51, 50)'
 
 const dayInfoLines = fs.readFileSync('../src/data/dayInfo.txt').toString().split('\n');
 for (let line of dayInfoLines) {
-    if (line && line.indexOf('#') < 0) {
+    if (line && line.indexOf('#') < 0 && line.indexOf('export') < 0) {
         const parts = line.split('|');
 
         const date = parts[0].trim();
