@@ -1,6 +1,7 @@
 import * as moment from 'moment';
 import {DPR, DESIGN_WIDTH} from '../utils/constants';
-import { getThemeColor } from '../utils/colors';
+import { getThemeColor, mainColor } from '../utils/colors';
+import { getDate } from '../utils/time';
 
 export default class CalendarCanvas {
 
@@ -35,6 +36,37 @@ export default class CalendarCanvas {
     }
 
     protected async _render() {
+        if (this.dateMoment.isBefore(getDate(moment('2019-1-1')))) {
+            await this._renderFrontPage();
+        }
+        else {
+            await this._renderInnerPage();
+        }
+    }
+
+    protected async _renderFrontPage() {
+        this.ctx.fillStyle = mainColor;
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+        let img = this.images['frontPage'];
+        if (!img) {
+            img = await new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    resolve(img);
+                };
+                img.onerror = reject;
+                img.src = '../assets/imgs/front-page.png';
+            }) as HTMLImageElement;
+            this.images['frontPage'] = img;
+        }
+
+        const left = (this.canvas.width - img.width) / 2;
+        const top = (this.canvas.height - img.height) / 2;
+        this.ctx.drawImage(img, left, top);
+    }
+
+    protected async _renderInnerPage() {
         const dateMoment = this.dateMoment;
         const padding = 20;
         const dayOfYear = dateMoment.dayOfYear();

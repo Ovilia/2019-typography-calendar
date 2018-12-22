@@ -17,6 +17,7 @@ import { STORE_KEY, DPR } from '../../utils/constants';
 })
 export class HistoryPage {
 
+    public isEmpty: boolean;
     public historyPages: any[];
 
     constructor(
@@ -25,6 +26,7 @@ export class HistoryPage {
         public navParams: NavParams,
         public storage: StorageService
     ) {
+        this.isEmpty = true;
         this.historyPages = [];
 
         this._init();
@@ -35,8 +37,13 @@ export class HistoryPage {
     }
 
     async _init() {
-        this.historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE);
+        this.historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];
+        if (!this.historyPages.length) {
+            return;
+        }
+        console.log(this.historyPages);
 
+        this.isEmpty = false;
         const pageWidth = window.innerWidth;
         const pageHeight = window.innerHeight;
         const imgSize = await this._getImageSize(this.historyPages[0].image) as any;

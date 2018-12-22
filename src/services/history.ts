@@ -16,27 +16,29 @@ export class HistoryService {
         return await this.storage.get(STORE_KEY.TORN_DATE);
     }
 
-    async setTearDate(dateMoment: moment.Moment, width: number, height: number): Promise<void> {
-        let lastMoment: moment.Moment;
-        const lastTear = await this.getTearDate();
-        if (!lastTear) {
-            await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
-            lastMoment = moment('2018-12-31');
-        }
-        else {
-            lastMoment = moment(lastTear);
-        }
+    // TODO: not tested
+    // async setTearDate(dateMoment: moment.Moment, width: number, height: number): Promise<void> {
+    //     let lastMoment;
+    //     const lastTear = await this.getTearDate();
+    //     if (!lastTear) {
+    //         // Tear the front page
+    //         await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
+    //         lastMoment = '2018-12-31';
+    //     }
+    //     else {
+    //         lastMoment = moment(lastTear);
+    //     }
 
-        dateMoment = getDate(dateMoment);
-        lastMoment = getDate(lastMoment);
+    //     dateMoment = getDate(dateMoment);
+    //     lastMoment = getDate(lastMoment);
 
-        while (lastMoment.isBefore(dateMoment)) {
-            lastMoment = lastMoment.add(1, 'day');
-            await this.tearNextDay(lastMoment, width, height);
-        }
-    }
+    //     while (lastMoment.isSameOrBefore(dateMoment)) {
+    //         await this.tearNextDay(lastMoment, width, height);
+    //         lastMoment = lastMoment.add(1, 'day');
+    //     }
+    // }
 
-    async tearNextDay(nextDay: moment.Moment, width: number, height: number): Promise<void> {
+    async tearNextDay(currentDate: moment.Moment, width: number, height: number): Promise<void> {
         const lastTear = await this.getTearDate();
         if (!lastTear) {
             await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
@@ -46,9 +48,10 @@ export class HistoryService {
         canvas.width = width;
         canvas.height = height;
 
-        const calendar = new CalendarCanvas(nextDay, canvas);
+        const calendar = new CalendarCanvas(currentDate, canvas);
 
         const base64 = await calendar.getRenderedBase64();
+        console.log(base64);
         const historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];
         const newPage = {
             date: Date,
@@ -57,7 +60,7 @@ export class HistoryService {
         historyPages.push(newPage);
 
         await this.storage.set(STORE_KEY.HISTORY_PAGE, historyPages);
-        return await this.storage.set(STORE_KEY.TORN_DATE, nextDay.toDate());
+        return await this.storage.set(STORE_KEY.TORN_DATE, currentDate.toDate());
     }
 
     async isFirstOpen(): Promise<boolean> {

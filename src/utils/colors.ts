@@ -23,3 +23,5 @@ export function getThemeColor(date: string): string {
             return '#FFE06E';
     }
 }
+
+export const mainColor = '#FFE06E';

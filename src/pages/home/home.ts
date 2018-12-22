@@ -3,10 +3,11 @@ import { NavController, ToastController, Toast } from 'ionic-angular';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
-import { getThemeColor } from '../../utils/colors';
+import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
 import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
+import { getDate } from '../../utils/time';
 
 @Component({
     selector: 'page-home',
@@ -16,6 +17,8 @@ export class HomePage {
 
     @ViewChild('mainCanvas') mainCanvasEl: ElementRef;
     themeColor: string;
+
+    public isFrontPage: boolean;
 
     protected mainCanvas: HTMLCanvasElement;
     protected mainCalendar: CalendarCanvas;
@@ -36,6 +39,8 @@ export class HomePage {
             storage.set(STORE_KEY.HISTORY_PAGE, '');
         }
 
+        this.isFrontPage = true;
+
         this.init();
     }
 
@@ -53,16 +58,18 @@ export class HomePage {
 
         this.historyService.getTearDate()
             .then(date => {
-                this.currentDate = moment(date || '2019-01-01');
+                if (date) {
+                    this.isFrontPage = false;
+                }
+                this.currentDate = getDate(date || '2018-12-31');
                 this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas);
-                this.themeColor = getThemeColor(this.currentDate.format('M.D'));
+                this.themeColor = date ? getThemeColor(this.currentDate.format('M.D')) : mainColor;
             });
     }
 
     async nextPage() {
-        await this.historyService.setTearDate(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
-
-        this.currentDate.add(1, 'day');
+        await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+        this.currentDate = this.currentDate.add(1, 'day');
         this.setDate(this.currentDate);
     }
 

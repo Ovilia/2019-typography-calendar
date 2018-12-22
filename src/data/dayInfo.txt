@@ -5,7 +5,7 @@
 1.2 | Trajan | Trajan Pro 3 | 生活就像一盒 Godiva，你永远不知道下一颗是什么味道。 | Trajan 是 Godiva Logo 所使用的字体 |
 1.3 | Gloria Hallelujah | GloriaHallelujah.ttf | 某种程度上说，每个人都是字体的创作者，因为人的笔迹独一无二。 | 这款字体源于一个普通小学生的笔迹 |
 1.4 | Baskerville PT | Baskerville Display PT | 「一个人的命运，也要考虑历史的行程」| 这是一款比 Times New Roman 更古老更著名的字体。没听说过？那可能是因为它没被操作系统收入…… |
-1.5 | 思源宋体 | 思源宋体 | 雁北向，鹊始巢，雉始雊 | 今日小寒 |
+1.5 | 思源宋体 | Source Han Serif SC | 雁北向，鹊始巢，雉始雊 | 今日小寒 |
 1.6 | Bad Script | BadScript-Regular.ttf | 自黑有时候也是门艺术，靠「糟糕的手写体」这个名字成为热门字体也算是自黑的巅峰了吧？ |  |
 1.7 | Frontage Condenced Outline | FrontageCondensed-Outline.otf | 新的一周，色彩由你掌控 | 如果这是一本实体日历，我会在空心字体内涂色，你呢？ |
 1.8 | OCR B | OCR-B Std | 「两匹马屁股之间的距离，决定了现代铁路的轨距」——【待补充】 | 最早为提高机器识别准确度而设计的OCR B至今仍被用于商品条形码与信用卡。 |
