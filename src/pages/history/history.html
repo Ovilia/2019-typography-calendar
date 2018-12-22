@@ -5,11 +5,13 @@
   Ionic pages and navigation.
 -->
 
-<ion-content id="history-content" padding>
-  <img class="pageImage" *ngFor="let page of historyPages"
-    [src]="page.image" [ngStyle]="page.style">
+<ion-content id="history-content">
+  <!-- <img class="pageImage" *ngFor="let page of historyPages"
+    [src]="page.image" [ngStyle]="page.style"> -->
+  <canvas #historyCanvas id="historyCanvas" class="full-canvas">
+  </canvas>
 
-  <a class="back-btn-img" (click)="dismiss()">
+  <a padding class="back-btn-img" (click)="dismiss()">
     <img src="assets/imgs/fonts/ui/back-btn.png" alt="">
   </a>
 

@@ -70,9 +70,14 @@ export class HomePage {
     }
 
     async nextPage() {
-        await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
-        this.currentDate = this.currentDate.add(1, 'day');
-        this.setDate(this.currentDate);
+        if (this.currentDate.isSameOrAfter(getDate('2019-01-31'))) {
+            this._toast('后面的日历页需要更新一下 App 哦！');
+        }
+        else {
+            await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+            this.currentDate = this.currentDate.add(1, 'day');
+            this.setDate(this.currentDate);
+        }
     }
 
     isToday() {

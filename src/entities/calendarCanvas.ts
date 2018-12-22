@@ -50,9 +50,11 @@ export default class CalendarCanvas {
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
         let img = await this._getImage('../assets/imgs/front-page.png');
-        const left = (this.canvas.width - img.width) / 2;
-        const top = (this.canvas.height - img.height) / 2;
-        this.ctx.drawImage(img, left, top);
+        const targetHeight = this.canvas.height < this._px(550) ? this.canvas.height * 0.85 : img.height;
+        const targetWidth = targetHeight / img.height * img.width;
+        const left = (this.canvas.width - targetWidth) / 2;
+        const top = (this.canvas.height - targetHeight) / 2;
+        this.ctx.drawImage(img, left, top, targetWidth, targetHeight);
     }
 
     protected async _renderInnerPage() {

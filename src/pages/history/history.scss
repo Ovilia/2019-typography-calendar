@@ -1,4 +1,9 @@
 page-history {
+    .scroll-content {
+        overflow-y: hidden;
+        background-color: #f3f3f3;
+    }
+
     .pageImage {
         position: absolute;
         box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.15);
