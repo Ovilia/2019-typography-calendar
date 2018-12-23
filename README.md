@@ -1,7 +1,9 @@
 # 2019 字体日历 App
 
-这是目前正在着手做的移动端 App，预计 2018 年年底上线，欢迎关注制作的进展。
+![Logo](./design/logo.png)
 
+每天邂逅不一样的字体故事
 
+![Design](./design/all.png)
 
-![Design](./design/design.png)
+iOS App Store 审核中，安卓开发中。
