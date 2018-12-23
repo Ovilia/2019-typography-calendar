@@ -42,36 +42,27 @@ export class HomePage {
         public base64ToGallery: Base64ToGallery,
         public storage: StorageService
     ) {
-        if (IS_DEBUG) {
-            storage.set(STORE_KEY.TORN_DATE, '');
-            storage.set(STORE_KEY.HISTORY_PAGE, '');
-        }
-
         this.isFrontPage = true;
         this.mainCanvasTop = 0;
-
-        this.init();
     }
 
     async init() {
-        if (await this.historyService.isFirstTear()) {
-            setTimeout(() => {
-                const text = this.isToday() ? '等日历上的日子过了，就可以下拉撕掉哦！' : '试试下拉撕日历吧！';
-                this._toast(text, 'top');
-            }, 3000);
+        const isFirst = await this.historyService.isFirstTear();
+        if (isFirst) {
+            this._toast('试试下拉撕日历吧！', 'top');
         }
-    }
 
-    ionViewDidLoad() {
         this.mainCanvas = this.mainCanvasEl.nativeElement;
         this.bgCanvas = this.bgCanvasEl.nativeElement;
 
         this.historyService.getTearDate()
             .then(date => {
+                console.log('tear date', date);
                 if (date) {
                     this.isFrontPage = false;
+                    date = moment(date).add(1, 'day') as any;
                 }
-                this.currentDate = getDate(date || '2018-12-31');
+                this.currentDate = moment.min(getDate(date || '2018-12-31'), getDate('2019-12-31'));
 
                 this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
                 this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
@@ -80,18 +71,33 @@ export class HomePage {
             });
     }
 
-    async exportCanvas() {
-        const base64 = await this.mainCalendar.getRenderedBase64();
-        this.base64ToGallery.base64ToGallery(base64).then(
-            () => {
-                this._toast('已经保存好啦，快把我从相册分享出去嘛！');
-            },
-            err => {
-                this._toast('啊呀，讨厌！为什么保存失败了呢……');
-                console.error(err);
-            }
-        );
+    ionViewWillEnter() {
+        if (IS_DEBUG) {
+            Promise.all([
+                this.storage.set(STORE_KEY.TORN_DATE, ''),
+                this.storage.set(STORE_KEY.HISTORY_PAGE, '')
+            ])
+            .then(() => this.init());
+        }
+
+        document.addEventListener('deviceready', () => {
+            this.init();
+        });
     }
+
+    // TODO: not tested
+    // async exportCanvas() {
+    //     const base64 = await this.mainCalendar.getRenderedBase64();
+    //     this.base64ToGallery.base64ToGallery(base64).then(
+    //         () => {
+    //             this._toast('已经保存好啦，快把我从相册分享出去嘛！');
+    //         },
+    //         err => {
+    //             this._toast('啊呀，讨厌！为什么保存失败了呢……');
+    //             console.error(err);
+    //         }
+    //     );
+    // }
 
     nextPage() {
         if (this.currentDate.isSameOrAfter(getDate('2019-01-31'))) {
@@ -105,14 +111,13 @@ export class HomePage {
                 this.mainCanvasTop = 0;
             };
 
-            const duration = 500;
+            const duration = 300;
             const start = new Date();
             const tick = () => {
                 const now = new Date();
                 const dtime = now.getTime() - start.getTime();
                 if (dtime < duration) {
                     this.mainCanvasTop = 100 * Math.sin(dtime / duration * Math.PI / 2);
-                    console.log(this.mainCanvasTop);
                     requestAnimationFrame(tick);
                 }
                 else {
@@ -123,10 +128,9 @@ export class HomePage {
         }
     }
 
-    isToday() {
-        const today = moment(new Date());
-        return today.isBefore(this.currentDate)
-            || this.currentDate.format('YYYY.M.D') === today.format('YYYY.M.D');
+    canTear() {
+        const today = getDate(new Date());
+        return this.isFrontPage || today.isBefore(this.currentDate, 'day');
     }
 
     setDate(date: moment.Moment) {
@@ -136,44 +140,48 @@ export class HomePage {
     }
 
     touchStart(event) {
-        console.log('touch start', arguments);
+        // console.log('touch start', arguments);
         this.touchStartX = event.touches[0].clientX;
         this.touchStartY = event.touches[0].clientY;
     }
 
     touchMove(event) {
-        console.log('touch move', arguments);
+        // console.log('touch move', arguments);
     }
 
     touchEnd(event) {
-        console.log('touch end', arguments);
+        // console.log('touch end', arguments);
         const x = event.changedTouches[0].clientX;
         const y = event.changedTouches[0].clientY;
 
         // TODO: not tested yet
         if (y - this.touchStartY > 20) {
-            if (this.isToday() && !IS_DEBUG) {
-                this._toast('明天再来撕嘛！');
+            if (this.canTear()) {
+                this.nextPage();
             }
             else {
-                this.nextPage();
+                this._toast('现在还不能撕哦！乖~');
             }
         }
         else {
-            this._toast('下拉撕去当前页');
+            this._toast('下拉撕去当前页哟~');
         }
     }
 
     protected _toast(text: string, position?: string) {
-        if (this.toast) {
-            this.toast.dismissAll();
-        }
+        this._toastDismiss();
         this.toast = this.toastCtrl.create({
             message: text,
             duration: 5000,
             position: position || 'middle'
         });
         this.toast.present();
+    }
+
+    protected _toastDismiss() {
+        if (this.toast) {
+            this.toast.dismissAll();
+        }
     }
 
 }

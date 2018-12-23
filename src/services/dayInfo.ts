@@ -8,7 +8,7 @@ export class DayInfoService {
 
     constructor() {
         this.infoStrArr = (infoStr as any).split('\n')
-            .filter(line => line && line.indexOf('#') < 0);
+            .filter(line => line && line.indexOf('#') !== 0);
     }
 
     getDayInfo(dateStr: string) {

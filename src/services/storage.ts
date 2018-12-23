@@ -30,9 +30,13 @@ export class StorageService {
         }
         catch (err) {
             console.warn(err);
-            if (err.indexOf('cordova_not_available') > -1) {
+            if (typeof err === 'string' && err.indexOf('cordova_not_available') > -1) {
                 console.warn('Native storage not available, using local storage instead');
                 return await this.localStorage.get(key);
+            }
+            else if (typeof err === 'object' && err.code === 2) {
+                // Item not found
+                return null;
             }
             else {
                 throw err;

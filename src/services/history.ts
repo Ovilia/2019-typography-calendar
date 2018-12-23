@@ -59,6 +59,7 @@ export class HistoryService {
         historyPages.push(newPage);
 
         await this.storage.set(STORE_KEY.HISTORY_PAGE, historyPages);
+        console.log('tear', currentDate.toDate());
         return await this.storage.set(STORE_KEY.TORN_DATE, currentDate.toDate());
     }
 
@@ -71,6 +72,6 @@ export class HistoryService {
     }
 
     async isFirstTear(): Promise<boolean> {
-        return await this.storage.get(STORE_KEY.FIRST_TEAR) == null;
+        return !await this.storage.get(STORE_KEY.FIRST_TEAR);
     }
 }

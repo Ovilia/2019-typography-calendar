@@ -100,7 +100,7 @@ export default class CalendarCanvas {
                     result.width = result.height / img.height * img.width;
                 }
 
-                if (result.width < this._px(180)) {
+                if (result.width < this._px(180) || date === '1.24') {
                     result.right = this._px(padding) / 2;
                 }
                 else if (result.width > this._px(260)) {

@@ -3,16 +3,17 @@
     <button ion-button menuToggle [ngStyle]="{color: themeColor}">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button end (click)="exportCanvas()" [ngStyle]="{color: themeColor}">
         <ion-icon name="share-alt"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <canvas #mainCanvas id="mainCanvas" class="full-canvas" [ngStyle]="{top: mainCanvasTop + '%'}"
+  <canvas #mainCanvas id="mainCanvas" class="full-canvas"
+    [ngStyle]="{top: mainCanvasTop + '%'}"
     (touchstart)="touchStart($event)"
     (touchmove)="touchMove($event)"
     (touchend)="touchEnd($event)"
