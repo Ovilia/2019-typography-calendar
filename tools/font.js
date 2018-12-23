@@ -17,10 +17,6 @@ for (let line of dayInfoLines) {
         const story = parts[3].trim();
         const note = parts[4].trim();
 
-        // if (name !== 'Myriad') {
-        //     continue;
-        // }
-
         const fontPath = file.indexOf('.') > -1 ? './fonts/' + file : file;
         console.log('path', fontPath);
 
@@ -34,9 +30,9 @@ for (let line of dayInfoLines) {
 
         if (name) {
             shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/light/${date}.png`
-            + ` --text "${name}" -c "${lightColor}" --font-size="20px" --dpr=2`);
+            + ` --text "${name}" -c "${lightColor}" --font-size="20px" --dpr=2 --line-height=0.6`);
             shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/dark/${date}.png`
-                + ` --text "${name}" -c "${darkMainColor}" --font-size="20px" --dpr=2`);
+                + ` --text "${name}" -c "${darkMainColor}" --font-size="20px" --dpr=2 --line-height=0.6`);
         }
 
         shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/story/light/${date}.png`

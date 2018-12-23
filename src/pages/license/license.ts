@@ -10,7 +10,6 @@ import { FontPage } from '../font/font';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
     selector: 'page-license',
     templateUrl: 'license.html',
@@ -20,16 +19,10 @@ export class LicensePage {
     public items;
 
     constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
-        console.log(licenses);
         this.items = licenses;
     }
 
-    ionViewDidLoad() {
-        console.log('ionViewDidLoad LicensePage');
-    }
-
     dismiss(): void {
-        console.log('dismiss');
         this.viewCtrl.dismiss();
     }
 

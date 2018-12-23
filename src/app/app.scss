@@ -15,16 +15,23 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.menu-list {
+    .label-ios {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
 .menu-title {
     position: relative;
-    top: 1px;
+    top: 2px;
     height: 16px;
 }
 
 .menu-title-h1 {
     position: relative;
     top: 2px;
-    height: 18px;
+    height: 20px;
 }
 
 .menu-header {

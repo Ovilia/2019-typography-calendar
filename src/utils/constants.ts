@@ -1,4 +1,7 @@
-export const IS_DEBUG = true;
+export const IS_DEBUG = (() => {
+    const match = location.href.match(/localhost/);
+    return match && match.length > 0;
+})();
 
 export const VERSION = '1.0.0';
 

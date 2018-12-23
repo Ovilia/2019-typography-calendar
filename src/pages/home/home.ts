@@ -10,7 +10,7 @@ import { StorageService } from '../../services/storage';
 import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { DayInfoService } from '../../services/dayInfo';
-import { GaService } from '../../services/ga';
+import { AudioService } from '../../services/audio';
 
 @Component({
     selector: 'page-home',
@@ -43,7 +43,7 @@ export class HomePage {
         public historyService: HistoryService,
         public dateInfoService: DayInfoService,
         // public base64ToGallery: Base64ToGallery,
-        public ga: GaService,
+        public audioService: AudioService,
         public storage: StorageService
     ) {
     }
@@ -53,6 +53,8 @@ export class HomePage {
         this.mainCanvasTop = 0;
         this.isCanvasSweeping = false;
         this.isTearing = false;
+
+        this.audioService.init();
 
         const isFirst = await this.historyService.isFirstTear();
         if (isFirst) {
@@ -123,7 +125,8 @@ export class HomePage {
             };
 
             this.isTearing = true;
-            const duration = 2000;
+            this.isFrontPage = false;
+            const duration = 500;
             const start = new Date();
             const tick = () => {
                 const now = new Date();
@@ -137,12 +140,14 @@ export class HomePage {
                 }
             };
             tick();
+
+            this.audioService.play('tear');
         }
     }
 
     canTear() {
         const today = getDate(new Date());
-        return this.isFrontPage || today.isBefore(this.currentDate, 'day');
+        return this.isFrontPage || today.isAfter(this.currentDate, 'day');
     }
 
     setDate(date: moment.Moment) {
@@ -159,6 +164,7 @@ export class HomePage {
 
     touchMove(event) {
         // console.log('touch move', arguments);
+        event.preventDefault();
     }
 
     touchEnd(event) {
@@ -176,7 +182,7 @@ export class HomePage {
                 this.nextPage();
             }
             else {
-                this._toast('现在还不能撕哦！乖~');
+                this._toast('还不能撕哦~ 等日历上的日子过了吧！');
             }
         }
         else {

@@ -3,7 +3,7 @@ export default `
 # 月.日 | 字体名称 | 文件名称 | 字体故事 | 备注 |
 # 可以留空行，或以 # 开头注释
 
-1.1 | Scriptorama Markdown JF | ScriptoramaMarkdownJF | 道生一。 | 第一天的字体最难选了。兜兜转转选了这么个名不见经传又说不出什么特色的字体，是因为很喜欢这种简洁中富于变化的感觉。#新的一年，万象更新。准备好了吗？ |
+1.1 | Scriptorama#Markdown JF | ScriptoramaMarkdownJF | 道生一。 | 第一天的字体最难选了。兜兜转转选了这么个名不见经传又说不出什么特色的字体，是因为很喜欢这种简洁中富于变化的感觉。#新的一年，万象更新。准备好了吗？ |
 1.2 | Trajan | Trajan Pro 3 | 生活就像一盒 Godiva，你永远不知道下一颗是什么味道。 | Trajan 是 Godiva Logo 所使用的字体。 |
 1.3 | Gloria Hallelujah | GloriaHallelujah.ttf | 某种程度上说，每个人都是字体的创作者，因为人的笔迹独一无二。 | 这款字体源于一个普通小学生的笔迹。 |
 1.4 | Baskerville PT | Baskerville Display PT | 一个人的命运，有时也要考虑历史的行程。| 这是一款比 Times New Roman 更古老更著名的字体。没听说过？那可能是因为它没被操作系统收入…… |
@@ -24,7 +24,7 @@ export default `
 1.19 | Lobster | Lobster-Regular.ttf | 「See? He is her lobster.」| 据《老友记》中的 Phoebe 说，龙虾的配偶都是一辈子的。 |
 1.20 | Gastromond | Gastromond | 今日大寒。 | 这么粗的笔画就像厚实的棉袄一样让人觉得踏实，天寒地冻的时候也要多穿一些哦！ |
 1.21 | LTC Broadway | LTC Broadway | 「City of Stars, are you shining just for me?」 | 电影《La La Land》的标题用的就是这字体，的确很「百老汇」！ |
-1.22 | DIN 1451 Pro | DIN 1451 LT Pro | 交通领域字体设计原则：#1. 让司机一眼看清路牌，专注开车；#2. 让监控快速识别并准确开罚单。 | DIN 1451字体是德国公路路牌和车牌所使用的字体。 |
+1.22 | DIN 1451 Pro | DIN 1451 LT Pro | 交通领域字体设计原则：#1. 让司机一眼看清路牌，专注开车；2. 让监控快速识别并准确开罚单。 | DIN 1451字体是德国公路路牌和车牌所使用的字体。 |
 1.23 | Big Caslon | Big Caslon FB | 「I'll stick with Caslon until I die.」#——萧伯纳 | 萧伯纳是 Caslon 的忠实粉丝，他坚持用#Caslon 印刷他出版的所有作品。 |
 1.24 |  |  | 今天是我的生日，写个字送给你！#见字如面。 | 这种字体是我在一次初中夏令营时候跟一位台湾朋友学的，后来经常出现于我们班的黑板报。我想，如果要写「羡辙体」的话，这大概可以算。 |
 1.25 | Balloon URW | Balloon D | 周五了，看点漫画轻松一下吧！ | Balloon 是一种常见的漫画字体。 |

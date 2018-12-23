@@ -6,7 +6,7 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
+    <ion-list class="menu-list">
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <img class="menu-title" [src]="'assets/imgs/fonts/ui/' + p.img">
       </button>

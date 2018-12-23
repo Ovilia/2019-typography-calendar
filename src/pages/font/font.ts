@@ -9,7 +9,6 @@ import licenses from '../../utils/license';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
     selector: 'page-font',
     templateUrl: 'font.html',

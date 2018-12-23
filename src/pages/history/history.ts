@@ -10,7 +10,6 @@ import { STORE_KEY, DPR } from '../../utils/constants';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
     selector: 'page-history',
     templateUrl: 'history.html',
@@ -24,6 +23,8 @@ export class HistoryPage {
     public isEmpty: boolean;
     public historyPages: any[];
 
+    private height: number;
+
     constructor(
         public navCtrl: NavController,
         public viewCtrl: ViewController,
@@ -36,8 +37,9 @@ export class HistoryPage {
 
     ionViewDidLoad() {
         this.canvas = this.historyCanvasEl.nativeElement;
+        this.height = this.canvas.clientHeight + 20;
         this.canvas.width = this.canvas.clientWidth * DPR;
-        this.canvas.height = this.canvas.clientHeight * DPR;
+        this.canvas.height = this.height * DPR;
         this.ctx = this.canvas.getContext('2d');
 
         this._init();
@@ -97,7 +99,6 @@ export class HistoryPage {
         return await new Promise((resolve, reject) => {
             const img = new Image();
             img.onload = () => {
-                console.log(img.width, img.height);
                 resolve({
                     width: img.width / DPR,
                     height: img.height / DPR

@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+import { Firebase } from '@ionic-native/firebase';
+import { NativeAudio } from '@ionic-native/native-audio';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,7 +18,7 @@ import { StorageService } from '../services/storage';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
 import { DayInfoService } from '../services/dayInfo';
-import { GaService } from '../services/ga';
+import { AudioService } from '../services/audio';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { GaService } from '../services/ga';
     StorageService,
     DayInfoService,
     Base64ToGallery,
-    GaService
+    Firebase,
+    NativeAudio,
+    AudioService
   ]
 })
 export class AppModule {}

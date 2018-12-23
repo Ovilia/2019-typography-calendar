@@ -5,17 +5,17 @@
   Ionic pages and navigation.
 -->
 
-<ion-content id="history-content">
+<ion-content ion-fixed id="history-content">
   <!-- <img class="pageImage" *ngFor="let page of historyPages"
     [src]="page.image" [ngStyle]="page.style"> -->
-  <canvas #historyCanvas id="historyCanvas" class="full-canvas">
+  <canvas #historyCanvas id="historyCanvas" class="full-canvas" [ngStyle]="{height: height + 'px' || '100%'}">
   </canvas>
 
   <a padding class="back-btn-img" (click)="dismiss()">
     <img src="assets/imgs/fonts/ui/back-btn.png" alt="">
   </a>
 
-  <div class="placeholder" *ngIf="isEmpty">
+  <div padding class="placeholder" *ngIf="isEmpty">
     <h2>暂时还没有撕下的日历页</h2>
     <p>试试在主页下拉，撕下日历封面吧！</p>
   </div>

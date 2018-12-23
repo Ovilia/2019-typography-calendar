@@ -8,14 +8,14 @@ const license = [
             而中文字库由于字数庞大，商用字体费用更是贵得吓人，像我这样的个人开发者根本无法承担。别说做个日历需要 365 种字体了，大部分中文商用字体的费用，可能我做的这个 App 的收入还不够买一个的。
             感谢喜鹊造字让中文字体的世界变得更美好！
             以下字体来自喜鹊造字，已购买商用版权。`,
-        fonts: ['喜鹊聚珍体']
+        fonts: ['喜鹊聚珍体', '喜鹊古典体']
     },
     {
         id: 'adobe',
         name: 'Adobe Font License',
-        fonts: ['Calibri', 'Trajan', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
+        fonts: ['Trajan Pro 3', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
             'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW',
-            'Gill Sans Nova']
+            'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II']
     },
     {
         id: 'open',
@@ -56,6 +56,11 @@ const license = [
 
             DISCLAIMER
             THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.`
+    },
+    {
+        id: 'others',
+        name: '其他获得商用授权的字体',
+        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Musoe Sans', 'Sant Elia Rough-Line Two', 'Versica sans']
     }
 ];
 

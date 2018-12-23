@@ -1,11 +1,19 @@
 page-about {
+    p {
+        font-size: 1.6rem;
+        color: #555;
+        line-height: 2.3rem;
+    }
+
     em {
         font-style: normal;
         font-weight: bold;
+        color: #333;
+        line-height: 2rem;
     }
 
     .split {
-        height: 20px;
+        height: 10px;
         width: 100%;
     }
 }
