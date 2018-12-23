@@ -16,6 +16,7 @@ import { StorageService } from '../services/storage';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
 import { DayInfoService } from '../services/dayInfo';
+import { GaService } from '../services/ga';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DayInfoService } from '../services/dayInfo';
     HistoryService,
     StorageService,
     DayInfoService,
-    Base64ToGallery
+    Base64ToGallery,
+    GaService
   ]
 })
 export class AppModule {}

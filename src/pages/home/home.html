@@ -13,11 +13,15 @@
 
 <ion-content>
   <canvas #mainCanvas id="mainCanvas" class="full-canvas"
-    [ngStyle]="{top: mainCanvasTop + '%'}"
+    [ngStyle]="{top: !isCanvasSweeping ? mainCanvasTop + '%' : 0}"
     (touchstart)="touchStart($event)"
     (touchmove)="touchMove($event)"
-    (touchend)="touchEnd($event)"
-  >
+    (touchend)="touchEnd($event)">
   </canvas>
-  <canvas #bgCanvas id="bgCanvas" class="full-canvas"></canvas>
+  <canvas #bgCanvas id="bgCanvas" class="full-canvas"
+    [ngStyle]="{top: isCanvasSweeping ? mainCanvasTop + '%' : 0, 'z-index': isCanvasSweeping ? 10 : -10}"
+    (touchstart)="touchStart($event)"
+    (touchmove)="touchMove($event)"
+    (touchend)="touchEnd($event)">
+  </canvas>
 </ion-content>

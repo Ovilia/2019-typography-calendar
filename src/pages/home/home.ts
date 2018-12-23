@@ -10,6 +10,7 @@ import { StorageService } from '../../services/storage';
 import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { DayInfoService } from '../../services/dayInfo';
+import { GaService } from '../../services/ga';
 
 @Component({
     selector: 'page-home',
@@ -29,6 +30,8 @@ export class HomePage {
     protected bgCalendar: CalendarCanvas;
     protected currentDate: moment.Moment;
     protected mainCanvasTop: number;
+    protected isCanvasSweeping: boolean;
+    protected isTearing: boolean;
 
     private touchStartX: number;
     private touchStartY: number;
@@ -39,14 +42,18 @@ export class HomePage {
         public toastCtrl: ToastController,
         public historyService: HistoryService,
         public dateInfoService: DayInfoService,
-        public base64ToGallery: Base64ToGallery,
+        // public base64ToGallery: Base64ToGallery,
+        public ga: GaService,
         public storage: StorageService
     ) {
-        this.isFrontPage = true;
-        this.mainCanvasTop = 0;
     }
 
     async init() {
+        this.isFrontPage = true;
+        this.mainCanvasTop = 0;
+        this.isCanvasSweeping = false;
+        this.isTearing = false;
+
         const isFirst = await this.historyService.isFirstTear();
         if (isFirst) {
             this._toast('试试下拉撕日历吧！', 'top');
@@ -57,7 +64,6 @@ export class HomePage {
 
         this.historyService.getTearDate()
             .then(date => {
-                console.log('tear date', date);
                 if (date) {
                     this.isFrontPage = false;
                     date = moment(date).add(1, 'day') as any;
@@ -67,17 +73,18 @@ export class HomePage {
                 this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
                 this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
                     this.bgCanvas, this.dateInfoService);
-                this.themeColor = date ? getThemeColor(this.currentDate.format('M.D')) : mainColor;
+                this.themeColor = date ? getThemeColor(this.currentDate) : mainColor;
             });
     }
 
     ionViewWillEnter() {
         if (IS_DEBUG) {
-            Promise.all([
-                this.storage.set(STORE_KEY.TORN_DATE, ''),
-                this.storage.set(STORE_KEY.HISTORY_PAGE, '')
-            ])
-            .then(() => this.init());
+            // Promise.all([
+            //     this.storage.set(STORE_KEY.TORN_DATE, ''),
+            //     this.storage.set(STORE_KEY.HISTORY_PAGE, '')
+            // ])
+            // .then(() => this.init());
+            this.init();
         }
 
         document.addEventListener('deviceready', () => {
@@ -105,13 +112,18 @@ export class HomePage {
         }
         else {
             const setup = async () => {
-                await this.historyService.tearNextDay(this.currentDate, this.mainCanvas.width, this.mainCanvas.height);
+                const mainCanvas = this.isCanvasSweeping ? this.bgCanvas : this.mainCanvas;
+                await this.historyService.tearNextDay(this.currentDate, mainCanvas.width, mainCanvas.height);
+
+                this.isCanvasSweeping = !this.isCanvasSweeping;
                 this.currentDate = this.currentDate.add(1, 'day');
                 this.setDate(this.currentDate);
                 this.mainCanvasTop = 0;
+                this.isTearing = false;
             };
 
-            const duration = 300;
+            this.isTearing = true;
+            const duration = 2000;
             const start = new Date();
             const tick = () => {
                 const now = new Date();
@@ -134,9 +146,9 @@ export class HomePage {
     }
 
     setDate(date: moment.Moment) {
-        this.mainCalendar.setDate(date);
-        this.bgCalendar.setDate(date.clone().add(1, 'day'));
-        this.themeColor = getThemeColor(date.format('M.D'));
+        const bgCalendar = this.isCanvasSweeping ? this.mainCalendar : this.bgCalendar;
+        bgCalendar.setDate(date.clone().add(1, 'day'));
+        this.themeColor = getThemeColor(date);
     }
 
     touchStart(event) {
@@ -153,6 +165,10 @@ export class HomePage {
         // console.log('touch end', arguments);
         const x = event.changedTouches[0].clientX;
         const y = event.changedTouches[0].clientY;
+
+        if (this.isTearing) {
+            return;
+        }
 
         // TODO: not tested yet
         if (y - this.touchStartY > 20) {

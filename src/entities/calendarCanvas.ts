@@ -191,7 +191,7 @@ export default class CalendarCanvas {
     }
 
     protected _getBackground(): string {
-        return getThemeColor(this.dateMoment.format('M.D'));
+        return getThemeColor(this.dateMoment);
     }
 
     protected _isWideDigit(): boolean {

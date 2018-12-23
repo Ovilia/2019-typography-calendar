@@ -1,26 +1,11 @@
-export function getThemeColor(date: string): string {
-    switch (date) {
-        case '1.1':
-            return '#FFE06E';
+import * as Color from 'color';
+import * as moment from 'moment';
 
-        case '1.2':
-            return '#DBEAB8';
-
-        case '1.3':
-            return '#F7CBB5';
-
-        case '1.4':
-            return '#C4CDE9';
-
-        case '1.5':
-            return '#E9B6C0';
-
-        case '1.6':
-            return '#BAEBC9';
-
+export function getThemeColor(date: moment.Moment): string {
+    switch (date.format('M.D')) {
         default:
-            console.warn('Date ' + date + ' not defined theme color.');
-            return '#FFE06E';
+            const hue = (date.date() / date.daysInMonth()) * 255;
+            return new Color(`hsl(${hue}, 70%, 80%)`).string();
     }
 }
 
