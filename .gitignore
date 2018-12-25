@@ -31,6 +31,8 @@ plugins/ios.json
 www/
 $RECYCLE.BIN/
 GoogleService-Info.plist
+google-services.json
+*.jks
 
 .DS_Store
 Thumbs.db

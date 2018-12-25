@@ -6,4 +6,6 @@
 
 ![Design](./design/all.png)
 
-iOS App Store 审核中，安卓开发中。
+iOS App Store 审核中，安卓已发布，扫描下面的二维码即可下载。
+
+![Android](./design/android.png)

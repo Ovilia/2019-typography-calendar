@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.zhangwenli.calendar2019" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>2019字体日历</name>
-    <description>2019字体日历</description>
+<widget id="com.zhangwenli.2019calendar" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>2019-typography-calendar</name>
+    <description>2019 字体日历</description>
+    <edit-config file="*-Info.plist" mode="merge" target="CFBundleDisplayName">
+        <string>2019字体日历</string>
+    </edit-config>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -22,7 +25,6 @@
     <preference name="Orientation" value="portrait" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <preference name="android-minSdkVersion" value="14" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
@@ -92,5 +94,4 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <engine name="ios" spec="4.5.5" />
-    <engine name="android" spec="7.1.4" />
 </widget>
