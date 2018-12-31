@@ -146,6 +146,9 @@ export class HomePage {
     }
 
     canTear() {
+        if (IS_DEBUG) {
+            return true;
+        }
         const today = getDate(new Date());
         return this.isFrontPage || today.isAfter(this.currentDate, 'day');
     }

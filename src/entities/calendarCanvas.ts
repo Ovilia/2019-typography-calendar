@@ -122,9 +122,7 @@ export default class CalendarCanvas {
         const notePath = `assets/imgs/fonts/note/dark/${date}.png`;
         const dayInfo = this.dayInfo.getDayInfo(date);
         if (dayInfo && dayInfo.note) {
-            this.ctx.globalAlpha = 0.6;
             await this._renderImage(notePath, padding, null, null, padding);
-            this.ctx.globalAlpha = 1;
 
             const noteImg = await this._getImage(notePath);
             const storyBottom = padding + noteImg.height / DPR + 10;

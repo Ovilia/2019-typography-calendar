@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const lightColor = '#fff';
 const darkMainColor = '#555';
-const darkSecondaryColor = 'rgba(85, 85, 85, 80)';
-const darkNoteColor = 'rgba(51, 51, 51, 50)'
+const darkSecondaryColor = 'rgba(85, 85, 85, 0.8)';
+const darkNoteColor = 'rgba(51, 51, 51, 0.5)';
 
 const dayInfoLines = fs.readFileSync('../src/data/dayInfo.ts').toString().split('\n');
 for (let line of dayInfoLines) {
