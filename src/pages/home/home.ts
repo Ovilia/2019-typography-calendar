@@ -29,7 +29,6 @@ export class HomePage {
     protected mainCalendar: CalendarCanvas;
     protected bgCalendar: CalendarCanvas;
     protected currentDate: moment.Moment;
-    protected mainCanvasTop: number;
     protected isCanvasSweeping: boolean;
     protected isTearing: boolean;
 
@@ -50,7 +49,6 @@ export class HomePage {
 
     async init() {
         this.isFrontPage = true;
-        this.mainCanvasTop = 0;
         this.isCanvasSweeping = false;
         this.isTearing = false;
 
@@ -109,40 +107,9 @@ export class HomePage {
     // }
 
     nextPage() {
-        if (this.currentDate.isSameOrAfter(getDate('2019-01-31'))) {
-            this._toast('后面的日历页需要更新一下 App 哦！');
-        }
-        else {
-            const setup = async () => {
-                const mainCanvas = this.isCanvasSweeping ? this.bgCanvas : this.mainCanvas;
-                await this.historyService.tearNextDay(this.currentDate, mainCanvas.width, mainCanvas.height);
-
-                this.isCanvasSweeping = !this.isCanvasSweeping;
-                this.currentDate = this.currentDate.add(1, 'day');
-                this.setDate(this.currentDate);
-                this.mainCanvasTop = 0;
-                this.isTearing = false;
-            };
-
-            this.isTearing = true;
-            this.isFrontPage = false;
-            const duration = 500;
-            const start = new Date();
-            const tick = () => {
-                const now = new Date();
-                const dtime = now.getTime() - start.getTime();
-                if (dtime < duration) {
-                    this.mainCanvasTop = 100 * Math.sin(dtime / duration * Math.PI / 2);
-                    requestAnimationFrame(tick);
-                }
-                else {
-                    setup();
-                }
-            };
-            tick();
-
-            this.audioService.play('tear');
-        }
+        this.isTearing = true;
+        this.isFrontPage = false;
+        this.audioService.play('tear');
     }
 
     canTear() {
@@ -159,6 +126,20 @@ export class HomePage {
         this.themeColor = getThemeColor(date);
     }
 
+    needUpgrade() {
+        return this.currentDate.isSameOrAfter(getDate('2019-01-31'))
+    }
+
+    async afterTearOff() {
+        const mainCanvas = this.isCanvasSweeping ? this.bgCanvas : this.mainCanvas;
+        await this.historyService.tearNextDay(this.currentDate, mainCanvas.width, mainCanvas.height);
+
+        this.isCanvasSweeping = !this.isCanvasSweeping;
+        this.currentDate = this.currentDate.add(1, 'day');
+        this.setDate(this.currentDate);
+        this.isTearing = false;
+    }
+
     touchStart(event) {
         // console.log('touch start', arguments);
         this.touchStartX = event.touches[0].clientX;
@@ -167,25 +148,34 @@ export class HomePage {
 
     touchMove(event) {
         // console.log('touch move', arguments);
-        event.preventDefault();
+        // event.preventDefault();
+
+        if (this.isTearing) {
+            return
+        }
+
+        const y = event.changedTouches[0].clientY;
+
+        if (!this.isTearing && y - this.touchStartY > 20 && this.canTear() && !this.needUpgrade()) {
+            this.nextPage();
+        }
     }
 
     touchEnd(event) {
         // console.log('touch end', arguments);
-        const x = event.changedTouches[0].clientX;
-        const y = event.changedTouches[0].clientY;
 
         if (this.isTearing) {
             return;
         }
 
+        const y = event.changedTouches[0].clientY;
+
         // TODO: not tested yet
         if (y - this.touchStartY > 20) {
-            if (this.canTear()) {
-                this.nextPage();
-            }
-            else {
+            if (!this.canTear()) {
                 this._toast('还不能撕哦~ 等日历上的日子过了吧！');
+            } else if (this.needUpgrade()) {
+                this._toast('后面的日历页需要更新一下 App 哦！');
             }
         }
         else {

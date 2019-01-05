@@ -13,15 +13,18 @@
 
 <ion-content>
   <canvas #mainCanvas id="mainCanvas" class="full-canvas"
-    [ngStyle]="{top: !isCanvasSweeping ? mainCanvasTop + '%' : 0}"
+    [ngClass]="{'tear-off': !isCanvasSweeping ? isTearing : false}"
     (touchstart)="touchStart($event)"
     (touchmove)="touchMove($event)"
-    (touchend)="touchEnd($event)">
+    (touchend)="touchEnd($event)"
+    (animationend)="afterTearOff()">
   </canvas>
   <canvas #bgCanvas id="bgCanvas" class="full-canvas"
-    [ngStyle]="{top: isCanvasSweeping ? mainCanvasTop + '%' : 0, 'z-index': isCanvasSweeping ? 10 : -10}"
+    [ngClass]="{'tear-off': isCanvasSweeping ? isTearing : false}"
+    [ngStyle]="{'z-index': isCanvasSweeping ? 10 : -10}"
     (touchstart)="touchStart($event)"
     (touchmove)="touchMove($event)"
-    (touchend)="touchEnd($event)">
+    (touchend)="touchEnd($event)"
+    (animationend)="afterTearOff()">
   </canvas>
 </ion-content>
