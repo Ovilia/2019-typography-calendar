@@ -21,7 +21,6 @@ import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
-import { DayInfoService } from '../services/dayInfo';
 import { AudioService } from '../services/audio';
 
 @NgModule({
@@ -54,7 +53,6 @@ import { AudioService } from '../services/audio';
     NativeStorage,
     HistoryService,
     StorageService,
-    DayInfoService,
     Base64ToGallery,
     Firebase,
     NativeAudio,

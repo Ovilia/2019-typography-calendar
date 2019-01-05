@@ -1,4 +1,9 @@
-export const IS_DEBUG = true;
+export const IS_DEBUG = (() => {
+    return location.port === '8100';
+})();
+if (IS_DEBUG) {
+    console.log('THIS IS IN DEBUG MODE.');
+}
 
 export const VERSION = '1.0.5';
 

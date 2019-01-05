@@ -4,11 +4,10 @@ import * as moment from 'moment';
 import { StorageService } from './storage';
 import { STORE_KEY } from '../utils/constants';
 import CalendarCanvas from '../entities/calendarCanvas';
-import { DayInfoService } from './dayInfo';
 
 @Injectable()
 export class HistoryService {
-    constructor(public storage: StorageService, public dayInfoService: DayInfoService) {
+    constructor(public storage: StorageService) {
 
     }
 
@@ -48,7 +47,7 @@ export class HistoryService {
         canvas.width = width;
         canvas.height = height;
 
-        const calendar = new CalendarCanvas(currentDate, canvas, this.dayInfoService);
+        const calendar = new CalendarCanvas(currentDate, canvas);
 
         const base64 = await calendar.getRenderedBase64();
         const historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];

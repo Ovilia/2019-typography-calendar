@@ -8,10 +8,10 @@ import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
-import { STORE_KEY, IS_DEBUG, NOTIIFICATION_ID_DAILY } from '../../utils/constants';
+import { IS_DEBUG, NOTIIFICATION_ID_DAILY } from '../../utils/constants';
 import { getDate } from '../../utils/time';
-import { DayInfoService } from '../../services/dayInfo';
 import { AudioService } from '../../services/audio';
+import { getExportBase64 } from '../../utils/share';
 
 @Component({
     selector: 'page-home',
@@ -33,7 +33,6 @@ export class HomePage {
     protected isCanvasSweeping: boolean;
     protected isTearing: boolean;
 
-    private touchStartX: number;
     private touchStartY: number;
     private toast: Toast;
 
@@ -42,8 +41,7 @@ export class HomePage {
         public toastCtrl: ToastController,
         public localNotifications: LocalNotifications,
         public historyService: HistoryService,
-        public dateInfoService: DayInfoService,
-        // public base64ToGallery: Base64ToGallery,
+        public base64ToGallery: Base64ToGallery,
         public audioService: AudioService,
         public storage: StorageService
     ) {
@@ -71,9 +69,8 @@ export class HomePage {
         }
         this.currentDate = moment.min(getDate(tearDate || '2018-12-31'), getDate('2019-12-31'));
 
-        this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
-        this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
-            this.bgCanvas, this.dateInfoService);
+        this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas);
+        this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'), this.bgCanvas);
         this.themeColor = tearDate ? getThemeColor(this.currentDate) : mainColor;
     }
 
@@ -105,19 +102,18 @@ export class HomePage {
         });
     }
 
-    // TODO: not tested
-    // async exportCanvas() {
-    //     const base64 = await this.mainCalendar.getRenderedBase64();
-    //     this.base64ToGallery.base64ToGallery(base64).then(
-    //         () => {
-    //             this._toast('已经保存好啦，快把我从相册分享出去嘛！');
-    //         },
-    //         err => {
-    //             this._toast('啊呀，讨厌！为什么保存失败了呢……');
-    //             console.error(err);
-    //         }
-    //     );
-    // }
+    async exportCanvas() {
+        const base64 = await getExportBase64(this.currentDate);
+        this.base64ToGallery.base64ToGallery(base64).then(
+            () => {
+                this._toast('已经保存好啦，快把我从相册分享出去嘛！');
+            },
+            err => {
+                this._toast('啊呀，讨厌！为什么保存失败了呢……');
+                console.error(err);
+            }
+        );
+    }
 
     nextPage() {
         if (this.isFrontPage) {
@@ -144,7 +140,7 @@ export class HomePage {
     }
 
     needUpgrade() {
-        return this.currentDate.isSameOrAfter(getDate('2019-01-31'))
+        return this.currentDate.isSameOrAfter(getDate('2019-01-31'));
     }
 
     async afterTearOff() {
@@ -158,15 +154,10 @@ export class HomePage {
     }
 
     touchStart(event) {
-        // console.log('touch start', arguments);
-        this.touchStartX = event.touches[0].clientX;
         this.touchStartY = event.touches[0].clientY;
     }
 
     touchMove(event) {
-        // console.log('touch move', arguments);
-        // event.preventDefault();
-
         if (this.isTearing) {
             return
         }
@@ -179,15 +170,12 @@ export class HomePage {
     }
 
     touchEnd(event) {
-        // console.log('touch end', arguments);
-
         if (this.isTearing) {
             return;
         }
 
         const y = event.changedTouches[0].clientY;
 
-        // TODO: not tested yet
         if (y - this.touchStartY > 20) {
             if (!this.canTear()) {
                 this._toast('还不能撕哦~ 等日历上的日子过了吧！');
