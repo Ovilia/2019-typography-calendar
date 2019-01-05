@@ -8,7 +8,7 @@ export class AudioService {
     }
 
     init() {
-        this.nativeAudio.preloadComplex('tear', 'assets/audio/tear.mp3', 0.6, 2, 0)
+        this.nativeAudio.preloadSimple('tear', 'assets/audio/tear.mp3')
             .then(() => {
             }, err => {
                 console.log(err);

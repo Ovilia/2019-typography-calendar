@@ -4,5 +4,9 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "https://umeecorn.com/calendar2019"
+  }]
 }

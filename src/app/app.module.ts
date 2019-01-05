@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
+import { Market } from '@ionic-native/market';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,6 +35,7 @@ import { AudioService } from '../services/audio';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,7 +57,9 @@ import { AudioService } from '../services/audio';
     Base64ToGallery,
     Firebase,
     NativeAudio,
-    AudioService
+    AudioService,
+    Market,
+    InAppBrowser
   ]
 })
 export class AppModule {}

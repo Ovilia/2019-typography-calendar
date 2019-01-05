@@ -42,7 +42,7 @@ ion-toast {
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #FFE06E,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -62,6 +62,7 @@ $list-border-color: #eee;
 
 $item-ios-body-text-font-size: 1.5rem;
 $toast-ios-background: rgba(0, 0, 0, 0.7);
+$alert-ios-button-text-color: #555;
 
 .header-ios {
   &#home-header {
