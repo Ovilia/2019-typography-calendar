@@ -200,11 +200,15 @@ export class HomePage {
         }
     }
 
+    public menuClick() {
+        this._toastDismiss();
+    }
+
     protected _toast(text: string, position?: string) {
         this._toastDismiss();
         this.toast = this.toastCtrl.create({
             message: text,
-            duration: 5000,
+            duration: 3000,
             position: position || 'middle'
         });
         this.toast.present();
@@ -212,7 +216,7 @@ export class HomePage {
 
     protected _toastDismiss() {
         if (this.toast) {
-            this.toast.dismissAll();
+            this.toast.dismiss();
         }
     }
 
