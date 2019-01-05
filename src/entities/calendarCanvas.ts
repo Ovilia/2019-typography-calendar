@@ -65,56 +65,58 @@ export default class CalendarCanvas {
     protected async _renderInnerPage() {
         const dateMoment = this.dateMoment;
         const padding = 20;
+        const paddingTop = 30;
         const dayOfYear = dateMoment.dayOfYear();
         const date = dateMoment.format('M.D');
 
         this.ctx.fillStyle = this._getBackground();
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        await this._renderImage(`assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, padding);
-        await this._renderImage(`assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 48);
-        await this._renderImage(`assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 80);
-        await this._renderImage(`assets/imgs/fonts/fontName/dark/${date}.png`, null, 275, padding);
+        await this._renderImage(`assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, paddingTop);
+        await this._renderImage(`assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 53);
+        await this._renderImage(`assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 86);
+        await this._renderFont(date, padding, paddingTop);
         await this._renderStory(date, padding);
-        await this._renderImage(
-            `assets/imgs/fonts/date/dark/${date}.png`,
-            null,
-            null,
-            null,
-            null,
-            img => {
-                const targetWidth = 258;
-                const targetHeight = 225;
-                const result = {
-                    width: 0,
-                    height: 0,
-                    right: null,
-                    top: null
-                };
+    }
 
-                if (img.width / img.height > targetWidth / targetHeight) {
-                    result.width = this._px(targetWidth);
-                    result.height = result.width / img.width * img.height;
-                }
-                else {
-                    result.height = this._px(targetHeight);
-                    result.width = result.height / img.height * img.width;
-                }
+    protected async _renderFont(date: string, padding: number, paddingTop: number) {
+        const datePath = `assets/imgs/fonts/date/dark/${date}.png`;
+        const dateImg = await this._getImage(datePath);
 
-                if (result.width < this._px(180)) {
-                    result.right = this._px(padding) / 2;
-                }
-                else if (result.width > this._px(260)) {
-                    result.right = -this._px(padding);
-                }
-                else {
-                    result.right = -this._px(padding) / 2;
-                }
+        const getDatePosition = img => {
+            const targetWidth = 258;
+            const targetHeight = 225;
+            const result = {
+                width: 0,
+                height: 0,
+                right: null
+            };
 
-                result.top = this._px(130) - result.height / DPR;
-                return result;
+            if (img.width / img.height > targetWidth / targetHeight) {
+                result.width = targetWidth;
+                result.height = result.width / img.width * img.height;
             }
-        );
+            else {
+                result.height = targetHeight;
+                result.width = result.height / img.height * img.width;
+            }
+
+            if (result.width < 180) {
+                result.right = padding;
+            }
+            else if (result.width > 260) {
+                result.right = -padding * 2;
+            }
+            else {
+                result.right = -padding;
+            }
+            return result;
+        };
+        const datePos = getDatePosition(dateImg);
+        await this._renderImage(datePath, null, paddingTop, datePos.right, null, datePos.width, datePos.height);
+
+        const nameTop = datePos.height + paddingTop * 1.5;
+        await this._renderImage(`assets/imgs/fonts/fontName/dark/${date}.png`, null, nameTop, padding);
     }
 
     protected async _renderStory(date: string, padding: number) {
@@ -139,34 +141,22 @@ export default class CalendarCanvas {
         top?: number,
         right?: number,
         bottom?: number,
-        targetSizeFormatter?: Function
+        width?: number,
+        height?: number
     ) {
         const img = await this._getImage(path);
-        let width;
-        let height;
-        if (targetSizeFormatter) {
-            const size = targetSizeFormatter(img);
-            if (size) {
-                width = size.width;
-                height = size.height;
-                right = size.right == null ? right : size.right;
-                top = size.top == null ? top : size.top;
-            }
-        }
-        else {
-            width = this._px(img.width / DPR);
-            height = this._px(img.height / DPR);
-        }
+        let w = width == null ? this._px(img.width / DPR) : this._px(width);
+        let h = height == null ? this._px(img.height / DPR) : this._px(height);
 
         let x = this._px(left);
         let y = this._px(top);
         if (left == null) {
-            x = this.canvas.width - width - this._px(right);
+            x = this.canvas.width - w - this._px(right);
         }
         if (top == null) {
-            y = this.canvas.height - height - this._px(bottom);
+            y = this.canvas.height - h - this._px(bottom);
         }
-        this.ctx.drawImage(img, x, y, width, height);
+        this.ctx.drawImage(img, x, y, w, h);
     }
 
     protected async _getImage(path) {
