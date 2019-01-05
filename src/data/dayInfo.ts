@@ -12,7 +12,7 @@ export default `
 1.7 | Frontage Condenced Outline | FrontageCondensed-Outline.otf | 新的一周，色彩由你掌控。 | 如果这是本实体日历，我会在空心字内涂色，你呢？ |
 1.8 | OCR B | OCR B Std | 两匹马屁股之间的距离，决定了现代铁路的轨距。 | 最早为提高机器识别准确度而设计的 OCR B 至今仍被用于商品条形码与信用卡。 |
 1.9 | Carrara Light | Carrara-Light.otf | 盯着样例许久，苦于为这款字体总结一个特色。突然意识到，有时候字体少几分特色，是不是更让内容多几分出色？ |  |
-1.10 | P22 Underground | P22 Underground | 「Mind the Gap!」#1863 年 1 月 10 日，世界上第一条地铁在伦敦开始运营。 | 这是一款得到了官方授权的仿制字体，与伦敦地铁实际使用的 Johnston 稍有差异。 |
+1.10 | P22 Underground | P22 Underground | 「Mind the Gap」#1863 年 1 月 10 日，世界上第一条地铁在伦敦开始运营。 | 这是一款得到了官方授权的仿制字体，与伦敦地铁实际使用的 Johnston 稍有差异。 |
 1.11 | Merienda | Merienda-Regular.ttf | Merienda 在西语中是下午茶点心的意思，作者希望这个字体能让大家感受到下午茶时间的愉悦——反正我是饿了。 |  |
 1.12 | Eurostile | Eurostile | 如果说高考数学是很多人（曾经）的噩梦，那 Eurostile 就是许多人在这个梦中的指路明灯。 | 卡西欧计算器的商标使用的就是 Eurostile。 |
 1.13 | Monoton | Monoton-Regular.ttf | 重要的事情要说三遍！太长了？那就在同一个字母里多写几遍吧！ | 想起了学生时代，被老师罚写字的时候，用几支笔一起抄写的经历…… |
