@@ -28,8 +28,13 @@
             width: 100%;
         }
 
-        #android-img {
+        #download-img {
             text-align: center;
+        }
+
+        #download-img img {
+            width: 600px;
+            max-width: 100%;
         }
 
         .desc {
@@ -42,19 +47,25 @@
         a {
             text-decoration: none;
             color: #000;
-            background-color: #A8F0D4;
+            background-color: #fff;
             display: inline-block;
-            padding: 5px 3px;
+            padding: 2px 8px;
+            margin: 0 4px;
+            border-radius: 4px;
+            border-bottom: 2px solid #333;
         }
     </style>
 </head>
 <body>
     <img class="demo-full-img" src="img/demo-full.png" alt="">
     <p class="desc">
-        iOS 版本正在 App Store 审核中，安卓版本可以扫描二维码下载，或者<a href="https://zwl-1256209664.cos.ap-shanghai.myqcloud.com/2019-calendar/2019-typography-calendar-v1.0.apk">点此下载 apk</a>：
+        iOS 搜索「2019 字体日历」或<a href="itms-apps://itunes.apple.com/app/id1446449483">点此前往 App Store下载</a>
     </p>
-    <div id="android-img">
-        <img src="img/android.png" alt="">
+    <p class="desc">
+        安卓版本<a href="https://zwl-1256209664.cos.ap-shanghai.myqcloud.com/2019-calendar/2019-typography-calendar-v1.0.apk">点此下载 apk</a>
+    </p>
+    <div id="download-img">
+        <img src="img/download.png" alt="">
     </div>
     <p class="desc">
         项目已开源，欢迎到 <a href="https://github.com/Ovilia/2019-typography-calendar">GitHub</a> 给个小星星。
@@ -67,5 +78,15 @@
         <img class="demo-img" src="img/demo-3.png">
         <img class="demo-img" src="img/demo-4.png">
     </div> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105266643-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105266643-2');
+    </script>
 </body>
 </html>
