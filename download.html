@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105266643-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105266643-2');
+
+    const system = getMobileOperatingSystem();
+    if (system === 'iOS') {
+        gtag('event', 'download', 'ios');
+        location.href = 'itms-apps://itunes.apple.com/app/id1446449483';
+    }
+    else if (system === 'Android') {
+        gtag('event', 'download', 'android');
+        location.href = 'https://zwl-1256209664.cos.ap-shanghai.myqcloud.com/2019-calendar/2019-typography-calendar-v1.0.apk';
+    }
+    else {
+        gtag('event', 'download', 'na');
+        location.href = './index.html';
+    }
+
+    function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone must come first because its UA also contains 'Android'
+        if (/windows phone/i.test(userAgent)) {
+            return 'Windows Phone';
+        }
+
+        if (/android/i.test(userAgent)) {
+            return 'Android';
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return 'iOS';
+        }
+
+        return 'unknown';
+    }
+    </script>
+</body>
+</html>
