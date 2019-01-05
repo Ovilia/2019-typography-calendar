@@ -1,13 +1,14 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, ToastController, Toast } from 'ionic-angular';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
-import { STORE_KEY, IS_DEBUG } from '../../utils/constants';
+import { STORE_KEY, IS_DEBUG, NOTIIFICATION_ID_DAILY } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { DayInfoService } from '../../services/dayInfo';
 import { AudioService } from '../../services/audio';
@@ -39,6 +40,7 @@ export class HomePage {
     constructor(
         public navCtrl: NavController,
         public toastCtrl: ToastController,
+        public localNotifications: LocalNotifications,
         public historyService: HistoryService,
         public dateInfoService: DayInfoService,
         // public base64ToGallery: Base64ToGallery,
@@ -62,19 +64,17 @@ export class HomePage {
         this.mainCanvas = this.mainCanvasEl.nativeElement;
         this.bgCanvas = this.bgCanvasEl.nativeElement;
 
-        this.historyService.getTearDate()
-            .then(date => {
-                if (date) {
-                    this.isFrontPage = false;
-                    date = moment(date).add(1, 'day') as any;
-                }
-                this.currentDate = moment.min(getDate(date || '2018-12-31'), getDate('2019-12-31'));
+        let tearDate = await this.historyService.getTearDate();
+        if (tearDate) {
+            this.isFrontPage = false;
+            tearDate = moment(tearDate).add(1, 'day') as any;
+        }
+        this.currentDate = moment.min(getDate(tearDate || '2018-12-31'), getDate('2019-12-31'));
 
-                this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
-                this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
-                    this.bgCanvas, this.dateInfoService);
-                this.themeColor = date ? getThemeColor(this.currentDate) : mainColor;
-            });
+        this.mainCalendar = new CalendarCanvas(this.currentDate, this.mainCanvas, this.dateInfoService);
+        this.bgCalendar = new CalendarCanvas(this.currentDate.clone().add(1, 'day'),
+            this.bgCanvas, this.dateInfoService);
+        this.themeColor = tearDate ? getThemeColor(this.currentDate) : mainColor;
     }
 
     ionViewWillEnter() {
@@ -89,6 +89,19 @@ export class HomePage {
 
         document.addEventListener('deviceready', () => {
             this.init();
+        });
+    }
+
+    setNotification() {
+        this.localNotifications.schedule({
+            id: NOTIIFICATION_ID_DAILY,
+            text: '快来撕今天的日历呀！',
+            trigger: {
+                every: {
+                    hour: 10,
+                    minute: 0
+                }
+            }
         });
     }
 
@@ -107,6 +120,10 @@ export class HomePage {
     // }
 
     nextPage() {
+        if (this.isFrontPage) {
+            this.setNotification();
+        }
+
         this.isTearing = true;
         this.isFrontPage = false;
         this.audioService.play('tear');

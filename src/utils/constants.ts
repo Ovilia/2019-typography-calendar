@@ -12,3 +12,5 @@ export const STORE_KEY = {
     FIRST_OPEN: 'firstOpen',
     FIRST_TEAR: 'firstTear'
 };
+
+export const NOTIIFICATION_ID_DAILY = 1;

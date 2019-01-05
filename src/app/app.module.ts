@@ -11,6 +11,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { Firebase } from '@ionic-native/firebase';
 import { NativeAudio } from '@ionic-native/native-audio';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -59,7 +60,8 @@ import { AudioService } from '../services/audio';
     NativeAudio,
     AudioService,
     Market,
-    InAppBrowser
+    InAppBrowser,
+    LocalNotifications
   ]
 })
 export class AppModule {}
