@@ -52,7 +52,7 @@ export class HistoryService {
         const base64 = await calendar.getRenderedBase64();
         const historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];
         const newPage = {
-            date: Date,
+            date: currentDate.toDate(),
             image: base64
         };
         historyPages.push(newPage);
