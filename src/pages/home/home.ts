@@ -8,7 +8,7 @@ import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
-import { IS_DEBUG, NOTIIFICATION_ID_DAILY } from '../../utils/constants';
+import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
