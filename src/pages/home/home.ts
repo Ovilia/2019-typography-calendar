@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController, ToastController, Toast } from 'ionic-angular';
+import { NavController, ToastController, Toast, Platform } from 'ionic-angular';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import * as moment from 'moment';
@@ -32,6 +32,7 @@ export class HomePage {
     protected currentDate: moment.Moment;
     protected isCanvasSweeping: boolean;
     protected isTearing: boolean;
+    protected isAndroid: boolean;
 
     private touchStartY: number;
     private toast: Toast;
@@ -43,7 +44,8 @@ export class HomePage {
         public historyService: HistoryService,
         public base64ToGallery: Base64ToGallery,
         public audioService: AudioService,
-        public storage: StorageService
+        public storage: StorageService,
+        public platfrom: Platform
     ) {
     }
 
@@ -58,6 +60,9 @@ export class HomePage {
         if (isFirst) {
             this._toast('试试下拉撕日历吧！', 'top');
         }
+
+        this.isAndroid = this.platfrom.is('android');
+        console.log(this.platfrom.is('android'))
 
         this.mainCanvas = this.mainCanvasEl.nativeElement;
         this.bgCanvas = this.bgCanvasEl.nativeElement;

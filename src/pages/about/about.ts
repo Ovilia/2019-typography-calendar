@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController, AlertController } from 'ionic-angular';
+import { NavController, NavParams, ViewController, AlertController, Platform } from 'ionic-angular';
 // import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -14,12 +14,13 @@ import { VERSION } from '../../utils/constants';
 
 @Component({
     selector: 'page-about',
-    templateUrl: 'about.html',
+    templateUrl: 'about.html'
 })
 export class AboutPage {
 
     public version: string
     public isLatestVersion: boolean;
+    public isAndroid: boolean;
 
     constructor(
         public viewCtrl: ViewController,
@@ -27,12 +28,17 @@ export class AboutPage {
         public navParams: NavParams,
         // public http: HttpClient,
         public browser: InAppBrowser,
-        public alertCtrl: AlertController
+        public alertCtrl: AlertController,
+        public platform: Platform
     ) {
         this.version = VERSION;
         this.isLatestVersion = null;
 
         // this.checkVersion();
+
+        if (this.platform.is('android')) {
+            this.isAndroid = true;
+        }
     }
 
     dismiss(): void {
@@ -59,6 +65,10 @@ export class AboutPage {
             ]
         });
         alert.present();
+    }
+
+    goWebsite() {
+        this.browser.create('http://zhangwenli.com/2019-typography-calendar/');
     }
 
     // checkVersion() {

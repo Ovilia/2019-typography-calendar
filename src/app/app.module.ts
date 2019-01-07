@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
-import { Market } from '@ionic-native/market';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -12,6 +10,10 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { Firebase } from '@ionic-native/firebase';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Market } from '@ionic-native/market';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -59,7 +61,9 @@ import { AudioService } from '../services/audio';
     AudioService,
     Market,
     InAppBrowser,
-    LocalNotifications
+    LocalNotifications,
+    AndroidFullScreen,
+    AndroidPermissions
   ]
 })
 export class AppModule {}

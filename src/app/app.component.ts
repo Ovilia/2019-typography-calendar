@@ -10,6 +10,7 @@ import { HistoryPage } from '../pages/history/history';
 import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
 import { AboutPage } from '../pages/about/about';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 
 @Component({
     templateUrl: 'app.html'
@@ -25,7 +26,8 @@ export class MyApp {
         public platform: Platform,
         public statusBar: StatusBar,
         public splashScreen: SplashScreen,
-        public history: HistoryService
+        public history: HistoryService,
+        public androidFullScreen: AndroidFullScreen
     ) {
         this.initializeApp();
         this.setPages();
@@ -34,11 +36,27 @@ export class MyApp {
     initializeApp() {
         moment.locale('zh-cn');
 
+        const enterHome = () => {
+            console.log('enter');
+            this.statusBar.styleDefault();
+            this.splashScreen.hide();
+        };
+
         this.platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
-            this.statusBar.styleDefault();
-            this.splashScreen.hide();
+            if (this.platform.is('android')) {
+                this.androidFullScreen.isImmersiveModeSupported()
+                    .then(err => {
+                        console.log(err);
+                        return this.androidFullScreen.immersiveMode();
+                    })
+                    .then(enterHome)
+                    .catch(enterHome);
+            }
+            else {
+                enterHome();
+            }
         });
     }
 
