@@ -1,14 +1,8 @@
 # 2019 字体日历 App
 
-![Logo](./design/logo.png)
-
-每天邂逅不一样的字体故事
+![Website](./design/website.png)
 
 ![Design](./design/all.png)
-
-iOS App Store 搜索「2019字体日历」下载，安卓已发布，扫描下面的二维码即可下载。
-
-![Android](./design/android.png)
 
 ## TODO
 
