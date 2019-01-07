@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105266643-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-105266643-2');
+
+    const url = 'https://umeecorn.com/calendar2019/dist/2019-typography-calendar-v1.1.1.apk';
+    location.href = url;
+
+    window.download = function () {
+        gtag('event', 'download-apk', {
+            'event_label': 'manual'
+        });
+        setTimeout(() => {
+            location.href = url;
+        }, 100);
+    };
+    </script>
+
+    如果没有自动开始下载，请<a href="javascript:;" onclick="window.download()">点击这里</a>开始下载安卓版。
+
+</body>
+</html>

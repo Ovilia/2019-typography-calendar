@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>2019 字体日历 - 下载</title>
+    <style>
+        body, html {
+            margin: 0;
+            background-color: #FFE06E;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            height: 100%;
+            margin: 20px auto;
+        }
+
+        .download-img {
+            width: 500px;
+            max-width: 100%;
+            margin: 10px auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 10px;
+            border-radius: 4px;
+            border-bottom: 2px solid #333;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>2019 字体日历 - 下载</h1>
+        <div>
+            <img class="download-img" src="img/download.png" alt="">
+        </div>
+        <div>
+            <a href="https://itunes.apple.com/cn/app/2019-%E5%AD%97%E4%BD%93%E6%97%A5%E5%8E%86/id1446449483?mt=8?ref=download">下载 iOS 版</a>
+            <a href="./download-android.html?ref=download">下载安卓版</a>
+        </div>
+    </div>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105266643-2"></script>
     <script>
@@ -18,16 +59,30 @@
 
     const system = getMobileOperatingSystem();
     if (system === 'iOS') {
-        gtag('event', 'download', 'ios');
-        location.href = 'itms-apps://itunes.apple.com/app/id1446449483';
+        gtag('event', 'download', {
+            'event_label': 'ios'
+        });
+        setTimeout(() => {
+            location.href = 'itms-apps://itunes.apple.com/app/id1446449483';
+        }, 100);
     }
     else if (system === 'Android') {
-        gtag('event', 'download', 'android');
-        location.href = 'https://zwl-1256209664.cos.ap-shanghai.myqcloud.com/2019-calendar/2019-typography-calendar-v1.0.apk';
+        gtag('event', 'download', {
+            'event_label': 'android'
+        });
+        setTimeout(() => {
+            location.href = './download-android.html';
+        }, 100);
     }
     else {
-        gtag('event', 'download', 'na');
-        location.href = './index.html';
+        gtag('event', 'download', {
+            'event_label': 'na'
+        });
+        if (location.search !== '?nohome') {
+            setTimeout(() => {
+                location.href = './index.html';
+            }, 100);
+        }
     }
 
     function getMobileOperatingSystem() {
@@ -43,7 +98,7 @@
         }
 
         // iOS detection from: http://stackoverflow.com/a/9039885/177710
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        if (/iPhone|iPod/.test(userAgent) && !window.MSStream) {
             return 'iOS';
         }
 

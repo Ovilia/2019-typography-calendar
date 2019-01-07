@@ -6,42 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2019 字体日历</title>
     <style>
-        body {
+        body, html {
             margin: 0;
             background-color: #FFE06E;
         }
 
-        #demo-imgs {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            text-align: center;
+        .container {
+            max-width: 1000px;
+            height: 100%;
+            margin: 0 auto;
         }
 
-        .demo-img {
-            display: inline-block;
-            width: 16%;
-            padding: 20px;
-        }
-
-        .demo-full-img {
+        table {
             width: 100%;
+            padding: 20px 0;
+        }
+
+        .mobile-img {
+            max-width: 400px;
+            max-height: 100%;
         }
 
         #download-img {
-            text-align: center;
-        }
-
-        #download-img img {
-            width: 600px;
+            width: 300px;
             max-width: 100%;
         }
 
-        .desc {
-            margin: 10px;
-            font-size: 14px;
-            text-align: center;
-            color: #555;
+        #demo-img, .demo-img {
+            width: 100%;
+            margin: 20px 0;
         }
 
         a {
@@ -50,14 +43,92 @@
             background-color: #fff;
             display: inline-block;
             padding: 2px 8px;
-            margin: 0 4px;
+            margin: 5px 4px;
             border-radius: 4px;
             border-bottom: 2px solid #333;
+        }
+
+        .btn-large {
+            font-size: 1.2rem;
+            padding: 8px 16px;
+            margin: 10px 8px;
+        }
+
+        #download-mobile {
+            text-align: center;
+        }
+
+        #detail {
+            margin: 20px 0 100px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .pc {
+                display: none;
+            }
+
+            table {
+                text-align: center;
+            }
+
+            .mobile-img {
+                width: 90%;
+                position: relative;
+                left: -8%;
+            }
+
+            .mobile {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-    <img class="demo-full-img" src="img/demo-full.png" alt="">
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <img class="mobile-img" src="img/title.png" />
+                </td>
+                <td id="download">
+                    <div class="pc">
+                        <img id="download-img" src="img/index-download.png" />
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <img id="demo-img" class="pc" src="img/demo-full.png" alt="Demo">
+
+        <div id="demo-imgs" class="mobile">
+            <img class="demo-img" src="img/demo-1.png">
+            <img class="demo-img" src="img/demo-2.png">
+            <img class="demo-img" src="img/demo-3.png">
+            <img class="demo-img" src="img/demo-4.png">
+            <div class="text-center">
+                <a class="btn-large" href="./download.html?nohome">点此下载</a>
+            </div>
+        </div>
+
+        <div id="detail">
+            <p class="text-center">
+                <a href="http://zhangwenli.com" target="_blank">作者个人主页</a>
+                <a href="http://weibo.com/plainjane" target="_blank">微博 @羡辙</a>
+                <a href="https://www.zhihu.com/people/ovilia/activities" target="_blank">知乎 @羡辙</a>
+                <a href="https://github.com/Ovilia/2019-typography-calendar" target="_blank">项目 GitHub</a>
+                <a href="https://dribbble.com/wenli" target="_blank">Dribbble @Ovilia</a>
+            </p>
+        </div>
+    </div>
+    <!-- <img class="demo-full-img" src="img/demo-full.png" alt="">
     <p class="desc">
         iOS 搜索「2019 字体日历」或<a href="itms-apps://itunes.apple.com/app/id1446449483">点此前往 App Store下载</a>
     </p>
@@ -69,7 +140,7 @@
     </div>
     <p class="desc">
         项目已开源，欢迎到 <a href="https://github.com/Ovilia/2019-typography-calendar">GitHub</a> 给个小星星。
-    </p>
+    </p-->
 
     <!-- <div id="demo-imgs">
         <img class="demo-img" src="img/demo-0.png">
