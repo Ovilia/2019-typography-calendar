@@ -1,5 +1,5 @@
 import * as moment from 'moment';
-import {DPR, DESIGN_WIDTH} from '../utils/constants';
+import {DPR, DESIGN_WIDTH, IMAGE_DPR} from '../utils/constants';
 import { getThemeColor, mainColor } from '../utils/colors';
 import { getDate, getDayInfo } from '../utils/time';
 import { getImage } from '../utils/image';
@@ -132,7 +132,7 @@ export default class CalendarCanvas {
             await this._renderImage(notePath, padding, null, null, padding);
 
             const noteImg = await getImage(notePath);
-            const storyBottom = padding + noteImg.height / DPR + 10;
+            const storyBottom = padding + noteImg.height / IMAGE_DPR + 10;
             await this._renderImage(storyPath, padding, null, null, storyBottom);
         }
         else {
@@ -150,8 +150,8 @@ export default class CalendarCanvas {
         height?: number
     ) {
         const img = await getImage(path);
-        let w = width == null ? this._px(img.width / DPR) : this._px(width);
-        let h = height == null ? this._px(img.height / DPR) : this._px(height);
+        let w = width == null ? this._px(img.width / IMAGE_DPR) : this._px(width);
+        let h = height == null ? this._px(img.height / IMAGE_DPR) : this._px(height);
 
         let x = this._px(left);
         let y = this._px(top);

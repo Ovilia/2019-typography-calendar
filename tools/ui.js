@@ -19,24 +19,23 @@ for (let theme of themes) {
         shot(lunarText, `../src/assets/imgs/fonts/ui/${theme}/lunar/${i}.png`, 14, darkSecondaryColor);
     }
 
-    // for (let i = 0; i < 7; ++i) {
-    //     const day = moment().day(i);
-    //     const name = day.format('dddd');
-    //     const output = `../src/assets/imgs/fonts/ui/${theme}/dayOfWeek/${i}.png`;
-    //     shot(name, output, 18, color);
-    // }
+    for (let i = 0; i < 7; ++i) {
+        const day = moment().day(i);
+        const name = day.format('dddd');
+        const output = `../src/assets/imgs/fonts/ui/${theme}/dayOfWeek/${i}.png`;
+        shot(name, output, 18, color);
+    }
 
-    // for (let i = 0; i < 1; ++i) {
-    //     const day = moment().month(i);
-    //     const month = day.format('MMMM');
-    //     console.log(day, month);
-    //     const output = `../src/assets/imgs/fonts/ui/${theme}/month/${i}.png`;
-    //     shot(month, output, 30, color);
-    // }
+    for (let i = 0; i < 1; ++i) {
+        const day = moment().month(i);
+        const month = day.format('MMMM');
+        const output = `../src/assets/imgs/fonts/ui/${theme}/month/${i}.png`;
+        shot(month, output, 30, color);
+    }
 }
 
 
 function shot(text, output, fontSize, color) {
     shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ${output} --text "${text}" -c "${color}" `
-        + `--font-size="${fontSize}px" --dpr=2`);
+        + `--font-size="${fontSize}px" --dpr=3`);
 }

@@ -8,6 +8,7 @@ if (IS_DEBUG) {
 export const VERSION = '1.1.1';
 
 export const DPR = 2;
+export const IMAGE_DPR = 3;
 
 export const DESIGN_WIDTH = 375;
 
