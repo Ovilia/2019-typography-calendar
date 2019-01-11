@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" [swipeEnabled]="false">
   <ion-header class="menu-header">
     <ion-toolbar>
       <ion-title><img class="menu-title-h1" [src]="'assets/imgs/fonts/ui/menu-title.png'"></ion-title>
@@ -7,7 +7,7 @@
 
   <ion-content>
     <ion-list class="menu-list">
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button menuClose persistent="false" ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <img class="menu-title" [src]="'assets/imgs/fonts/ui/' + p.img">
       </button>
     </ion-list>

@@ -72,4 +72,12 @@ export class HistoryService {
     async isFirstTear(): Promise<boolean> {
         return !await this.storage.get(STORE_KEY.FIRST_TEAR);
     }
+
+    async hasShakedInHistory(): Promise<boolean> {
+        return !!(await this.storage.get(STORE_KEY.FIRST_HISTORY_SHAKE));
+    }
+
+    async setShakedInHistory(): Promise<void> {
+        await this.storage.set(STORE_KEY.FIRST_HISTORY_SHAKE, true);
+    }
 }

@@ -1,10 +1,14 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ViewController, ToastController, Platform } from 'ionic-angular';
+import { Shake } from '@ionic-native/shake';
 import * as zrender from 'zrender';
 
 import { StorageService } from '../../services/storage';
+import { HistoryService } from '../../services/history';
 import { LogService } from '../../services/log';
-import { STORE_KEY, DPR } from '../../utils/constants';
+import { STORE_KEY, DPR, IS_DEBUG } from '../../utils/constants';
+import { TapticEngine } from '@ionic-native/taptic-engine';
+import { Subscription } from 'rxjs/Subscription';
 
 const PAGE_NAME = 'history';
 
@@ -23,21 +27,33 @@ export class HistoryPage {
     public historyPages: any[];
 
     protected height: number;
-    protected isInteracted: boolean;
+    protected imgRenderWidth: number;
+    protected imgRenderHeight: number;
+    protected isTouchMoved: boolean;
+    protected shakedTimes: number;
+    protected shakeWatch: Subscription;
 
     constructor(
         public navCtrl: NavController,
         public viewCtrl: ViewController,
+        public toastCtrl: ToastController,
         public navParams: NavParams,
         public storage: StorageService,
-        public logService: LogService
+        public historyService: HistoryService,
+        public logService: LogService,
+        public platform: Platform,
+        public taptic: TapticEngine,
+        public shake: Shake
     ) {
         this.isEmpty = true;
         this.historyPages = [];
-        this.isInteracted = false;
+        this.isTouchMoved = false;
+        this.shakedTimes = 0;
+        this.imgRenderWidth = 0;
+        this.imgRenderHeight = 0;
     }
 
-    ionViewDidLoad() {
+    async ionViewDidLoad() {
         this.logService.logPageView(PAGE_NAME);
 
         this.canvas = this.historyCanvasEl.nativeElement;
@@ -48,10 +64,15 @@ export class HistoryPage {
 
         this.zr = zrender.init(this.canvas);
 
-        this._init();
+        await this._init();
+        await this._initShake();
     }
 
     dismiss(): void {
+        if (this.shakeWatch) {
+            this.shakeWatch.unsubscribe();
+            this.shakeWatch = null;
+        }
         this.viewCtrl.dismiss();
     }
 
@@ -85,6 +106,9 @@ export class HistoryPage {
                 img.onload = () => {
                     const targetWidth = img.width * imgScale;
                     const targetHeight = img.height * imgScale;
+                    this.imgRenderWidth = targetWidth;
+                    this.imgRenderHeight = targetHeight;
+
                     const dx = (cw - targetWidth) * Math.random();
                     const dy = (ch - targetHeight) * Math.random();
                     const rotate = (Math.random() * 2 - 1) * 15 / 180 * Math.PI;
@@ -117,9 +141,9 @@ export class HistoryPage {
                             return;
                         }
 
-                        if (!this.isInteracted) {
+                        if (!this.isTouchMoved) {
                             this.logService.logEvent(PAGE_NAME, 'interacted');
-                            this.isInteracted = true;
+                            this.isTouchMoved = true;
                         }
 
                         const oldStyle = touchTarget.style;
@@ -142,6 +166,7 @@ export class HistoryPage {
                     });
 
                     this.zr.add(zrImg);
+                    page.zrImg = zrImg;
                     resolve();
                 };
                 img.onerror = reject;
@@ -150,7 +175,7 @@ export class HistoryPage {
         }
     }
 
-    async _getImageSize(src) {
+    protected async _getImageSize(src) {
         return await new Promise((resolve, reject) => {
             const img = new Image();
             img.onload = () => {
@@ -162,6 +187,64 @@ export class HistoryPage {
             img.onerror = reject;
             img.src = src;
         });
+    }
+
+    protected async _initShake() {
+        if (IS_DEBUG || !this.platform.is('ios')) {
+            // Shake and Taptic supports iOS only
+            return;
+        }
+
+        const isShaked = await this.historyService.hasShakedInHistory();
+        if (!isShaked) {
+            const toast = this.toastCtrl.create({
+                message: '摇一摇可以把日历页排整齐哦！',
+                duration: 3000,
+                position: 'middle'
+            });
+            toast.present();
+        }
+
+        this.shakeWatch = this.shake.startWatch(100).subscribe(() => {
+            this.taptic.impact({
+                style: 'heavy'
+            });
+            this._dealWithOneShake();
+
+            ++this.shakedTimes;
+            if (this.shakedTimes % 5) {
+                const toast = this.toastCtrl.create({
+                    message: '暂时就是这样啦，更多功能敬请期待~',
+                    duration: 3000,
+                    position: 'middle'
+                });
+                toast.present();
+            }
+        });
+    }
+
+    protected _dealWithOneShake() {
+        if (!this.isTouchMoved) {
+            this.historyService.setShakedInHistory();
+            this.isTouchMoved = true;
+        }
+
+        const step = (current, target) => {
+            const ratio = 0.5;
+            let value = current * ratio + target * (1 - ratio);
+            return value;
+        };
+
+        for (let i = 0; i < this.historyPages.length; ++i) {
+            const zrImg = this.historyPages[i].zrImg;
+            if (zrImg) {
+                zrImg.attr('rotation', step(zrImg.rotation, 0));
+                zrImg.attr('style', {
+                    x: step(zrImg.style.x, (this.canvas.width - this.imgRenderWidth) * 0.5),
+                    y: step(zrImg.style.y, (this.canvas.height - this.imgRenderHeight) * 0.5)
+                });
+            }
+        }
     }
 
 }

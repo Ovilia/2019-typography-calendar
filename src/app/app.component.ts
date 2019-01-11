@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -27,7 +27,8 @@ export class MyApp {
         public statusBar: StatusBar,
         public splashScreen: SplashScreen,
         public history: HistoryService,
-        public androidFullScreen: AndroidFullScreen
+        public androidFullScreen: AndroidFullScreen,
+        public menuCtrl: MenuController
     ) {
         this.initializeApp();
         this.setPages();
@@ -37,7 +38,6 @@ export class MyApp {
         moment.locale('zh-cn');
 
         const enterHome = () => {
-            console.log('enter');
             this.statusBar.styleDefault();
             this.splashScreen.hide();
         };
@@ -93,5 +93,6 @@ export class MyApp {
         // Reset the content nav to have just this page
         // we wouldn't want the back button to show in this scenario
         this.nav.push(page.component);
+        this.menuCtrl.close();
     }
 }

@@ -100,6 +100,7 @@
     <plugin name="cordova-plugin-local-notification" spec="0.9.0-beta.2" />
     <plugin name="cordova-plugin-fullscreen" spec="~1.1.0" />
     <plugin name="cordova-plugin-taptic-engine" spec="2.1.0" />
+    <plugin name="cordova-plugin-shake" spec="0.6.0" />
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.1.4" />
 </widget>
