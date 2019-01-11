@@ -22,9 +22,10 @@ import { HistoryPage } from '../pages/history/history';
 import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
+import { AudioService } from '../services/audio';
+import { LogService } from '../services/log';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
-import { AudioService } from '../services/audio';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AudioService } from '../services/audio';
     NativeStorage,
     HistoryService,
     StorageService,
+    LogService,
     Base64ToGallery,
     Firebase,
     NativeAudio,

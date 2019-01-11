@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import licenses from '../../utils/license';
+import { LogService } from '../../services/log';
 
-/**
- * Generated class for the FontPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+const PAGE_NAME = 'license';
 
 @Component({
     selector: 'page-font',
@@ -20,7 +16,12 @@ export class FontPage {
     fonts: string[];
     detail: string[];
 
-    constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
+    constructor(
+        public viewCtrl: ViewController,
+        public navCtrl: NavController,
+        public navParams: NavParams,
+        public logService: LogService
+    ) {
         const licenseId = navParams.get('licenseId');
 
         for (let l of licenses) {
@@ -33,6 +34,10 @@ export class FontPage {
                 break;
             }
         }
+    }
+
+    ionViewWillEnter() {
+        this.logService.logPageView(PAGE_NAME);
     }
 
     dismiss(): void {

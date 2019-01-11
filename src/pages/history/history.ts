@@ -3,14 +3,10 @@ import { NavController, NavParams, ViewController } from 'ionic-angular';
 import * as zrender from 'zrender';
 
 import { StorageService } from '../../services/storage';
+import { LogService } from '../../services/log';
 import { STORE_KEY, DPR } from '../../utils/constants';
 
-/**
- * Generated class for the HistoryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+const PAGE_NAME = 'history';
 
 @Component({
     selector: 'page-history',
@@ -26,19 +22,24 @@ export class HistoryPage {
     public isEmpty: boolean;
     public historyPages: any[];
 
-    private height: number;
+    protected height: number;
+    protected isInteracted: boolean;
 
     constructor(
         public navCtrl: NavController,
         public viewCtrl: ViewController,
         public navParams: NavParams,
-        public storage: StorageService
+        public storage: StorageService,
+        public logService: LogService
     ) {
         this.isEmpty = true;
         this.historyPages = [];
+        this.isInteracted = false;
     }
 
     ionViewDidLoad() {
+        this.logService.logPageView(PAGE_NAME);
+
         this.canvas = this.historyCanvasEl.nativeElement;
         this.height = this.canvas.clientHeight + 20;
         this.canvas.width = this.canvas.clientWidth * DPR;
@@ -111,9 +112,14 @@ export class HistoryPage {
                         lastY = e.offsetY;
                     });
 
-                    zrImg.on('mousemove', function (e) {
+                    zrImg.on('mousemove', e => {
                         if (!touchTarget) {
                             return;
+                        }
+
+                        if (!this.isInteracted) {
+                            this.logService.logEvent(PAGE_NAME, 'interacted');
+                            this.isInteracted = true;
                         }
 
                         const oldStyle = touchTarget.style;
