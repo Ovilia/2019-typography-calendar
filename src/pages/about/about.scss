@@ -1,8 +1,14 @@
 page-about {
-    p {
-        font-size: 1.6rem;
+    .version {
+        color: #777;
+        font-size: 1.4rem;
+    }
+
+    p, .card-md p {
+        font-size: 1.4rem;
         color: #555;
-        line-height: 2.3rem;
+        line-height: 2.3rem !important;
+        margin: 0 0 1rem 0 !important;
     }
 
     em {
@@ -34,6 +40,10 @@ page-about {
         .item-inner {
             padding-right: 0;
         }
+    }
+
+    .item-md {
+        padding-left: 0;
     }
 
     #version-info {
