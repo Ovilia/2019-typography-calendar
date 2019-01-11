@@ -26,8 +26,8 @@
           <ion-item ion-item>
             版本号：{{version}}
             <div id="version-info" item-right>
-              <!-- <span *ngIf="isLatestVersion">已经是最新版了</span>
-              <button *ngIf="!isLatestVersion" class="button-bottom" ion-button (click)="update()">前往更新</button> -->
+              <span *ngIf="isLatestVersion">已经是最新版了</span>
+              <button *ngIf="!isLatestVersion" class="button-bottom" ion-button (click)="update()">前往更新</button>
               <button *ngIf="!isAndroid" class="button-bottom" ion-button (click)="promptLike()">喜欢我吗</button>
               <button *ngIf="isAndroid" class="button-bottom" ion-button (click)="goWebsite()">前往官网</button>
             </div>

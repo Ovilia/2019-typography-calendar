@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController, AlertController, Platform } from 'ionic-angular';
-// import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { VERSION } from '../../utils/constants';
@@ -26,7 +26,7 @@ export class AboutPage {
         public viewCtrl: ViewController,
         public navCtrl: NavController,
         public navParams: NavParams,
-        // public http: HttpClient,
+        public http: HttpClient,
         public browser: InAppBrowser,
         public alertCtrl: AlertController,
         public platform: Platform
@@ -34,7 +34,7 @@ export class AboutPage {
         this.version = VERSION;
         this.isLatestVersion = null;
 
-        // this.checkVersion();
+        this.checkVersion();
 
         if (this.platform.is('android')) {
             this.isAndroid = true;
@@ -71,24 +71,29 @@ export class AboutPage {
         this.browser.create('http://zhangwenli.com/2019-typography-calendar/');
     }
 
-    // checkVersion() {
-    //     let headers =new HttpHeaders({
-    //         'Content-Type': 'application/json',
-    //         'Accept': 'text/javascript'
-    //       });
+    checkVersion() {
+        let headers =new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Accept': 'text/javascript'
+          });
 
-    //     this.http.get('https://umeecorn.com/calendar2019/version.json', {headers})
-    //         .subscribe(data => {
-    //             if (data) {
-    //                 const lastVersion = (data as any).lastRelease.ios.version;
-    //                 this.isLatestVersion = lastVersion === this.version;
-    //             }
-    //         });
-    // }
+        this.http.get('https://umeecorn.com/calendar2019/version.json', {headers})
+            .subscribe(data => {
+                if (data) {
+                    const lastVersion = (data as any).lastRelease.ios.version;
+                    this.isLatestVersion = lastVersion === this.version;
+                }
+            });
+    }
 
-    // update() {
-    //     this.updateIos();
-    // }
+    update() {
+        this.updateIos();
+    }
+
+    updateIos()
+    {
+        this.browser.create('http://zhangwenli.com/2019-typography-calendar/update-ios.html');
+    }
 
     openIosAppStore(ref?: string) {
         this.browser.create('http://zhangwenli.com/2019-typography-calendar/update-ios.html?ref=' + ref);
