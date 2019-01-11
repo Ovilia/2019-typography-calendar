@@ -3,7 +3,7 @@ import { NavController, NavParams, ViewController, AlertController, Platform } f
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-import { VERSION } from '../../utils/constants';
+import { VERSION, IS_DEBUG } from '../../utils/constants';
 import { LogService } from '../../services/log';
 
 const PAGE_NAME = 'about';
@@ -62,7 +62,7 @@ export class AboutPage {
                     text: '好啊',
                     handler: () => {
                         this.logService.logEvent(PAGE_NAME, 'like_ok');
-                        this.openIosAppStore('review');
+                        this._openIosAppStore('review');
                     }
                 }
             ]
@@ -82,27 +82,38 @@ export class AboutPage {
             'Accept': 'text/javascript'
           });
 
-        this.http.get('https://umeecorn.com/calendar2019/version.json', {headers})
+        this.http.get('https://umeecorn.com/calendar2019/version.json', { headers })
             .subscribe(data => {
                 if (data) {
-                    const lastVersion = (data as any).lastRelease.ios.version;
-                    this.isLatestVersion = lastVersion === this.version;
+                    const platform = this.isAndroid ? 'android' : 'ios';
+                    const release = (data as any).lastRelease[platform];
+                    if (release) {
+                        if (IS_DEBUG && release.version !== this.version) {
+                            console.log('Release: ' + release.version, 'Current: ' + this.version);
+                        }
+                        this.isLatestVersion = release.version === this.version;
+                    }
                 }
             });
     }
 
     update() {
+        if (this.isAndroid) {
+            const url = 'http://zhangwenli.com/2019-typography-calendar/download-android.html';
+            this.logService.logWebsite(PAGE_NAME, url, 'update-android');
+            this.browser.create(`${url}?ref=inapp-update-android`);
+        }
         this.updateIos();
     }
 
-    updateIos()
-    {
-        this.browser.create('http://zhangwenli.com/2019-typography-calendar/update-ios.html');
+    updateIos() {
+        this._openIosAppStore('update-ios');
     }
 
-    openIosAppStore(ref?: string) {
-        this.logService.logWebsite(PAGE_NAME, 'http://zhangwenli.com/2019-typography-calendar/update-ios.html', ref);
-        this.browser.create('http://zhangwenli.com/2019-typography-calendar/update-ios.html?ref=' + ref);
+    protected _openIosAppStore(ref?: string) {
+        const url = 'http://zhangwenli.com/2019-typography-calendar/update-ios.html';
+        this.logService.logWebsite(PAGE_NAME, url, ref);
+        this.browser.create(`${url}?ref=inapp-${ref}`);
     }
 
 }

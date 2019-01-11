@@ -1,9 +1,4 @@
 page-about {
-    .version {
-        color: #777;
-        font-size: 1.4rem;
-    }
-
     p, .card-md p {
         font-size: 1.4rem;
         color: #555;
@@ -47,11 +42,18 @@ page-about {
     }
 
     #version-info {
-        color: #aaa;
-        margin: 0;
+        color: #555;
 
         button {
             padding: 1.2rem;
         }
+
+        ion-label, .item-ios [item-right] {
+            margin: 0;
+        }
+    }
+
+    #rate-item {
+        text-align: center;
     }
 }

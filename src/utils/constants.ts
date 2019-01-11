@@ -5,7 +5,7 @@ if (IS_DEBUG) {
     console.log('THIS IS IN DEBUG MODE.');
 }
 
-export const VERSION = '1.1.1';
+export const VERSION = '1.2.0';
 
 export const DPR = 2;
 export const IMAGE_DPR = 3;

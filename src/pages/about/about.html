@@ -23,13 +23,11 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-          <ion-item ion-item class="version">
-            版本号：{{version}}
-            <div id="version-info" item-right>
-              <span *ngIf="isLatestVersion">已经是最新版了</span>
-              <button *ngIf="!isLatestVersion" class="button-bottom" ion-button (click)="update()">前往更新</button>
-              <button *ngIf="!isAndroid" class="button-bottom" ion-button (click)="promptLike()">喜欢我吗</button>
-              <button *ngIf="isAndroid" class="button-bottom" ion-button (click)="goWebsite()">前往官网</button>
+          <ion-item ion-item id="version-info">
+            版本号：{{version}}<span *ngIf="isLatestVersion">（最新）</span>
+            <div item-right>
+              <button *ngIf="isLatestVersion === false" class="button-bottom" ion-button (click)="update()">前往更新</button>
+              <button *ngIf="isLatestVersion && !isAndroid" class="button-bottom" ion-button (click)="promptLike()">喜欢我吗</button>
             </div>
           </ion-item>
         </ion-list>
