@@ -12,6 +12,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Market } from '@ionic-native/market';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { TapticEngine } from '@ionic-native/taptic-engine';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
@@ -63,7 +64,8 @@ import { AudioService } from '../services/audio';
     InAppBrowser,
     LocalNotifications,
     AndroidFullScreen,
-    AndroidPermissions
+    AndroidPermissions,
+    TapticEngine
   ]
 })
 export class AppModule {}

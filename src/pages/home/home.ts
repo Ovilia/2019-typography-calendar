@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, ToastController, Toast, Platform } from 'ionic-angular';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { TapticEngine } from '@ionic-native/taptic-engine';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
@@ -45,6 +46,7 @@ export class HomePage {
         public base64ToGallery: Base64ToGallery,
         public audioService: AudioService,
         public storage: StorageService,
+        public taptic: TapticEngine,
         public platfrom: Platform
     ) {
     }
@@ -128,6 +130,10 @@ export class HomePage {
         this.isTearing = true;
         this.isFrontPage = false;
         this.audioService.play('tear');
+        this.taptic.impact({
+            style: 'light'
+        })
+        .catch(e => { console.log(e); });
     }
 
     canTear() {
