@@ -2,16 +2,20 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, ToastController, Toast, Platform } from 'ionic-angular';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { TapticEngine } from '@ionic-native/taptic-engine';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
 import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
+import { LogService } from '../../services/log';
 import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
+
+const PAGE_NAME = 'home';
 
 @Component({
     selector: 'page-home',
@@ -44,7 +48,9 @@ export class HomePage {
         public historyService: HistoryService,
         public base64ToGallery: Base64ToGallery,
         public audioService: AudioService,
+        public logService: LogService,
         public storage: StorageService,
+        public taptic: TapticEngine,
         public platfrom: Platform
     ) {
     }
@@ -62,7 +68,6 @@ export class HomePage {
         }
 
         this.isAndroid = this.platfrom.is('android');
-        console.log(this.platfrom.is('android'))
 
         this.mainCanvas = this.mainCanvasEl.nativeElement;
         this.bgCanvas = this.bgCanvasEl.nativeElement;
@@ -79,7 +84,7 @@ export class HomePage {
         this.themeColor = tearDate ? getThemeColor(this.currentDate) : mainColor;
     }
 
-    ionViewWillEnter() {
+    ionViewDidEnter() {
         if (IS_DEBUG) {
             // Promise.all([
             //     this.storage.set(STORE_KEY.TORN_DATE, ''),
@@ -91,6 +96,8 @@ export class HomePage {
 
         document.addEventListener('deviceready', () => {
             this.init();
+            this.logService.logUserView();
+            this.logService.logPageView(PAGE_NAME);
         });
     }
 
@@ -105,29 +112,45 @@ export class HomePage {
                 }
             }
         });
+        // TODO: log click event
     }
 
     async exportCanvas() {
+        this.logService.logEvent(PAGE_NAME, 'export_today', this.currentDate.format('MM-DD'));
+
         const base64 = await getExportBase64(this.currentDate);
         this.base64ToGallery.base64ToGallery(base64).then(
             () => {
+                this.logService.logEvent(PAGE_NAME, 'export_today_success');
                 this._toast('已经保存好啦，快把我从相册分享出去嘛！');
             },
             err => {
-                this._toast('啊呀，讨厌！为什么保存失败了呢……');
+                this.logService.logEvent(PAGE_NAME, 'export_today_fail', err);
                 console.error(err);
+                this._toast('啊呀，讨厌！为什么保存失败了呢……');
             }
         );
     }
 
     nextPage() {
+        this.logService.logEvent(PAGE_NAME, 'tear');
+
         if (this.isFrontPage) {
             this.setNotification();
         }
 
         this.isTearing = true;
         this.isFrontPage = false;
+
         this.audioService.play('tear');
+
+        this.taptic.impact({
+            style: 'light'
+        })
+        .catch(e => {
+            this.logService.logEvent(PAGE_NAME, 'error_taptic', e);
+            console.error(e);
+        });
     }
 
     canTear() {
@@ -194,6 +217,7 @@ export class HomePage {
     }
 
     public menuClick() {
+        this.logService.logClick(PAGE_NAME, 'menu');
         this._toastDismiss();
     }
 

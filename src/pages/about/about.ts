@@ -4,13 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { VERSION } from '../../utils/constants';
+import { LogService } from '../../services/log';
 
-/**
- * Generated class for the AboutPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+const PAGE_NAME = 'about';
 
 @Component({
     selector: 'page-about',
@@ -29,7 +25,8 @@ export class AboutPage {
         public http: HttpClient,
         public browser: InAppBrowser,
         public alertCtrl: AlertController,
-        public platform: Platform
+        public platform: Platform,
+        public logService: LogService
     ) {
         this.version = VERSION;
         this.isLatestVersion = null;
@@ -39,6 +36,10 @@ export class AboutPage {
         if (this.platform.is('android')) {
             this.isAndroid = true;
         }
+    }
+
+    ionViewWillEnter() {
+        this.logService.logPageView(PAGE_NAME);
     }
 
     dismiss(): void {
@@ -54,11 +55,13 @@ export class AboutPage {
                     text: '不要',
                     role: 'cancel',
                     handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'like_cancel');
                     }
                 },
                 {
                     text: '好啊',
                     handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'like_ok');
                         this.openIosAppStore('review');
                     }
                 }
@@ -68,7 +71,9 @@ export class AboutPage {
     }
 
     goWebsite() {
-        this.browser.create('http://zhangwenli.com/2019-typography-calendar/');
+        const url = 'http://zhangwenli.com/2019-typography-calendar/';
+        this.logService.logWebsite(PAGE_NAME, url, 'about_version');
+        this.browser.create(url);
     }
 
     checkVersion() {
@@ -96,6 +101,7 @@ export class AboutPage {
     }
 
     openIosAppStore(ref?: string) {
+        this.logService.logWebsite(PAGE_NAME, 'http://zhangwenli.com/2019-typography-calendar/update-ios.html', ref);
         this.browser.create('http://zhangwenli.com/2019-typography-calendar/update-ios.html?ref=' + ref);
     }
 

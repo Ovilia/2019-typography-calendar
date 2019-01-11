@@ -12,6 +12,7 @@ import { NativeAudio } from '@ionic-native/native-audio';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Market } from '@ionic-native/market';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { TapticEngine } from '@ionic-native/taptic-engine';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
@@ -21,9 +22,10 @@ import { HistoryPage } from '../pages/history/history';
 import { LicensePage } from '../pages/license/license';
 import { HistoryService } from '../services/history';
 import { StorageService } from '../services/storage';
+import { AudioService } from '../services/audio';
+import { LogService } from '../services/log';
 import { FontPage } from '../pages/font/font';
 import { AboutPage } from '../pages/about/about';
-import { AudioService } from '../services/audio';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { AudioService } from '../services/audio';
     NativeStorage,
     HistoryService,
     StorageService,
+    LogService,
     Base64ToGallery,
     Firebase,
     NativeAudio,
@@ -63,7 +66,8 @@ import { AudioService } from '../services/audio';
     InAppBrowser,
     LocalNotifications,
     AndroidFullScreen,
-    AndroidPermissions
+    AndroidPermissions,
+    TapticEngine
   ]
 })
 export class AppModule {}

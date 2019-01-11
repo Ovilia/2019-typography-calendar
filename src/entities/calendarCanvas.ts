@@ -70,18 +70,18 @@ export default class CalendarCanvas {
     protected async _renderInnerPage() {
         const dateMoment = this.dateMoment;
         const padding = 20;
-        const paddingTop = 30;
+        const paddingV = 25;
         const dayOfYear = dateMoment.dayOfYear();
         const date = dateMoment.format('M.D');
 
         this.ctx.fillStyle = this._getBackground();
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        await this._renderImage(`assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, paddingTop);
+        await this._renderImage(`assets/imgs/fonts/ui/dark/lunar/${dayOfYear}.png`, padding, paddingV);
         await this._renderImage(`assets/imgs/fonts/ui/dark/month/${dateMoment.month()}.png`, padding, 53);
         await this._renderImage(`assets/imgs/fonts/ui/dark/dayOfWeek/${dateMoment.day()}.png`, padding, 86);
-        await this._renderFont(date, padding, paddingTop);
-        await this._renderStory(date, padding);
+        await this._renderFont(date, padding, paddingV);
+        await this._renderStory(date, padding, paddingV);
     }
 
     protected async _renderFont(date: string, padding: number, paddingTop: number) {
@@ -124,19 +124,19 @@ export default class CalendarCanvas {
         await this._renderImage(`assets/imgs/fonts/fontName/dark/${date}.png`, null, nameTop, padding);
     }
 
-    protected async _renderStory(date: string, padding: number) {
+    protected async _renderStory(date: string, padding: number, paddingV: number) {
         const storyPath = `assets/imgs/fonts/story/dark/${date}.png`;
         const notePath = `assets/imgs/fonts/note/dark/${date}.png`;
         const dayInfo = getDayInfo(date);
         if (dayInfo && dayInfo.note) {
-            await this._renderImage(notePath, padding, null, null, padding);
+            await this._renderImage(notePath, padding, null, null, paddingV);
 
             const noteImg = await getImage(notePath);
-            const storyBottom = padding + noteImg.height / IMAGE_DPR + 10;
+            const storyBottom = paddingV + noteImg.height / IMAGE_DPR + 10;
             await this._renderImage(storyPath, padding, null, null, storyBottom);
         }
         else {
-            await this._renderImage(storyPath, padding, null, null, padding);
+            await this._renderImage(storyPath, padding, null, null, paddingV);
         }
     }
 
