@@ -10,9 +10,9 @@ export class AudioService {
     constructor(protected nativeAudio: NativeAudio) {
     }
 
-    init() {
+    async init() {
         for (let i = 0; i < TEAR_AUDIO_CNT; ++i) {
-            this._preload('tear' + i);
+            await this._preload('tear' + i);
         }
     }
 
@@ -23,18 +23,18 @@ export class AudioService {
 
         if (IS_DEBUG) {
             const audio = new Audio(`assets/audio/${name}.mp3`);
-            audio.play();
+            audio.play().catch(e => console.error(e));
         }
         else {
             this.nativeAudio.play(name);
         }
     }
 
-    protected _preload(name: string) {
+    protected async _preload(name: string) {
         if (IS_DEBUG) {
             return;
         }
-        this.nativeAudio.preloadSimple(name, `assets/audio/${name}.mp3`)
+        await this.nativeAudio.preloadSimple(name, `assets/audio/${name}.mp3`)
             .then(() => {
             }, err => {
                 console.log(err);

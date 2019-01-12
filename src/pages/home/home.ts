@@ -36,6 +36,7 @@ export class HomePage {
     protected currentDate: moment.Moment;
     protected isCanvasSweeping: boolean;
     protected isTearing: boolean;
+    protected isTore: boolean;
     protected isAndroid: boolean;
 
     private touchStartY: number;
@@ -59,8 +60,7 @@ export class HomePage {
         this.isFrontPage = true;
         this.isCanvasSweeping = false;
         this.isTearing = false;
-
-        this.audioService.init();
+        this.isTore = false;
 
         const isFirst = await this.historyService.isFirstTear();
         if (isFirst) {
@@ -102,16 +102,25 @@ export class HomePage {
     }
 
     setNotification() {
-        this.localNotifications.schedule({
-            id: NOTIIFICATION_ID_DAILY,
-            text: '快来撕今天的日历呀！',
-            trigger: {
-                every: {
-                    hour: 10,
-                    minute: 0
+        this.localNotifications.isScheduled(NOTIIFICATION_ID_DAILY)
+            .then(isSheduled => {
+                if (!isSheduled) {
+                    this.logService.logEvent(PAGE_NAME, 'schedule_notify');
+                    this.localNotifications.schedule({
+                        id: NOTIIFICATION_ID_DAILY,
+                        text: '快来撕今天的日历呀！',
+                        trigger: {
+                            every: {
+                                hour: 10,
+                                minute: 0
+                            }
+                        }
+                    });
                 }
-            }
-        });
+                else {
+                    this.logService.logEvent(PAGE_NAME, 'scheduled_notify_before');
+                }
+            });
         // TODO: log click event
     }
 
@@ -132,11 +141,12 @@ export class HomePage {
         );
     }
 
-    nextPage() {
+    async nextPage() {
         this.logService.logEvent(PAGE_NAME, 'tear');
 
-        if (this.isFrontPage) {
-            this.setNotification();
+        if (!this.isTore) {
+            // TODO: async here
+            await this.audioService.init();
         }
 
         this.isTearing = true;
@@ -144,13 +154,15 @@ export class HomePage {
 
         this.audioService.play('tear');
 
-        this.taptic.impact({
-            style: 'light'
-        })
-        .catch(e => {
-            this.logService.logEvent(PAGE_NAME, 'error_taptic', e);
-            console.error(e);
-        });
+        if (!IS_DEBUG) {
+            this.taptic.impact({
+                style: 'light'
+            })
+            .catch(e => {
+                this.logService.logEvent(PAGE_NAME, 'error_taptic', e);
+                console.error(e);
+            });
+        }
     }
 
     canTear() {
@@ -179,6 +191,7 @@ export class HomePage {
         this.currentDate = this.currentDate.add(1, 'day');
         this.setDate(this.currentDate);
         this.isTearing = false;
+        this.isTore = true;
     }
 
     touchStart(event) {
@@ -205,6 +218,9 @@ export class HomePage {
         const y = event.changedTouches[0].clientY;
 
         if (y - this.touchStartY > 20) {
+            if (!this.isTore) {
+                this.setNotification();
+            }
             if (!this.canTear()) {
                 this._toast('还不能撕哦~ 等日历上的日子过了吧！');
             } else if (this.needUpgrade()) {

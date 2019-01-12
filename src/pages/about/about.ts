@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController, AlertController, Platform } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import * as compareVersions from 'compare-versions';
 
 import { VERSION, IS_DEBUG } from '../../utils/constants';
 import { LogService } from '../../services/log';
@@ -88,10 +89,11 @@ export class AboutPage {
                     const platform = this.isAndroid ? 'android' : 'ios';
                     const release = (data as any).lastRelease[platform];
                     if (release) {
-                        if (IS_DEBUG && release.version !== this.version) {
+                        const hasUpdate = compareVersions(release.version, this.version) === 1;
+                        if (IS_DEBUG && hasUpdate) {
                             console.log('Release: ' + release.version, 'Current: ' + this.version);
                         }
-                        this.isLatestVersion = release.version === this.version;
+                        this.isLatestVersion = !hasUpdate;
                     }
                 }
             });
