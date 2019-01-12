@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { NativeStorage } from '@ionic-native/native-storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { Firebase } from '@ionic-native/firebase';
 import { NativeAudio } from '@ionic-native/native-audio';
@@ -40,7 +40,10 @@ import { AboutPage } from '../pages/about/about';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    IonicStorageModule.forRoot({
+      driverOrder: ['sqlite', 'indexeddb', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +58,6 @@ import { AboutPage } from '../pages/about/about';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NativeStorage,
     HistoryService,
     StorageService,
     LogService,

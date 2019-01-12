@@ -1,40 +1,30 @@
 import { Injectable } from '@angular/core';
-import { NativeStorage } from '@ionic-native/native-storage';
-import { Storage as LocalStorage } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 @Injectable()
 export class StorageService {
-    protected nativeStorage: NativeStorage;
-    protected localStorage: LocalStorage;
+    protected storage: Storage;
 
     constructor() {
-        this.nativeStorage = new NativeStorage();
-        this.localStorage = new LocalStorage({});
+        this.storage = new Storage({});
     }
 
     async set(key: string, value: any) {
         try {
-            return await this.nativeStorage.setItem(key, value);
+            return await this.storage.set(key, value);
         }
         catch (err) {
-            console.warn(err);
-            console.warn('Native storage not available, using local storage instead');
-            return await this.localStorage.set(key, value);
+            throw err;
         }
     }
 
     async get(key: string) {
         try {
-            const value = await this.nativeStorage.getItem(key);
+            const value = await this.storage.get(key);
             return value;
         }
         catch (err) {
-            console.warn(err);
-            if (typeof err === 'string' && err.indexOf('cordova_not_available') > -1) {
-                console.warn('Native storage not available, using local storage instead');
-                return await this.localStorage.get(key);
-            }
-            else if (typeof err === 'object' && err.code === 2) {
+            if (typeof err === 'object' && err.code === 2) {
                 // Item not found
                 return null;
             }
