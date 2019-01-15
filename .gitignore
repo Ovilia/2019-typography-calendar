@@ -20,7 +20,6 @@ tools/fonts/
 .tmp/
 .versions/
 coverage/
-dist/
 node_modules/
 tmp/
 temp/

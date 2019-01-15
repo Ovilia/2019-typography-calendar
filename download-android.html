@@ -16,12 +16,12 @@
 
     gtag('config', 'UA-105266643-2');
 
-    const url = 'https://umeecorn.com/calendar2019/dist/2019-typography-calendar-v1.1.1.apk';
+    const url = './dist/2019-typography-calendar-v1.2.0.apk';
     location.href = url;
 
     window.download = function () {
         gtag('event', 'download-apk', {
-            'event_label': 'manual'
+            'event_label': '1.2.0'
         });
         setTimeout(() => {
             location.href = url;
