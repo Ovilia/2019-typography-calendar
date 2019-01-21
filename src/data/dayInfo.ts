@@ -2,7 +2,7 @@ export default `
 
 # 月.日 | 字体名称 | 文件名称 | 字体故事 | 备注 |
 # 可以留空行，或以 # 开头注释
-
+<!--
 1.1 | Scriptorama#Markdown JF | ScriptoramaMarkdownJF | 道生一。 | 第一天的字体最难选了。兜兜转转选了这么个名不见经传又说不出什么特色的字体，是因为很喜欢这种简洁中富于变化的感觉。#新的一年，万象更新。准备好了吗？ |
 1.2 | Trajan | Trajan Pro 3 | 生活就像一盒 Godiva，你永远不知道下一颗是什么味道。 | Trajan 是 Godiva Logo 所使用的字体。 |
 1.3 | Gloria Hallelujah | GloriaHallelujah.ttf | 某种程度上说，每个人都是字体的创作者，因为人的笔迹独一无二。 | 这款字体源于一个普通小学生的笔迹。 |
@@ -34,32 +34,35 @@ export default `
 1.29 | Gill Sans Nova | Gill Sans Nova | 人们总喜欢抬头望着月亮，而忘了脚下的六便士也可以买到一本杰作。 | 企鹅出版集团使用 Gill Sans 印刷他们那套经典平装图书的封面，而这套书刚出版时的定价就是 6 便士一本。 |
 1.30 | Cookie | Cookie-Regular.ttf | 忘记了之前都提到过哪些字体？你可能需要一些 Cookie！ | Cookie 一词在计算机术语里通常表示之前访问的一些记录信息。有一种说法是，这和 Cookie（曲奇饼）的共同之处在于，吃曲奇饼总会留下一些碎屑…… |
 1.31 | Sant Elia Rough-Line Two | SantEliaRough-LineTwo.otf | 淡线勾勒的草图总给人无限遐想，希望一月的 31 个小故事能让你开启对二月的期待！ |  |
+-->
+2.1 | Wreath Halftone | Wreath Halftone Medium.otf | 在准备新年贺卡吗？推荐一款漂亮的连体字给你！ | 在西方字体排印学中，连字（ligatures）专指两个或多个字符组合在一起时，通过调整形成整体符号的字形。 |
+2.2 | ITC American Typewriter | American Typewriter ITC Pro Bold | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
+2.3 | FM Pointifax A | FontMeister - FMPointifax-A.otf | 辞旧 | 这种不仅像素低还有坏点的老式显示屏，是该进博物馆了吧？ |
+2.4 | Fabryka | 4th february - Fabryka4FMedium.otf | 名字取得巧，除夕的彩头也能抢得到 | 这款字体的出版商名字正是 2 月 4 日（February 4th）。 |
+2.5 | 喜鹊古典体 |  |  |  |
+2.7 | Oxtail | Oxtail Black | 走亲访友的时候，不妨留意一下门牌是不是这个字体呢？ | Oxtail 因其辨识度高却又不死板的特点，成为了一种不错的门牌号字体的选择。是不是特别眼熟呢？ |
+2.8 | LTC Bodoni 175 | LTC Bodoni 175 Pro Regular | 作为一直以来时尚行业的宠儿，Bodoni 字体在当今有多种复刻版本，所有版本都保留了原版极端的笔画粗细对比和尖锐的衬线。 |  |
+2.9 | Blenny Black | Blenny Black | 螺蛳壳里做道场不是一件容易的事儿，它可能是为数不多几乎不留下任何空白却依旧有相当高辨识度的字体之一。 |  |
+2.10 | Rad | Rad | 趁着假期结束前，再去冰雪世界玩一次飘移吧！ |  |
+2.11 | Tangerine | Tangerine-Regular.ttf | Tangerine 高挑优雅的上升部，宛如灵动逸荡的手写乐谱。字体设计和音乐看似风马牛不相及，实则在美学的维度上高度相关。 | 对了，某些靠行间距来卖厚书的出版社朋友们，我们的字体日历是不是启发了其中的商机？ |
+2.12 | Variex | Variex OT Light | Variex 打破了许多字体设计时的条框，用最古老的正圆弧和直线玩出了后现代的感觉。 |  |
+2.13 | PMN Caecilia | Caecilia LT Pro 55 Roman | 一款同时内含高级狗粮和精神食粮的字体。 | PMN 是设计师名字的缩写，Caecilia 是设计师妻子的名字。至于精神食粮在哪里，明天告诉你。 |
+2.14 | PMN Caecilia Sans | PMNCaeciliaSans Head Lt Italic | 显而易见，这是昨天的 PMN Caecilia 的非衬线情侣款，看电子书的朋友一定对它们很熟悉。 | PMN Caecilia 是 Kindle 使用的系统字体。 |
+2.16 | ITC Avant Garde Gothic | ITC Avant Garde Gothic Pro Book | 这款字体似乎特别受音乐厂牌们喜爱，许多古典音乐唱片的封面上都有它的影子。 |  |
+2.21 | Minion 3 | Minion 3 Medium | 开学的日子，即便已经离开象牙塔，也不妨多读两本书哦。 | Minion 最初设计时主要用来满足印刷教科书的需求。 |
+<!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.2 | Volina | Volina Regular | 她（设计者）曾经可以没日没夜地舞动她的彩带，在空中留下各式各样的轨迹。而这些流畅优雅的曲线也留在了她设计的字体中。 |  |
-2.3 | FM Pointifax A | FontMeister - FMPointifax-A.otf | 辞旧 | 这种不仅像素低还有坏点的老式显示屏，是该进博物馆了吧？ |
-2.4 | Fabryka 4F Medium | 4th february - Fabryka4FMedium.otf | 名字取得好，除夕头条也能抢得到 | 这款字体的出版商名字就叫2月4日（February 4th） |
-2.5 | Akronim | Akronim-Regular.ttf | 新的一年，一起来书写新的故事吧~ |  |
-2.6 | Tangerine | Tangerine-Regular.ttf | Tangerine特意使用了高挑的上升部来进一步扩大行与行之间的留白 | 某些靠行间距来卖厚书的出版社们，新思路来咯。 |
-2.7 | Oxtail | Oxtail Black | 走亲访友的时候，有没有留意他们门牌的字体呢？ | Black因其辨识度高却又不死板的特点成为了一种不错的门牌号字体的选择。 |
-2.8 | Wreath Halftone Medium | Wreath Halftone Medium.otf | 新年假期过半，想要送出的新年礼物可不能再拖延啦。 | 还没想好在卡片上写什么的话，不妨试试这个为礼物卡片而生的字体？ |
-2.9 | Clarendon Text | Clarendon Text Pro Bold | 年初五是迎财神的日子，就选看着就多金的字体祝大家新年有财运吧。 | Clarendon是美国富国（WELLS FARGO）银行Logo使用的字体 |
-2.10 | Rad | Rad | 趁着假期结束前，再去冰雪世界玩一次飘移吧。 |  |
+2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
+2.9 | Clarendon Text | Clarendon Text Pro Bold | 年初五是迎财神的日子，就选看着就多金的字体祝大家新年有财运吧。 | Clarendon 是美国富国（WELLS FARGO）银行 Logo 使用的字体。 |
 2.11 | Over the Rainbow | OvertheRainbow.ttf | 「Somewhere over the rainbow way up high There's a land that I heard of once in lullaby」 | 节后第一个工作日，听首轻松欢快的歌儿吧~ |
-2.12 | Variex | Variex OT Light | 南辕北辙有时候并不是坏事，毕竟地球是圆的 | Variex打破了许多字体设计时的条框，但却用最古老的正圆弧和直线玩出了后现代的感觉 |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
-2.14 | ITC American Typewriter | American Typewriter ITC Pro Bold | 「一锅火热的爱」 | 经典的"I❤NY"用的就是American Typewriter |
-2.15 | Mono45 Headline | Mono45-Headline Regular | 0和O傻傻分不清楚？加一根斜线吧。 |  |
-2.16 | ITC Avant Garde Gothic | ITC Avant Garde Gothic Pro Book | 这款字体似乎特别受音乐厂牌们喜爱，许多古典音乐唱片的封面上都有它的影子 |  |
-2.17 | PMN Caecilia | Caecilia LT Pro 55 Roman | 一款同时内含高级狗粮和精神食粮的字体。 | PMN是设计师名字的缩写，Caecilia是设计师妻子的名字。至于精神食粮在哪里，明天告诉你。 |
-2.18 | PMN Caecilia Sans | PMNCaeciliaSans Head Lt Italic | 显而易见，这是昨天的PMN Caecilia的非衬线情侣款，看电子书的你一定对它们很熟悉。 | PMN Caecilia是Kindle使用的系统字体 |
+2.15 | Mono45 Headline | Mono45-Headline Regular | 0 和 O 傻傻分不清楚？加一根斜线吧。 |  |
 2.19 | Patrick Hand | PatrickHand-Regular.ttf | 顾名思义，这是Patrick「写」出来的一款字体。 | 到底是字写的好看而成为了字体设计师，还是做字体设计让自己的字也变好看了呢？ |
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
-2.21 | Minion 3 | Minion 3 Medium | 开学的日子，即便已经离开象牙塔，也不妨多读两本书哦。 | Minion最初设计时主要用来满足印刷教科书的需求。 |
-2.22 | Blenny Black | Blenny Black | 螺蛳壳里做道场不是一件容易的事儿，它可能是为数不多几乎不留下任何空白却依旧有相当高辨识度的字体之一。 |  |
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 |  |
-2.24 | LTC Bodoni 175 | LTC Bodoni 175 Pro Regular | 作为一直以来时尚行业的宠儿，Bodoni字体在当今有多种复刻版本，所有版本都保留了原版极端的笔画粗细对比和尖锐的衬线。 |  |
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
-2.26 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母0有没有长得像一个甜甜圈？反正我又饿了… |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
+-->
 `;
