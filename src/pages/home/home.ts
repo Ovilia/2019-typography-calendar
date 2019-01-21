@@ -14,6 +14,7 @@ import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY } from '../../utils/constan
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
+import { convertUrlToDehydratedSegments } from 'ionic-angular/umd/navigation/url-serializer';
 
 const PAGE_NAME = 'home';
 
@@ -41,6 +42,10 @@ export class HomePage {
 
     private touchStartY: number;
     private toast: Toast;
+    private torn: number;
+    private touchTimer: number;
+
+    private isLongTouch: boolean;
 
     constructor(
         public navCtrl: NavController,
@@ -61,6 +66,9 @@ export class HomePage {
         this.isCanvasSweeping = false;
         this.isTearing = false;
         this.isTore = false;
+        this.torn = 0;
+        this.touchTimer = 0;
+        this.isLongTouch = false;
 
         const isFirst = await this.historyService.isFirstTear();
         if (isFirst) {
@@ -151,8 +159,17 @@ export class HomePage {
 
         this.isTearing = true;
         this.isFrontPage = false;
-
         this.audioService.play('tear');
+
+        if (!this.isLongTouch)
+        {
+            this.torn += 1;
+            if (this.torn >= 3 )
+            {
+                this._toast('试试长按一口气撕到今天吧！');
+                this.torn = 0;
+            }
+        }
 
         if (!IS_DEBUG) {
             this.taptic.impact({
@@ -194,8 +211,28 @@ export class HomePage {
         this.isTore = true;
     }
 
+
+    nextPages(days: number)
+    {
+        let timer = setInterval ( () => {
+            if (days <= 0)
+            {
+                clearInterval(timer);
+            }
+            days --;
+            this.nextPage();
+        }, 900)
+
+    }
+    onLongTouch = () => 
+    {
+        this.isLongTouch = true;
+        let daysBetween = moment(new Date()).diff(this.currentDate, 'days');
+        this.nextPages(daysBetween);
+    }
     touchStart(event) {
         this.touchStartY = event.touches[0].clientY;
+        this.touchTimer = setTimeout(this.onLongTouch, 1500); 
     }
 
     touchMove(event) {
@@ -208,6 +245,12 @@ export class HomePage {
         if (!this.isTearing && y - this.touchStartY > 20 && this.canTear() && !this.needUpgrade()) {
             this.nextPage();
         }
+
+        if (this.touchTimer)
+        {
+            clearTimeout(this.touchTimer);
+        }
+        this.isLongTouch = false;
     }
 
     touchEnd(event) {
@@ -230,6 +273,12 @@ export class HomePage {
         else {
             this._toast('下拉撕去当前页哟~');
         }
+
+        if (this.touchTimer)
+        {
+            clearTimeout(this.touchTimer);
+        }
+        this.isLongTouch = false;
     }
 
     public menuClick() {
