@@ -14,7 +14,6 @@ import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY } from '../../utils/constan
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
-import { convertUrlToDehydratedSegments } from 'ionic-angular/umd/navigation/url-serializer';
 
 const PAGE_NAME = 'home';
 
