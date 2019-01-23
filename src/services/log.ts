@@ -8,7 +8,7 @@ export class LogService {
     }
 
     logUserView() {
-        this.firebase.logEvent('c_user_view', { hour: new Date().getHours() });
+        this.firebase.logEvent('c_user_view_' + new Date().getHours(), {});
     }
 
     logPageView(page: string) {

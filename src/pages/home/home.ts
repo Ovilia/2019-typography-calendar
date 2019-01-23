@@ -10,7 +10,7 @@ import { getThemeColor, mainColor } from '../../utils/colors';
 import { HistoryService } from '../../services/history';
 import { StorageService } from '../../services/storage';
 import { LogService } from '../../services/log';
-import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY } from '../../utils/constants';
+import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY, LAST_AVAILABLE_DATE } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
@@ -87,7 +87,7 @@ export class HomePage {
     ionViewDidEnter() {
         if (IS_DEBUG) {
             // Promise.all([
-            //     this.storage.set(STORE_KEY.TORN_DATE, ''),
+            //     this.storage.set(STORE_KEY.TORN_DATE, new Date('2019-01-30')),
             //     this.storage.set(STORE_KEY.HISTORY_PAGE, '')
             // ])
             // .then(() => this.init());
@@ -102,6 +102,10 @@ export class HomePage {
     }
 
     setNotification() {
+        if (IS_DEBUG) {
+            return;
+        }
+
         this.localNotifications.isScheduled(NOTIIFICATION_ID_DAILY)
             .then(isSheduled => {
                 if (!isSheduled) {
@@ -180,7 +184,7 @@ export class HomePage {
     }
 
     needUpgrade() {
-        return this.currentDate.isSameOrAfter(getDate('2019-01-31'));
+        return this.currentDate.isSameOrAfter(getDate(LAST_AVAILABLE_DATE), 'day');
     }
 
     async afterTearOff() {
@@ -200,7 +204,7 @@ export class HomePage {
 
     touchMove(event) {
         if (this.isTearing) {
-            return
+            return;
         }
 
         const y = event.changedTouches[0].clientY;

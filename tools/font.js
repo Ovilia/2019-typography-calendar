@@ -1,18 +1,24 @@
 const shell = require('shelljs');
 const fs = require('fs');
 
-const lightColor = '#fff';
 const darkMainColor = '#555';
 const darkSecondaryColor = 'rgba(85, 85, 85, 0.8)';
 const darkNoteColor = 'rgba(51, 51, 51, 0.5)';
+const goldColor = '#f3af2d';
 
 const dayInfoLines = fs.readFileSync('../src/data/dayInfo.ts').toString().split('\n');
+let isComment = false;
 for (let line of dayInfoLines) {
-    if (line === '%%%') {
-        break;
+    if (line === '<!--') {
+        isComment = true;
+        continue;
+    }
+    if (line === '-->') {
+        isComment = false;
+        continue;
     }
 
-    if (line && line.indexOf('#') !== 0 && line.indexOf('|') >= 0) {
+    if (!isComment && line && line.indexOf('#') !== 0 && line.indexOf('|') >= 0) {
         const parts = line.split('|');
 
         const date = parts[0].trim();
@@ -22,33 +28,43 @@ for (let line of dayInfoLines) {
         const note = parts[4].trim();
 
         const fontPath = file.indexOf('.') > -1 ? './fonts/' + file : file;
-        console.log('path', fontPath);
+        console.log('Dealing with', date, name);
+
+        let fontColor = darkMainColor;
+        let storyColor = darkSecondaryColor;
+        let noteColor = darkNoteColor;
+        if (date === '2.5') {
+            fontColor = '#333';
+            storyColor = '#444';
+            noteColor = '#494949';
+            fontColor = goldColor;
+        }
 
         if (file) {
             const dayOfMonth = date.substr(date.indexOf('.') + 1);
-            // shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/date/light/${date}.png`
-                // + ` --text "${dayOfMonth}" -c "${lightColor}" --font-size="350px" --dpr=3`);
-            shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/date/dark/${date}.png`
-                + ` --text "${dayOfMonth}" -c "${darkMainColor}" --font-size="350px" --dpr=3`);
+            switch (date) {
+                case '2.5':
+                    shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/date/dark/${date}.png`
+                        + ` --text "过#年#好" -c "${fontColor}" --font-size="270px" --dpr=3 --line-height=0.3`);
+                    break;
+
+                default:
+                    shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/date/dark/${date}.png`
+                        + ` --text "${dayOfMonth}" -c "${darkMainColor}" --font-size="350px" --dpr=3`);
+            }
         }
 
         if (name) {
-            // shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/light/${date}.png`
-            // + ` --text "${name}" -c "${lightColor}" --font-size="20px" --dpr=3 --line-height=0.6`);
             shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/dark/${date}.png`
-                + ` --text "${name}" -c "${darkMainColor}" --font-size="20px" --dpr=3 --line-height=0.4`);
+                + ` --text "${name}" -c "${fontColor}" --font-size="23px" --dpr=3 --line-height=0.45`);
         }
 
-        // shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/story/light/${date}.png`
-        // + ` --text "${story}" -c "${lightColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.6`);
         shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/story/dark/${date}.png`
-            + ` --text "${story}" -c "${darkSecondaryColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
+            + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
 
         if (note) {
-            // shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/note/dark/${date}.png`
-            //     + ` --text "${note}" -c "${lightColor}" --font-size="14px" --dpr=3 --max-width=280 --line-height=0.6`);
             shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/note/dark/${date}.png`
-                + ` --text "${note}" -c "${darkNoteColor}" --font-size="14px" --dpr=3 --max-width=280 `
+                + ` --text "${note}" -c "${noteColor}" --font-size="14px" --dpr=3 --max-width=280 `
                 + `--line-height=0.4`);
         }
 
