@@ -15,13 +15,13 @@ const license = [
         name: 'Adobe Font License',
         fonts: ['Trajan Pro 3', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
             'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW',
-            'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II']
+            'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic', 'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans']
     },
     {
         id: 'open',
         name: 'SIL Open Font License',
         desc: '以下字体来自 Google Fonts，基于 SIL Open Font License。',
-        fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie'],
+        fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie', 'Tangerine'],
         detail: `
             SIL Open Font License
             PREAMBLE
@@ -60,7 +60,7 @@ const license = [
     {
         id: 'others',
         name: '其他获得商用授权的字体',
-        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans']
+        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka']
     }
 ];
 
