@@ -30,7 +30,7 @@ export default `
 1.25 | Balloon URW | Balloon D | 周五了，看点漫画轻松一下吧！ | Balloon 是一种常见的漫画字体。 |
 1.26 | Musoe Sans | MuseoSans-500.otf | Musoe Sans 是基于因高度对称而著名的 Museo 的非衬线体。猜猜 #Museo 会在日历里的哪天出现呢？ |  |
 1.27 | Versica sans | VersicaSerif.otf | 稍稍变化的笔画粗细和衬线位置，让本来看上去冰冷的印刷字体多了一分灵性。 |  |
-1.28 | Vollkorn | Vollkorn-Regular.ttf | Vollkorn 自 2005 年发布起就采用了当时尚属新鲜 CC 协议，相比于某些靠百年老字体躺着数钱的企业而言，可以算是业界良心了。 |  |
+1.28 | Vollkorn | Vollkorn-Regular.ttf | Vollkorn 自 2005 年发布起就采用了当时尚属新鲜的 CC 协议，相比于某些靠百年老字体躺着数钱的企业而言，可以算是业界良心了。 |  |
 1.29 | Gill Sans Nova | Gill Sans Nova | 人们总喜欢抬头望着月亮，而忘了脚下的六便士也可以买到一本杰作。 | 企鹅出版集团使用 Gill Sans 印刷他们那套经典平装图书的封面，而这套书刚出版时的定价就是 6 便士一本。 |
 1.30 | Cookie | Cookie-Regular.ttf | 忘记了之前都提到过哪些字体？你可能需要一些 Cookie！ | Cookie 一词在计算机术语里通常表示之前访问的一些记录信息。有一种说法是，这和 Cookie（曲奇饼）的共同之处在于，吃曲奇饼总会留下一些碎屑…… |
 1.31 | Sant Elia Rough-Line Two | SantEliaRough-LineTwo.otf | 淡线勾勒的草图总给人无限遐想，希望一月的 31 个小故事能让你开启对二月的期待！ |  |
