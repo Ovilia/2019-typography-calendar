@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController, ToastController, Toast, Platform } from 'ionic-angular';
+import { NavController, ToastController, Toast, Platform, AlertController } from 'ionic-angular';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { TapticEngine } from '@ionic-native/taptic-engine';
@@ -37,6 +37,7 @@ export class HomePage {
     protected isCanvasSweeping: boolean;
     protected isTearing: boolean;
     protected isTore: boolean;
+    protected tearCnt: number;
     protected isAndroid: boolean;
 
     private touchStartY: number;
@@ -45,6 +46,7 @@ export class HomePage {
     constructor(
         public navCtrl: NavController,
         public toastCtrl: ToastController,
+        public alertCtrl: AlertController,
         public localNotifications: LocalNotifications,
         public historyService: HistoryService,
         public base64ToGallery: Base64ToGallery,
@@ -61,6 +63,7 @@ export class HomePage {
         this.isCanvasSweeping = false;
         this.isTearing = false;
         this.isTore = false;
+        this.tearCnt = 0;
 
         const isFirst = await this.historyService.isFirstTear();
         if (isFirst) {
@@ -87,7 +90,7 @@ export class HomePage {
     ionViewDidEnter() {
         if (IS_DEBUG) {
             // Promise.all([
-            //     this.storage.set(STORE_KEY.TORN_DATE, new Date('2019-01-30')),
+            //     this.storage.set(STORE_KEY.TORN_DATE, ''),
             //     this.storage.set(STORE_KEY.HISTORY_PAGE, '')
             // ])
             // .then(() => this.init());
@@ -162,10 +165,7 @@ export class HomePage {
             this.taptic.impact({
                 style: 'light'
             })
-            .catch(e => {
-                this.logService.logEvent(PAGE_NAME, 'error_taptic', e);
-                console.error(e);
-            });
+            .catch(() => {});
         }
     }
 
@@ -177,9 +177,16 @@ export class HomePage {
         return this.isFrontPage || today.isAfter(this.currentDate, 'day');
     }
 
-    setDate(date: moment.Moment) {
+    setDate(date: moment.Moment, changeCurrent: boolean) {
         const bgCalendar = this.isCanvasSweeping ? this.mainCalendar : this.bgCalendar;
         bgCalendar.setDate(date.clone().add(1, 'day'));
+
+        if (changeCurrent) {
+            const foreCalandar = this.isCanvasSweeping ? this.bgCalendar : this.mainCalendar;
+            foreCalandar.setDate(date);
+            this.currentDate = date;
+        }
+
         this.themeColor = getThemeColor(date);
     }
 
@@ -193,9 +200,14 @@ export class HomePage {
 
         this.isCanvasSweeping = !this.isCanvasSweeping;
         this.currentDate = this.currentDate.add(1, 'day');
-        this.setDate(this.currentDate);
+        this.setDate(this.currentDate, false);
         this.isTearing = false;
         this.isTore = true;
+        ++this.tearCnt;
+
+        if (this.tearCnt === 3 && this.currentDate.diff(getDate(new Date()), 'day') <= -3) {
+            this.promptTearMultiple();
+        }
     }
 
     touchStart(event) {
@@ -239,6 +251,33 @@ export class HomePage {
     public menuClick() {
         this.logService.logClick(PAGE_NAME, 'menu');
         this._toastDismiss();
+    }
+
+    public promptTearMultiple() {
+        const alert = this.alertCtrl.create({
+            title: '是否直接撕到今天？',
+            message: '可以在「撕下的日历」中查看被跳过的日历页，取消则手动一页页撕下。',
+            buttons: [
+                {
+                    text: '取消',
+                    role: 'cancel',
+                    handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'tear_multi_cancel');
+                    }
+                },
+                {
+                    text: '跳转到今天',
+                    handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'tear_multi_ok');
+                        this.isCanvasSweeping = !this.isCanvasSweeping;
+                        const today = getDate(new Date());
+                        this.historyService.setTearDay(today.clone().subtract(1, 'day'))
+                            .then(() => this.setDate(today, true));
+                    }
+                }
+            ]
+        });
+        alert.present();
     }
 
     protected _toast(text: string, position?: string) {

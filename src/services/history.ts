@@ -15,27 +15,17 @@ export class HistoryService {
         return await this.storage.get(STORE_KEY.TORN_DATE);
     }
 
-    // TODO: not tested
-    // async setTearDate(dateMoment: moment.Moment, width: number, height: number): Promise<void> {
-    //     let lastMoment;
-    //     const lastTear = await this.getTearDate();
-    //     if (!lastTear) {
-    //         // Tear the front page
-    //         await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
-    //         lastMoment = '2018-12-31';
-    //     }
-    //     else {
-    //         lastMoment = moment(lastTear);
-    //     }
+    async setTearDay(day: moment.Moment): Promise<void> {
+        const lastTear = await this.getTearDate();
+        if (!lastTear) {
+            await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
+        }
+        else if (moment(lastTear).isAfter(day)) {
+            return;
+        }
 
-    //     dateMoment = getDate(dateMoment);
-    //     lastMoment = getDate(lastMoment);
-
-    //     while (lastMoment.isSameOrBefore(dateMoment)) {
-    //         await this.tearNextDay(lastMoment, width, height);
-    //         lastMoment = lastMoment.add(1, 'day');
-    //     }
-    // }
+        return await this.storage.set(STORE_KEY.TORN_DATE, day.toDate());
+    }
 
     async tearNextDay(currentDate: moment.Moment, width: number, height: number): Promise<void> {
         const lastTear = await this.getTearDate();

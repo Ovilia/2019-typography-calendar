@@ -2,7 +2,7 @@ import * as moment from 'moment';
 
 import infoStr from '../data/dayInfo';
 
-export function getDate(date: string | moment.Moment | Date) {
+export function getDate(date: string | moment.Moment | Date): moment.Moment {
     if (typeof date === 'string') {
         return moment(date);
     }

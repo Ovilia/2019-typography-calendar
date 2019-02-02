@@ -29,13 +29,15 @@ export default class CalendarCanvas {
         }
     }
 
-    setDate(dateMoment: moment.Moment) {
+    setDate(dateMoment: moment.Moment, lazyRender?: boolean) {
         this.dateMoment = dateMoment;
         this.isFrontPage = dateMoment.isBefore(getDate('2019-01-01'), 'day');
 
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-        this.render();
+        if (!lazyRender) {
+            this.render();
+        }
     }
 
     async getRenderedBase64() {
@@ -141,7 +143,6 @@ export default class CalendarCanvas {
                 result.width = result.height / img.height * img.width;
             }
 
-            console.log(result.width);
             if (result.width < 200) {
                 result.right = padding;
             }

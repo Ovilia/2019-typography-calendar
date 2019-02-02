@@ -1,14 +1,17 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, ViewController, ToastController, Platform } from 'ionic-angular';
 import { Shake } from '@ionic-native/shake';
+import { TapticEngine } from '@ionic-native/taptic-engine';
+import { Subscription } from 'rxjs/Subscription';
 import * as zrender from 'zrender';
+import * as moment from 'moment';
 
 import { StorageService } from '../../services/storage';
 import { HistoryService } from '../../services/history';
 import { LogService } from '../../services/log';
 import { STORE_KEY, DPR, IS_DEBUG } from '../../utils/constants';
-import { TapticEngine } from '@ionic-native/taptic-engine';
-import { Subscription } from 'rxjs/Subscription';
+import { getDate } from '../../utils/time';
+import CalendarCanvas from '../../entities/calendarCanvas';
 
 const PAGE_NAME = 'history';
 
@@ -24,7 +27,7 @@ export class HistoryPage {
     protected zr: any;
 
     public isEmpty: boolean;
-    public historyPages: any[];
+    public tearDay: moment.Moment;
 
     protected height: number;
     protected imgRenderWidth: number;
@@ -46,7 +49,6 @@ export class HistoryPage {
         public shake: Shake
     ) {
         this.isEmpty = true;
-        this.historyPages = [];
         this.isTouchMoved = false;
         this.shakedTimes = 0;
         this.imgRenderWidth = 0;
@@ -77,35 +79,43 @@ export class HistoryPage {
     }
 
     async _init() {
-        this.historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];
-        if (!this.historyPages.length) {
-            return;
-        }
-        this.isEmpty = false;
+        this.tearDay = getDate(await this.storage.get(STORE_KEY.TORN_DATE));
+        this.isEmpty = !this.tearDay || !this.tearDay.isValid();
 
         await this._render();
     }
 
     protected async _render() {
+        if (this.isEmpty) {
+            return;
+        }
+
         const imgScale = 0.8;
         const cw = this.canvas.width;
         const ch = this.canvas.height;
 
         let touchTarget = null;
-        let z = 0;
         let lastX;
         let lastY;
+        const days = Math.min(7, this.tearDay.diff(moment('2018-12-30'), 'day'));
+        let date = this.tearDay.clone();
+        let z = days;
 
-        for (let i = 0; i < this.historyPages.length; ++i) {
-            const page = this.historyPages[i];
+        const canvas = document.createElement('canvas');
+        canvas.width = cw * imgScale;
+        canvas.height = ch * imgScale;
+        const calendar = new CalendarCanvas(date, canvas, true);
 
-            await new Promise((resolve, reject) => {
+        for (let i = 0; i < days; ++i) {
+            calendar.setDate(date, true);
+
+            await new Promise(async (resolve, reject) => {
                 const img = new Image();
                 let zrImg;
 
                 img.onload = () => {
-                    const targetWidth = img.width * imgScale;
-                    const targetHeight = img.height * imgScale;
+                    const targetWidth = img.width;
+                    const targetHeight = img.height;
                     this.imgRenderWidth = targetWidth;
                     this.imgRenderHeight = targetHeight;
 
@@ -126,7 +136,8 @@ export class HistoryPage {
                             shadowOffsetY: 2
                         },
                         rotation: rotate,
-                        origin: [targetWidth / 2, targetHeight / 2]
+                        origin: [targetWidth / 2, targetHeight / 2],
+                        z: --z
                     });
 
                     zrImg.on('mousedown', function (e) {
@@ -166,13 +177,16 @@ export class HistoryPage {
                     });
 
                     this.zr.add(zrImg);
-                    page.zrImg = zrImg;
                     resolve();
                 };
                 img.onerror = reject;
-                img.src = page.image;
+                img.src = await calendar.getRenderedBase64();
             });
+
+            date = date.subtract(1, 'day');
         }
+
+        z = days;
     }
 
     protected async _getImageSize(src) {
