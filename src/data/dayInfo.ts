@@ -50,6 +50,20 @@ export default `
 2.12 | Tangerine | Tangerine-Regular.ttf | Tangerine 高挑优雅的上升部，宛如灵动逸荡的手写乐谱。字体设计和音乐看似风马牛不相及，实则在美学的维度上高度相关。 | 对了，某些靠行间距来卖厚书的出版社朋友们，我们的字体日历是不是启发了其中的商机？ |
 2.13 | PMN Caecilia | Caecilia LT Pro | 一款同时内含高级狗粮和精神食粮的字体。 | PMN 是设计师名字的缩写，Caecilia 是设计师妻子的名字。#至于精神食粮在哪里，明天告诉你。 |
 2.14 | PMN Caecilia Sans | PMN Caecilia Sans.ttf | 没错，这是昨天 PMN Caecilia 的非衬线情侣款。看电子书的朋友一定对它们很熟悉。 | PMN Caecilia 是 Kindle 使用的系统字体。 |
+2.15 | Roboto | Roboto-Regular.ttf | 这是Google产品家族的御用字体，包括Android, Youtube, Google Maps等。 | 2005年2月15日YouTube正式注册并使用。 |
+2.16 | Open Sans | OpenSans-Regular.ttf | 现代扁平化设计中最流行的无衬线字体之一。 |  也是火狐浏览器官网使用的字体。 |
+2.17 | New Zen | Zen New Medium | 带有轻微圆润笔触结尾的无衬线字体。 | 设计师加粗了笔画，让圆体字不那么幼稚。 |
+2.18 | Starling | Starling Book | 末端结尾和衬线仿佛鸟喙一般尖锐而灵动 | Starling也指代八哥。 |
+2.19 | 思源黑体 | Source Han Sans  | 去年元夜时，花市灯如昼。月上柳梢头，人约黄昏后。今年元夜时，月与灯依旧。不见去年人，泪湿春衫袖。 | 元宵节快乐。|
+2.20 | Study | Study Regular | 寒假结束开学了吗？如果是已经工作的你，是否经常还有时间充电呢？ | 据字体作者本人宣传，用过该字体的人，学习过程中更加开心和自信。|
+2.21 | Remedy | Remedy OT Single | 花饰繁多的字体最早被设计用于反抗字体模块化的潮流。 |  好似春日里万物芽孢初放。 |
+2.22 | Anonymous | Anonymous Pro Regular | 为开发者设计的字体，字符等宽是第一大原则。 | 一些编程语言中也有匿名类，匿名函数的概念。 |
+2.23 | Lo-Res | LoRes 12 OT Narrow Regular | 不是你手机屏幕分辨率降低了，今天是一款像素风字体。 | 该字体1985年发表，表示所有字符只需要9个ASCII码。 |
+2.24 | Adobe Handwriting Frank | Adobe Handwriting Frank | 设计师Frank把自己的写的字变成了一份官方字体，名字里面还写着自己的名字。 | 每个人写的字都可以做成独一无二的字体。 |
+2.25 | Voltage | Voltage Regular | 新的工作日，给自己充满电量！| 该字体被用作酒吧的霓虹灯牌。|
+2.26 | OCR-A | OCR A Std Regular | 1968年设计的字体，当年被最早用于计算机光学字符识别研究。 | 即使OCR技术已经非常成熟，不再需要这种字体，但它仍被用于世界各地的支票上。 |
+2.27 | OCR-B | OCR B Std Regular | 同样是1968年设计的光学识别字体，更加倾向于设计成方便人脑阅读的外观。 | 目前仍被广泛用于世界各国的条形码和护照中。 |
+2.28 | Bello | Bello Script Pro Regular | 这种类似手写街头嘻哈风字体已经成为游行抗议标牌的最常用字体。 | Airbnb的初版logo字体也是Bello. |
 <!--
 2.21 | Minion 3 | Minion 3 Medium | 开学的日子，即便已经离开象牙塔，也不妨多读两本书哦。 | Minion 最初设计时主要用来满足印刷教科书的需求。 |
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
@@ -65,5 +79,8 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
+
+5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
+10.24 | Hack | 又一款专为代码编辑设计的字体 || 
 -->
 `;
