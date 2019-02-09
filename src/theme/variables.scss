@@ -63,6 +63,7 @@ $list-border-color: #eee;
 $item-ios-body-text-font-size: 1.5rem;
 $toast-ios-background: rgba(0, 0, 0, 0.7);
 $alert-ios-button-text-color: #555;
+$toolbar-ios-title-text-color: #333;
 
 .header-ios {
   &#home-header {
@@ -82,6 +83,7 @@ $alert-ios-button-text-color: #555;
 $list-md-border-color: $list-border-color;
 $button-md-box-shadow: none;
 $button-md-border-radius: 4px;
+$toolbar-md-title-text-color: #333;
 
 // App Windows Variables
 // --------------------------------------------------

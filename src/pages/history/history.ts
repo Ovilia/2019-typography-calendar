@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, ViewController, ToastController, Platform } from 'ionic-angular';
-import { Shake } from '@ionic-native/shake';
 import { TapticEngine } from '@ionic-native/taptic-engine';
 import { Subscription } from 'rxjs/Subscription';
 import * as zrender from 'zrender';
@@ -9,9 +8,10 @@ import * as moment from 'moment';
 import { StorageService } from '../../services/storage';
 import { HistoryService } from '../../services/history';
 import { LogService } from '../../services/log';
-import { STORE_KEY, DPR, IS_DEBUG } from '../../utils/constants';
+import { STORE_KEY, DPR, IS_DEBUG, IMAGE_DPR } from '../../utils/constants';
 import { getDate } from '../../utils/time';
 import CalendarCanvas from '../../entities/calendarCanvas';
+import MonthlyCalendarChart from '../../entities/monthlyCalendarChart';
 
 const PAGE_NAME = 'history';
 
@@ -22,19 +22,24 @@ const PAGE_NAME = 'history';
 export class HistoryPage {
 
     @ViewChild('historyCanvas') historyCanvasEl: ElementRef;
+    @ViewChild('monthlyCalendar') monthlyCalendarEl: ElementRef;
     protected canvas: HTMLCanvasElement;
     protected ctx: CanvasRenderingContext2D;
     protected zr: any;
 
     public isEmpty: boolean;
     public tearDay: moment.Moment;
+    public viewDay: moment.Moment;
+    public fromDay: moment.Moment;
+    public monthlyCalendar: MonthlyCalendarChart;
+    public isMonthlyOpen: boolean;
 
     protected height: number;
     protected imgRenderWidth: number;
     protected imgRenderHeight: number;
     protected isTouchMoved: boolean;
-    protected shakedTimes: number;
     protected shakeWatch: Subscription;
+    protected historyPages: any[];
 
     constructor(
         public navCtrl: NavController,
@@ -45,21 +50,24 @@ export class HistoryPage {
         public historyService: HistoryService,
         public logService: LogService,
         public platform: Platform,
-        public taptic: TapticEngine,
-        public shake: Shake
+        public taptic: TapticEngine
     ) {
         this.isEmpty = true;
         this.isTouchMoved = false;
-        this.shakedTimes = 0;
         this.imgRenderWidth = 0;
         this.imgRenderHeight = 0;
+        this.historyPages = [];
+        this.tearDay = moment();
+        this.viewDay = moment();
+        this.fromDay = moment();
+        this.isMonthlyOpen = false;
     }
 
     async ionViewDidLoad() {
         this.logService.logPageView(PAGE_NAME);
 
         this.canvas = this.historyCanvasEl.nativeElement;
-        this.height = this.canvas.clientHeight + 20;
+        this.height = this.canvas.clientHeight;
         this.canvas.width = this.canvas.clientWidth * DPR;
         this.canvas.height = this.height * DPR;
         this.ctx = this.canvas.getContext('2d');
@@ -67,28 +75,77 @@ export class HistoryPage {
         this.zr = zrender.init(this.canvas);
 
         await this._init();
-        await this._initShake();
+    }
+
+    get title() {
+        if (this.isEmpty) {
+            return '';
+        }
+        else if (this.isMonthlyOpen) {
+            if (this.monthlyCalendar) {
+                return '2019/' + (this.monthlyCalendar.viewMonth + 1);
+            }
+            else {
+                return this.viewDay.format('YYYY/MM');
+            }
+        }
+        else {
+            return this.viewDay.format('M 月 DD 日');
+        }
     }
 
     dismiss(): void {
-        if (this.shakeWatch) {
-            this.shakeWatch.unsubscribe();
-            this.shakeWatch = null;
-        }
         this.viewCtrl.dismiss();
     }
 
     async _init() {
         this.tearDay = getDate(await this.storage.get(STORE_KEY.TORN_DATE));
-        this.isEmpty = !this.tearDay || !this.tearDay.isValid();
+        this.isEmpty = !this.tearDay || !this.tearDay.isValid() || this.tearDay.year() === 2018;
+        if (!this.isEmpty) {
+            this.updateViewDay(this.tearDay);
+        }
 
         await this._render();
+    }
+
+    toggleCalendar() {
+        if (!this.isMonthlyOpen) {
+            // Open
+            setTimeout(() => {
+                this.monthlyCalendar = new MonthlyCalendarChart(
+                    this.monthlyCalendarEl.nativeElement, this.tearDay, this.viewDay.month(), this);
+            });
+        }
+        this.isMonthlyOpen = !this.isMonthlyOpen;
+    }
+
+    closeCalendar() {
+        this.isMonthlyOpen = false;
+    }
+
+    onDaySelect(dateStr) {
+        this.closeCalendar();
+        this.updateViewDay(getDate(dateStr));
+        this._render();
+    }
+
+    protected updateViewDay(viewDay) {
+        this.viewDay = viewDay.clone();
+        const span = this.getDaySpan(viewDay);
+        this.fromDay = this.viewDay.clone().subtract(span, 'day');
+    }
+
+    protected getDaySpan(viewDay) {
+        return Math.min(7, viewDay.diff(moment('2018-12-30'), 'day'));
     }
 
     protected async _render() {
         if (this.isEmpty) {
             return;
         }
+
+        this.historyPages = [];
+        this.zr.clear();
 
         const imgScale = 0.8;
         const cw = this.canvas.width;
@@ -97,8 +154,8 @@ export class HistoryPage {
         let touchTarget = null;
         let lastX;
         let lastY;
-        const days = Math.min(7, this.tearDay.diff(moment('2018-12-30'), 'day'));
-        let date = this.tearDay.clone();
+        const days = Math.min(7, this.viewDay.diff(moment('2018-12-30'), 'day'));
+        let date = this.viewDay.clone();
         let z = days;
 
         const canvas = document.createElement('canvas');
@@ -119,9 +176,9 @@ export class HistoryPage {
                     this.imgRenderWidth = targetWidth;
                     this.imgRenderHeight = targetHeight;
 
-                    const dx = (cw - targetWidth) * Math.random();
-                    const dy = (ch - targetHeight) * Math.random();
-                    const rotate = (Math.random() * 2 - 1) * 15 / 180 * Math.PI;
+                    const dx = (cw - targetWidth) / 2;
+                    const dy = (ch - targetHeight) / 2 - 20;
+                    const rotate = i ? (Math.random() * 2 - 1) * 15 / 180 * Math.PI : 0;
 
                     zrImg = new zrender.Image({
                         style: {
@@ -139,42 +196,43 @@ export class HistoryPage {
                         origin: [targetWidth / 2, targetHeight / 2],
                         z: --z
                     });
+                    this.historyPages.push(zrImg);
 
-                    zrImg.on('mousedown', function (e) {
-                        touchTarget = e.target;
-                        touchTarget.attr('z', ++z);
-                        lastX = e.offsetX;
-                        lastY = e.offsetY;
-                    });
+                    // zrImg.on('mousedown', function (e) {
+                    //     touchTarget = e.target;
+                    //     touchTarget.attr('z', ++z);
+                    //     lastX = e.offsetX;
+                    //     lastY = e.offsetY;
+                    // });
 
-                    zrImg.on('mousemove', e => {
-                        if (!touchTarget) {
-                            return;
-                        }
+                    // zrImg.on('mousemove', e => {
+                    //     if (!touchTarget) {
+                    //         return;
+                    //     }
 
-                        if (!this.isTouchMoved) {
-                            this.logService.logEvent(PAGE_NAME, 'interacted');
-                            this.isTouchMoved = true;
-                        }
+                    //     if (!this.isTouchMoved) {
+                    //         this.logService.logEvent(PAGE_NAME, 'interacted');
+                    //         this.isTouchMoved = true;
+                    //     }
 
-                        const oldStyle = touchTarget.style;
-                        const newX = oldStyle.x + (e.offsetX - lastX);
-                        const newY = oldStyle.y + (e.offsetY - lastY);
-                        touchTarget.attr({
-                            style: {
-                                x: newX,
-                                y: newY
-                            }
-                        });
-                        lastX = e.offsetX;
-                        lastY = e.offsetY;
-                    });
+                    //     const oldStyle = touchTarget.style;
+                    //     const newX = oldStyle.x + (e.offsetX - lastX);
+                    //     const newY = oldStyle.y + (e.offsetY - lastY);
+                    //     touchTarget.attr({
+                    //         style: {
+                    //             x: newX,
+                    //             y: newY
+                    //         }
+                    //     });
+                    //     lastX = e.offsetX;
+                    //     lastY = e.offsetY;
+                    // });
 
-                    zrImg.on('mouseup', function (e) {
-                        touchTarget = null;
-                        lastX = null;
-                        lastY = null;
-                    });
+                    // zrImg.on('mouseup', function (e) {
+                    //     touchTarget = null;
+                    //     lastX = null;
+                    //     lastY = null;
+                    // });
 
                     this.zr.add(zrImg);
                     resolve();
@@ -201,64 +259,6 @@ export class HistoryPage {
             img.onerror = reject;
             img.src = src;
         });
-    }
-
-    protected async _initShake() {
-        if (IS_DEBUG || !this.platform.is('ios')) {
-            // Shake and Taptic supports iOS only
-            return;
-        }
-
-        const isShaked = await this.historyService.hasShakedInHistory();
-        if (!isShaked) {
-            const toast = this.toastCtrl.create({
-                message: '摇一摇可以把日历页排整齐哦！',
-                duration: 3000,
-                position: 'middle'
-            });
-            toast.present();
-        }
-
-        this.shakeWatch = this.shake.startWatch(100).subscribe(() => {
-            this.taptic.impact({
-                style: 'heavy'
-            });
-            this._dealWithOneShake();
-
-            ++this.shakedTimes;
-            if (this.shakedTimes % 5) {
-                const toast = this.toastCtrl.create({
-                    message: '暂时就是这样啦，更多功能敬请期待~',
-                    duration: 3000,
-                    position: 'middle'
-                });
-                toast.present();
-            }
-        });
-    }
-
-    protected _dealWithOneShake() {
-        if (!this.isTouchMoved) {
-            this.historyService.setShakedInHistory();
-            this.isTouchMoved = true;
-        }
-
-        const step = (current, target) => {
-            const ratio = 0.5;
-            let value = current * ratio + target * (1 - ratio);
-            return value;
-        };
-
-        for (let i = 0; i < this.historyPages.length; ++i) {
-            const zrImg = this.historyPages[i].zrImg;
-            if (zrImg) {
-                zrImg.attr('rotation', step(zrImg.rotation, 0));
-                zrImg.attr('style', {
-                    x: step(zrImg.style.x, (this.canvas.width - this.imgRenderWidth) * 0.5),
-                    y: step(zrImg.style.y, (this.canvas.height - this.imgRenderHeight) * 0.5)
-                });
-            }
-        }
     }
 
 }
