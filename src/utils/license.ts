@@ -15,13 +15,16 @@ const license = [
         name: 'Adobe Font License',
         fonts: ['Trajan Pro 3', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
             'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW',
-            'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic', 'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans']
+            'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic',
+            'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans', 'New Zen', 'Source Han Sans',
+            'Study', 'Remedy', 'Anonymous', 'Lo-Res', 'Adobe Handwriting Frank', 'Voltage', 'OCR-A', 'OCR-B', 'Bello']
     },
     {
         id: 'open',
         name: 'SIL Open Font License',
         desc: '以下字体来自 Google Fonts，基于 SIL Open Font License。',
-        fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie', 'Tangerine'],
+        fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie',
+            'Tangerine', 'Roboto', 'Open Sans', ],
         detail: `
             SIL Open Font License
             PREAMBLE
