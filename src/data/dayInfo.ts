@@ -28,7 +28,7 @@ export default `
 1.23 | Big Caslon | Big Caslon FB | 「I'll stick with Caslon until I die.」#——萧伯纳 | 萧伯纳是 Caslon 的忠实粉丝，他坚持用#Caslon 印刷他出版的所有作品。 |
 1.24 |  |  | 今天是我的生日，写个字送给你！#见字如面。 | 这种字体是我在一次初中夏令营时候跟一位台湾朋友学的，后来经常出现于我们班的黑板报。我想，如果要写「羡辙体」的话，这大概可以算。 |
 1.25 | Balloon URW | Balloon D | 周五了，看点漫画轻松一下吧！ | Balloon 是一种常见的漫画字体。 |
-1.26 | Musoe Sans | MuseoSans-500.otf | Musoe Sans 是基于因高度对称而著名的 Museo 的非衬线体。猜猜 #Museo 会在日历里的哪天出现呢？ |  |
+1.26 | Museo Sans | MuseoSans-500.otf | Museo Sans 是基于因高度对称而著名的 Museo 的非衬线体。猜猜 #Museo 会在日历里的哪天出现呢？ |  |
 1.27 | Versica sans | VersicaSerif.otf | 稍稍变化的笔画粗细和衬线位置，让本来看上去冰冷的印刷字体多了一分灵性。 |  |
 1.28 | Vollkorn | Vollkorn-Regular.ttf | Vollkorn 自 2005 年发布起就采用了当时尚属新鲜的 CC 协议，相比于某些靠百年老字体躺着数钱的企业而言，可以算是业界良心了。 |  |
 1.29 | Gill Sans Nova | Gill Sans Nova | 人们总喜欢抬头望着月亮，而忘了脚下的六便士也可以买到一本杰作。 | 企鹅出版集团使用 Gill Sans 印刷他们那套经典平装图书的封面，而这套书刚出版时的定价就是 6 便士一本。 |
@@ -38,34 +38,30 @@ export default `
 2.2 | Volina | volina.ttf | 设计者曾经没日没夜地舞动着她的彩带，而这些流畅优雅的曲线也留在了她设计的字体中。 |  |
 2.3 | FM Pointifax A | FontMeister - FMPointifax-A.otf | 辞旧 | 这种不仅像素低还有坏点的老式显示屏，是该进博物馆了吧？ |
 2.4 | Fabryka | 4th february - Fabryka4FMedium.otf | 名字取得巧，除夕的彩头也抢得到！ | 这款字体的出版商名字（February 4th）正是#2 月 4 日。 |
-2.5 | 喜鹊古典体 | xique-gudian.otf | 爆竹声中一岁除，春风送暖入屠苏。 | 「2019 字体日历」logo 使用的中文字体就是喜鹊古典体。新的一年，祝愿我们可以看到更多优秀的中文字体设计。 |
+2.5 | 喜鹊古字典体 | xique-gudian.otf | 爆竹声中一岁除，春风送暖入屠苏。 | 「2019 字体日历」logo 使用的中文字体就是喜鹊古字典体。新的一年，祝愿我们可以看到更多优秀的中文字体设计。 |
 2.6 | Oxtail | Oxtail OT | 走亲访友的时候，不妨留意一下门牌是不是这个字体呢？ | Oxtail 因其辨识度高却又不死板的特点，成为了一种不错的门牌号字体的选择。是不是特别眼熟呢？ |
 2.7 | ITC Avant Garde Gothic | ITC Avant Garde Gothic.ttf | 这款字体似乎深受音乐厂牌们喜爱，许多古典音乐唱片的封面上都有它的影子。 |  |
 2.8 | LTC Bodoni 175 | LTC Bodoni 175 Pro | 作为时尚行业的宠儿，Bodoni 字体有多种复刻版本，而所有版本都保留了原版极端的笔画粗细对比和尖锐的衬线。 |  |
 2.9 | Blenny Black | Blenny | 螺蛳壳里做道场不是一件容易的事，它可能是为数不多几乎不留下任何空白，却依旧有相当高辨识度的字体之一。 |  |
 2.10 | Rad | Rad Std | 趁着假期结束前，再去冰雪世界玩一次飘移吧！ |  |
--->
 2.11 | Variex | Variex OT | Variex 打破了许多字体设计时的条#框，用最古老的正圆弧和直线玩出#了后现代的感觉。 |  |
-<!--
 2.12 | Tangerine | Tangerine-Regular.ttf | Tangerine 高挑优雅的上升部，宛如灵动逸荡的手写乐谱。字体设计和音乐看似风马牛不相及，实则在美学的维度上高度相关。 | 对了，某些靠行间距来卖厚书的出版社朋友们，我们的字体日历是不是启发了其中的商机？ |
 2.13 | PMN Caecilia | Caecilia LT Pro | 一款同时内含高级狗粮和精神食粮的字体。 | PMN 是设计师名字的缩写，Caecilia 是设计师妻子的名字。#至于精神食粮在哪里，明天告诉你。 |
 2.14 | PMN Caecilia Sans | PMN Caecilia Sans.ttf | 没错，这是昨天 PMN Caecilia 的非衬线情侣款。看电子书的朋友一定对它们很熟悉。 | PMN Caecilia 是 Kindle 使用的系统字体。 |
-2.15 | Roboto | Roboto-Regular.ttf | 这是Google产品家族的御用字体，包括Android, Youtube, Google Maps等。 | 2005年2月15日YouTube正式注册并使用。 |
-2.16 | Open Sans | OpenSans-Regular.ttf | 现代扁平化设计中最流行的无衬线字体之一。 |  也是火狐浏览器官网使用的字体。 |
-2.17 | New Zen | Zen New Medium | 带有轻微圆润笔触结尾的无衬线字体。 | 设计师加粗了笔画，让圆体字不那么幼稚。 |
-2.18 | Starling | Starling Book | 末端结尾和衬线仿佛鸟喙一般尖锐而灵动 | Starling也指代八哥。 |
-2.19 | 思源黑体 | Source Han Sans  | 去年元夜时，花市灯如昼。月上柳梢头，人约黄昏后。今年元夜时，月与灯依旧。不见去年人，泪湿春衫袖。 | 元宵节快乐。|
-2.20 | Study | Study Regular | 寒假结束开学了吗？如果是已经工作的你，是否经常还有时间充电呢？ | 据字体作者本人宣传，用过该字体的人，学习过程中更加开心和自信。|
-2.21 | Remedy | Remedy OT Single | 花饰繁多的字体最早被设计用于反抗字体模块化的潮流。 |  好似春日里万物芽孢初放。 |
-2.22 | Anonymous | Anonymous Pro Regular | 为开发者设计的字体，字符等宽是第一大原则。 | 一些编程语言中也有匿名类，匿名函数的概念。 |
-2.23 | Lo-Res | LoRes 12 OT Narrow Regular | 不是你手机屏幕分辨率降低了，今天是一款像素风字体。 | 该字体1985年发表，表示所有字符只需要9个ASCII码。 |
-2.24 | Adobe Handwriting Frank | Adobe Handwriting Frank | 设计师Frank把自己的写的字变成了一份官方字体，名字里面还写着自己的名字。 | 每个人写的字都可以做成独一无二的字体。 |
-2.25 | Voltage | Voltage Regular | 新的工作日，给自己充满电量！| 该字体被用作酒吧的霓虹灯牌。|
-2.26 | OCR-A | OCR A Std Regular | 1968年设计的字体，当年被最早用于计算机光学字符识别研究。 | 即使OCR技术已经非常成熟，不再需要这种字体，但它仍被用于世界各地的支票上。 |
-2.27 | OCR-B | OCR B Std Regular | 同样是1968年设计的光学识别字体，更加倾向于设计成方便人脑阅读的外观。 | 目前仍被广泛用于世界各国的条形码和护照中。 |
-2.28 | Bello | Bello Script Pro Regular | 这种类似手写街头嘻哈风字体已经成为游行抗议标牌的最常用字体。 | Airbnb的初版logo字体也是Bello. |
+-->
+2.15 | Roboto | Roboto | Roboto 是 Google 产品家族的御用#字体，包括Android、Youtube、#Google Maps 等，也是 Google#Fonts 上使用量排名第一的字体。 | 2005 年 2 月 15 日 YouTube 正式注册并使用。 |
+2.16 | Open Sans | OpenSans-Regular.ttf | 高挑的 x 字高（小写字母 x 的高度）是 Open Sans 的一大特色。#它是 Google Fonts 上使用量排名第二的字体，在超过两千万个网站上都可以看到它的身影。| |
+2.17 | Bello | Bello Script Pro | 这种类似手写街头嘻哈风字体已经成为游行抗议标牌的最常用字体。#Airbnb 的初版 logo 字体用的也是#Bello。 | Bello 是西班牙语中美丽的意思。 |
+2.18 | Starling | Starling | Starling 有「八哥鸟」的意思，正呼应了这款字体衬线和笔触末端仿佛鸟喙一般尖锐而灵动。 | |
+2.19 | 思源黑体 | SourceHanSansSC-Normal.otf | 去年元夜时，花市灯如昼。#月上柳梢头，人约黄昏后。#今年元夜时，月与灯依旧。#不见去年人，泪湿春衫袖。 | 今日元宵节，你们团圆了吗？ |
+2.20 | Study | Study | 寒假结束开学了吗？如果是已经工作的你，是否经常还有时间充电呢？ | 据字体作者本人宣传，用过该字体的人，学习过程中更加开心和自信。|
+2.21 | Minion 3 | Minion 3 | 发新的教科书了吗？即便已经离开象牙塔，也不妨多读两本闲书哦！ | Minion 最初设计时主要用来满足印刷教科书的需求。 |
+2.22 | Lo-Res | LoRes 15 OT | 不要怀疑手机屏幕分辨率降低了，今天展示的是一款像素风字体。 | |
+2.23 | Anonymous | Anonymous Pro | 等宽字符的字体，是不是看起来黑客感十足？ | Anonymous 是匿名的意思，或许和「黑客」的设定有些相关。一些编程语言中也有匿名类，匿名函数的概念。 |
+2.24 | OCR A | OCR A Std | 1968 年设计的字体，当年被最早用于计算机光学字符识别研究。即使如今OCR 技术已经非常成熟，但它仍被用于世界各地的支票上。 | 还记得我们之前介绍过的 OCR B 字体吗？ |
+2.25 | Voltage | Voltage | 新的工作日，给自己充满电量！| 这款漂亮的连体字常被用作酒吧的霓虹灯牌。|
+2.26 | Remedy | Remedy OT | 花饰繁多的字体最早被设计用于反抗字体模块化的潮流。 | |
 <!--
-2.21 | Minion 3 | Minion 3 Medium | 开学的日子，即便已经离开象牙塔，也不妨多读两本书哦。 | Minion 最初设计时主要用来满足印刷教科书的需求。 |
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.2 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
@@ -81,6 +77,6 @@ export default `
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
 
 5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
-10.24 | Hack | 又一款专为代码编辑设计的字体 || 
+10.24 | Hack | 又一款专为代码编辑设计的字体 ||
 -->
 `;

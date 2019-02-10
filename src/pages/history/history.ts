@@ -123,9 +123,9 @@ export class HistoryPage {
         this.isMonthlyOpen = false;
     }
 
-    onDaySelect(dateStr) {
+    onDaySelect(timeStamp) {
         this.closeCalendar();
-        this.updateViewDay(getDate(dateStr));
+        this.updateViewDay(getDate(new Date(timeStamp)));
         this._render();
     }
 
@@ -177,7 +177,7 @@ export class HistoryPage {
                     this.imgRenderHeight = targetHeight;
 
                     const dx = (cw - targetWidth) / 2;
-                    const dy = (ch - targetHeight) / 2 - 20;
+                    const dy = (ch - targetHeight) / 4;
                     const rotate = i ? (Math.random() * 2 - 1) * 15 / 180 * Math.PI : 0;
 
                     zrImg = new zrender.Image({

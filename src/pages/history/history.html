@@ -5,39 +5,38 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar hideBackButton>
+  <ion-toolbar>
     <ion-buttons start>
       <button (click)="dismiss()" class="navbar-btn">
         <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
 
-    <ion-toolbar *ngIf="!isEmpty">
-      <ion-title>
-        <button *ngIf="isMonthlyOpen" (click)="monthlyCalendar.prevMonth()" class="navbar-btn title-btn">
-          <ion-icon name="arrow-dropleft"></ion-icon>
-        </button>
-        {{ title }}
-        <button *ngIf="isMonthlyOpen" (click)="monthlyCalendar.nextMonth()" class="navbar-btn title-btn">
-          <ion-icon name="arrow-dropright"></ion-icon>
-        </button>
-      </ion-title>
-    </ion-toolbar>
+    <ion-title *ngIf="!isEmpty">
+      <button *ngIf="isMonthlyOpen" (click)="monthlyCalendar.prevMonth()" class="navbar-btn title-btn">
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </button>
+      {{ title }}
+      <button *ngIf="isMonthlyOpen" (click)="monthlyCalendar.nextMonth()" class="navbar-btn title-btn">
+        <ion-icon name="arrow-dropright"></ion-icon>
+      </button>
+    </ion-title>
 
     <ion-buttons end *ngIf="!isEmpty">
       <button class="navbar-btn" (click)="toggleCalendar()">
         <ion-icon name="apps"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>{{ title }}</ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content id="history-content">
   <div *ngIf="isMonthlyOpen" #monthlyCalendar class="calendar-panel"></div>
 
-  <canvas #historyCanvas id="historyCanvas" class="full-canvas" [ngStyle]="{height: height + 'px' || '100%'}" (click)="closeCalendar()">
-  </canvas>
+  <div class="history-canvas">
+    <canvas #historyCanvas id="historyCanvas" [ngStyle]="{height: height + 'px' || '100%'}" (click)="closeCalendar()">
+    </canvas>
+  </div>
 
   <div padding class="placeholder" *ngIf="isEmpty">
     <h2>没有撕下的日历页</h2>

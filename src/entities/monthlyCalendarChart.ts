@@ -3,14 +3,21 @@ import * as moment from 'moment';
 import { getDate } from '../utils/time';
 import { getThemeColor } from '../utils/colors';
 import { HistoryPage } from '../pages/history/history';
+import { DESIGN_WIDTH } from '../utils/constants';
 
 export default class MonthlyCalendarChart {
 
     chart: any;
     viewMonth: number;
+    width: number;
+    height: number;
 
     constructor(container: HTMLDivElement, protected tearDay: moment.Moment, viewMonth: number, history: HistoryPage) {
         this.chart = echarts.init(container);
+
+        this.width = this.chart.getWidth();
+        this.height = this.chart.getHeight();
+
         this.update(viewMonth);
 
         this.chart.on('click', param => {
@@ -20,6 +27,7 @@ export default class MonthlyCalendarChart {
 
     update(viewMonth: number) {
         this.viewMonth = viewMonth;
+        const ratio = this.width / DESIGN_WIDTH;
 
         const renderItem = function(params, api) {
             const day = getDate(new Date(api.value(0)));
@@ -33,7 +41,7 @@ export default class MonthlyCalendarChart {
                 return;
             }
 
-            const padding = 8;
+            const padding = 8 * ratio;
             const pos = [cellPoint[0] - cellWidth / 2, cellPoint[1] - cellHeight / 2];
             return {
                 type: 'group',
@@ -52,7 +60,7 @@ export default class MonthlyCalendarChart {
                     position: [pos[0] + padding, pos[1] + padding],
                     style: api.style({
                         image: img,
-                        height: 18
+                        height: 18 * ratio
                     })
                 }],
                 name: 'group'
@@ -60,11 +68,11 @@ export default class MonthlyCalendarChart {
         };
 
         const data = [];
-        const month = viewMonth + 1;
-        for (let i = 1, len = moment(`2019-${month}`).daysInMonth(); i <= len; ++i) {
-            const date = `2019-${month}-${i}`;
-            if (getDate(date).isSameOrBefore(this.tearDay)) {
-                data.push([date, 1]);
+        const month = moment().year(2019).month(viewMonth);
+        for (let i = 1, len = month.daysInMonth(); i <= len; ++i) {
+            const date = getDate(month.date(i));
+            if (date.isSameOrBefore(this.tearDay)) {
+                data.push([date.toDate().getTime(), 1]);
             }
         }
 
@@ -72,8 +80,8 @@ export default class MonthlyCalendarChart {
             calendar: {
                 left: 'center',
                 top: 'middle',
-                cellSize: [50, 50],
-                range: `2019-${month}`,
+                cellSize: [50 * ratio, 50 * ratio],
+                range: `2019-${viewMonth + 1}`,
                 orient: 'vertical',
                 splitLine: {
                     lineStyle: {

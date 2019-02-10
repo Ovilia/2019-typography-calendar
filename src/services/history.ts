@@ -32,22 +32,6 @@ export class HistoryService {
         if (!lastTear) {
             await this.storage.set(STORE_KEY.FIRST_TEAR, 'torn');
         }
-
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-
-        const calendar = new CalendarCanvas(currentDate, canvas);
-
-        const base64 = await calendar.getRenderedBase64();
-        const historyPages = await this.storage.get(STORE_KEY.HISTORY_PAGE) || [];
-        const newPage = {
-            date: currentDate.toDate(),
-            image: base64
-        };
-        historyPages.push(newPage);
-
-        await this.storage.set(STORE_KEY.HISTORY_PAGE, historyPages);
         return await this.storage.set(STORE_KEY.TORN_DATE, currentDate.toDate());
     }
 

@@ -78,7 +78,7 @@ export class AboutPage {
     }
 
     checkVersion() {
-        let headers =new HttpHeaders({
+        const headers = new HttpHeaders({
             'Content-Type': 'application/json',
             'Accept': 'text/javascript'
           });

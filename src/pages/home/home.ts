@@ -3,6 +3,7 @@ import { NavController, ToastController, Toast, Platform, AlertController } from
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { TapticEngine } from '@ionic-native/taptic-engine';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
@@ -28,6 +29,7 @@ export class HomePage {
     themeColor: string;
 
     public isFrontPage: boolean;
+    public isDebug: boolean;
 
     protected mainCanvas: HTMLCanvasElement;
     protected bgCanvas: HTMLCanvasElement;
@@ -54,8 +56,10 @@ export class HomePage {
         public logService: LogService,
         public storage: StorageService,
         public taptic: TapticEngine,
+        public browser: InAppBrowser,
         public platfrom: Platform
     ) {
+        this.isDebug = IS_DEBUG;
     }
 
     async init() {
@@ -89,11 +93,6 @@ export class HomePage {
 
     ionViewDidEnter() {
         if (IS_DEBUG) {
-            // Promise.all([
-            //     this.storage.set(STORE_KEY.TORN_DATE, ''),
-            //     this.storage.set(STORE_KEY.HISTORY_PAGE, '')
-            // ])
-            // .then(() => this.init());
             this.init();
         }
 
@@ -240,7 +239,7 @@ export class HomePage {
             if (!this.canTear()) {
                 this._toast('还不能撕哦~ 等日历上的日子过了吧！');
             } else if (this.needUpgrade()) {
-                this._toast('后面的日历页需要更新一下 App 哦！');
+                this.promptUpdate();
             }
         }
         else {
@@ -280,6 +279,32 @@ export class HomePage {
         alert.present();
     }
 
+    public promptUpdate() {
+        const alert = this.alertCtrl.create({
+            title: '更新日历',
+            message: '后面的日历页需要更新后才能撕，是否前往更新？',
+            buttons: [
+                {
+                    text: '取消',
+                    role: 'cancel',
+                    handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'update_cancel');
+                    }
+                },
+                {
+                    text: '更新',
+                    handler: () => {
+                        this.logService.logEvent(PAGE_NAME, 'update_ok');
+                        const url = 'http://zhangwenli.com/2019-typography-calendar/update-ios.html';
+                        this.logService.logWebsite(PAGE_NAME, url, 'home-update');
+                        this.browser.create(`${url}?ref=inapp-home-update`);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    }
+
     protected _toast(text: string, position?: string) {
         this._toastDismiss();
         this.toast = this.toastCtrl.create({
@@ -293,6 +318,16 @@ export class HomePage {
     protected _toastDismiss() {
         if (this.toast) {
             this.toast.dismiss();
+        }
+    }
+
+    protected _clearStorage() {
+        if (IS_DEBUG) {
+            Promise.all([
+                this.storage.set(STORE_KEY.TORN_DATE, ''),
+                this.storage.set(STORE_KEY.HISTORY_PAGE, '')
+            ])
+            .then(() => this.init());
         }
     }
 

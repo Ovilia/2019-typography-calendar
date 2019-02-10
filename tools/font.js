@@ -59,13 +59,28 @@ for (let line of dayInfoLines) {
                 + ` --text "${name}" -c "${fontColor}" --font-size="23px" --dpr=3 --line-height=0.45`);
         }
 
-        shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/story/dark/${date}.png`
-            + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
+        switch (date) {
+            case '2.19':
+                shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/story/dark/${date}.png`
+                    + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
+                break;
+            default:
+                shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/story/dark/${date}.png`
+                    + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
+        }
 
         if (note) {
-            shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/note/dark/${date}.png`
-                + ` --text "${note}" -c "${noteColor}" --font-size="14px" --dpr=3 --max-width=280 `
-                + `--line-height=0.4`);
+            switch (date) {
+                case '2.19':
+                    shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/note/dark/${date}.png`
+                        + ` --text "${note}" -c "${noteColor}" --font-size="14px" --dpr=3 --max-width=280 `
+                        + `--line-height=0.4`);
+                    break;
+                default:
+                    shell.exec(`font2img -f ./fonts/xique-juzhen.ttf -o ../src/assets/imgs/fonts/note/dark/${date}.png`
+                        + ` --text "${note}" -c "${noteColor}" --font-size="14px" --dpr=3 --max-width=280 `
+                        + `--line-height=0.4`);
+            }
         }
 
         console.log('-------');
