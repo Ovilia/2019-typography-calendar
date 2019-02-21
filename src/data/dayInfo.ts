@@ -61,21 +61,21 @@ export default `
 2.24 | OCR A | OCR A Std | 1968 年设计的字体，当年被最早用于计算机光学字符识别研究。即使如今OCR 技术已经非常成熟，但它仍被用于世界各地的支票上。 | 还记得我们之前介绍过的 OCR B 字体吗？ |
 2.25 | Voltage | Voltage | 新的工作日，给自己充满电量！| 这款漂亮的连体字常被用作酒吧的霓虹灯牌。|
 2.26 | Remedy | Remedy OT | 花饰繁多的字体最早被设计用于反抗字体模块化的潮流。 | |
-2.27 | Just Another Hand | Just Another Hand | 「山穷水尽疑无路，柳暗花明又一村」 | 它源于作者某次心血来潮用一种全新的笔迹写字。当苦于当下的困境时，不妨试试换一个思路？|
-2.28 | Luckiest Guy | Luckiest Guy | 今年不是闰年，那就在今天祝那些四年才长一岁的幸运儿们生日快乐吧~ | |
-3.1 | Alice | Alice | 这款字体被特意为排印「爱丽丝梦游仙境」而创作，所有的衬线都调整了弧度，增加了一丝俏皮的感觉 | |
-3.2 | Cinzel | Cinzel | 「它的灵感来自罗马碑文，但一些调整使它看起来更现代一点」 | 如果拿它和Trajan类比，现代人好像比古代时候胖那么一点儿… |
+2.27 | Just Another Hand | JustAnotherHand-Regular.ttf | 「山穷水尽疑无路，柳暗花明又一村」 | 它源于作者某次心血来潮用一种全新的笔迹写字。当苦于当下的困境时，不妨试试换一个思路？|
+2.28 | Luckiest Guy | LuckiestGuy-Regular.ttf | 今年不是闰年，那就在今天祝那些四年才长一岁的幸运儿们生日快乐吧~ | |
+3.1 | Alice | Alice-Regular.ttf | 这款字体被特意为排印「爱丽丝梦游仙境」而创作，所有的衬线都调整了弧度，增加了一丝俏皮的感觉 | |
+3.2 | Cinzel | Cinzel-Regular.ttf | 「它的灵感来自罗马碑文，但一些调整使它看起来更现代一点」 | 如果拿它和Trajan类比，现代人好像比古代时候胖那么一点儿… |
 3.3 | Bell Centennial | Bell Centennial | 这款字体为AT&T公司为纪念其创始人，电话的发明人贝尔（1847.3.3-1922.8.2）而设计，最初被用于印制电话黄页。 | |
 3.4 | Axia Stencil Black | Axia Stencil Black | Stencil指的笔画镂空的字体模板，它们会使用细线连接字腔（如O中的圈）和主体，印到成品上时这些细线就成为了截断笔画的部分。 | |
 3.5 | DINosaur | DINosaur | 「道路千万条，安全第一条」 | 这款为公路标识设计的字体为了致敬其来源DIN而特地在名字上玩了个双关|
-3.6 | Average | Average | 这是一款用许多衬线字体平均出来的「标准字」 | 和之前社交网站上火过的标准脸给我有同样的感觉——它们绝对比超过一半的样本好看。 |
-3.7 | Curly | Curly | 对于一款不直不舒服斯基的字体，「卷曲」这个名字可以说是很贴切了 | |
+3.6 | Average | Average-Regular.ttf | 这是一款用许多衬线字体平均出来的「标准字」 | 和之前社交网站上火过的标准脸给我有同样的感觉——它们绝对比超过一半的样本好看。 |
+3.7 | Curly | Curly.otf | 对于一款不直不舒服斯基的字体，「卷曲」这个名字可以说是很贴切了 | |
 3.8 | Eskorte Latin Extrabold Italic  | Eskorte Latin Extrabold Italic | 「妇女能顶半边天」 | 今天的字体来自于早期为数不多的女性设计师，是她们用自己的才华赢得了平等与尊重。 |
-3.9 | Press Start 2P | Press Start 2P | 熟悉的像素风，是不是让你有再一次重拾红白机的感觉呢？ | |
-3.10 | Josefin Sans | Josefin Sans Light | OSCAR使用的就是少许改动过的Josefin Sans | |
-3.11 | Alike Angular | Alike Angular | 字体中的钢铁直男说得大概就是它了 | 这款字体用短直线代替了所有的弧线作为笔画边缘 |
+3.9 | Press Start 2P | PressStart2P-Regular.ttf | 熟悉的像素风，是不是让你有再一次重拾红白机的感觉呢？ | |
+3.10 | Josefin Sans | JustAnotherHand-Regular.ttf | OSCAR使用的就是少许改动过的Josefin Sans | |
+3.11 | Alike Angular | AlikeAngular-Regular.ttf | 字体中的钢铁直男说得大概就是它了 | 这款字体用短直线代替了所有的弧线作为笔画边缘 |
 3.12 | Fairwater Sailor Serif Regular | Fairwater Sailor Serif Regular | 植树节，在屏幕上种下一颗小树苗吧 | 然而我的Focus Forest已经遍地荒芜了，你们呢？ |
-3.13 | IM Fell DW Pica SC | IM Fell DW Pica SC | 一款自带侦探片音效的字体 | 许多侦探小说翻拍的电影里都有打字机正在工作的镜头，而且一般内容都比较毛骨悚然（比如凶手的信之类的）。 |
+3.13 | IM Fell DW Pica SC | IMFePIsc28P.ttf | 一款自带侦探片音效的字体 | 许多侦探小说翻拍的电影里都有打字机正在工作的镜头，而且一般内容都比较毛骨悚然（比如凶手的信之类的）。 |
 3.14 | JAF Domus Titling | Domus Titling Extrabold | 在因圆周率得名的π Day，当然要选一个字腔和笔画端头都圆得不能更圆的字体啦 | |
 3.15 | Calibri | Calibri | 「假的真不了，真的假不了」 | 巴基斯坦前总理在接受法院调查时提交了一份声称签署于06年的文件，却因为里面用的是直到07年才开放商用的Calibri字体而露馅 |
 
