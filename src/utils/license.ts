@@ -28,7 +28,7 @@ const license = [
         name: 'SIL Open Font License',
         desc: '以下字体来自 Google Fonts，基于 SIL Open Font License。',
         fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie',
-            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC'],
+            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text'],
         detail: `
             SIL Open Font License
             PREAMBLE
@@ -67,7 +67,7 @@ const license = [
     {
         id: 'others',
         name: '其他获得商用授权的字体',
-        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly']
+        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly', 'Dragon Serial']
     }
 ];
 

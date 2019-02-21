@@ -48,7 +48,6 @@ export default `
 2.12 | Tangerine | Tangerine-Regular.ttf | Tangerine 高挑优雅的上升部，宛如灵动逸荡的手写乐谱。字体设计和音乐看似风马牛不相及，实则在美学的维度上高度相关。 | 对了，某些靠行间距来卖厚书的出版社朋友们，我们的字体日历是不是启发了其中的商机？ |
 2.13 | PMN Caecilia | Caecilia LT Pro | 一款同时内含高级狗粮和精神食粮的字体。 | PMN 是设计师名字的缩写，Caecilia 是设计师妻子的名字。#至于精神食粮在哪里，明天告诉你。 |
 2.14 | PMN Caecilia Sans | PMN Caecilia Sans.ttf | 没错，这是昨天 PMN Caecilia 的非衬线情侣款。看电子书的朋友一定对它们很熟悉。 | PMN Caecilia 是 Kindle 使用的系统字体。 |
--->
 2.15 | Roboto | Roboto | Roboto 是 Google 产品家族的御用#字体，包括Android、Youtube、#Google Maps 等，也是 Google#Fonts 上使用量排名第一的字体。 | 2005 年 2 月 15 日 YouTube 正式注册并使用。 |
 2.16 | Open Sans | OpenSans-Regular.ttf | 高挑的 x 字高（小写字母 x 的高度）是 Open Sans 的一大特色。#它是 Google Fonts 上使用量排名第二的字体，在超过两千万个网站上都可以看到它的身影。| |
 2.17 | Bello | Bello Script Pro | 这种类似手写街头嘻哈风字体已经成为游行抗议标牌的最常用字体。#Airbnb 的初版 logo 字体用的也是#Bello。 | Bello 是西班牙语中美丽的意思。 |
@@ -61,25 +60,27 @@ export default `
 2.24 | OCR A | OCR A Std | 1968 年设计的字体，当年被最早用于计算机光学字符识别研究。即使如今OCR 技术已经非常成熟，但它仍被用于世界各地的支票上。 | 还记得我们之前介绍过的 OCR B 字体吗？ |
 2.25 | Voltage | Voltage | 新的工作日，给自己充满电量！| 这款漂亮的连体字常被用作酒吧的霓虹灯牌。|
 2.26 | Remedy | Remedy OT | 花饰繁多的字体最早被设计用于反抗字体模块化的潮流。 | |
-2.27 | Just Another Hand | JustAnotherHand-Regular.ttf | 「山穷水尽疑无路，柳暗花明又一村」 | 它源于作者某次心血来潮用一种全新的笔迹写字。当苦于当下的困境时，不妨试试换一个思路？|
-2.28 | Luckiest Guy | LuckiestGuy-Regular.ttf | 今年不是闰年，那就在今天祝那些四年才长一岁的幸运儿们生日快乐吧~ | |
-3.1 | Alice | Alice-Regular.ttf | 这款字体被特意为排印「爱丽丝梦游仙境」而创作，所有的衬线都调整了弧度，增加了一丝俏皮的感觉 | |
-3.2 | Cinzel | Cinzel-Regular.ttf | 「它的灵感来自罗马碑文，但一些调整使它看起来更现代一点」 | 如果拿它和Trajan类比，现代人好像比古代时候胖那么一点儿… |
-3.3 | Bell Centennial | Bell Centennial | 这款字体为AT&T公司为纪念其创始人，电话的发明人贝尔（1847.3.3-1922.8.2）而设计，最初被用于印制电话黄页。 | |
-3.4 | Axia Stencil Black | Axia Stencil Black | Stencil指的笔画镂空的字体模板，它们会使用细线连接字腔（如O中的圈）和主体，印到成品上时这些细线就成为了截断笔画的部分。 | |
-3.5 | DINosaur | DINosaur | 「道路千万条，安全第一条」 | 这款为公路标识设计的字体为了致敬其来源DIN而特地在名字上玩了个双关|
-3.6 | Average | Average-Regular.ttf | 这是一款用许多衬线字体平均出来的「标准字」 | 和之前社交网站上火过的标准脸给我有同样的感觉——它们绝对比超过一半的样本好看。 |
-3.7 | Curly | Curly.otf | 对于一款不直不舒服斯基的字体，「卷曲」这个名字可以说是很贴切了 | |
-3.8 | Eskorte Latin Extrabold Italic  | Eskorte Latin Extrabold Italic | 「妇女能顶半边天」 | 今天的字体来自于早期为数不多的女性设计师，是她们用自己的才华赢得了平等与尊重。 |
+2.27 | DINosaur | DINosaur | 「道路千万条，安全第一条」 | 这款为公路标识设计的字体为了致敬其来源#DIN 而特地在名字上玩了个双关。|
+2.28 | Luckiest Guy | LuckiestGuy-Regular.ttf | 今年不是闰年，那就在今天祝那些四年才老一岁的幸运儿们生日快乐吧~ | |
+3.1 | Alice | Alice-Regular.ttf | 这款字体被特意为排印《爱丽丝梦游仙境》而创作，所有的衬线都调整了弧度，增加了一丝俏皮的感觉。 | |
+3.2 | Cinzel | Cinzel-Regular.ttf | 「它的灵感来自罗马碑文，但一些调整使它看起来更现代一点。」 | 如果拿它和 Trajan 类比，现代人好像比古代时候胖那么一点儿… |
+3.3 | Bell Centennial Std | Bell Centennial Std | 这款字体为 AT&T 公司为纪念其创始人——电话的发明人贝尔而设计，最初被用于印制电话黄页。 | |
+3.4 | Axia Stencil Black | Axia Stencil | Stencil 指的笔画镂空的字体模板，它们会使用细线连接字腔（比如 O 中的圈）和主体，印到成品上时这些细线就成为了截断笔画的部分。 | |
+3.5 | Just Another Hand | JustAnotherHand-Regular.ttf | 山穷水尽疑无路，#柳暗花明又一村。 | 它源于作者某次心血来潮用一种全新的笔迹写#字。当苦于当下的困境时，不妨试试换一个思#路？|
+3.6 | Average | Average-Regular.ttf | 这是一款用许多衬线字体平均出来的「标准字」。 | 和之前社交网站上火过的标准脸给我有同样的感觉——它们绝对比超过一半的样本好看。 |
+3.7 | Curly | Curly.otf | 对于一款不直不舒服斯基的字体，#Curly（卷曲）这个名字可以说#是很贴切了。 | |
+3.8 | Eskorte | Eskorte Latin | 「妇女能顶半边天」 | 今天的字体来自于早期占少数的女性设计师，是她们用自己的才华赢得了平等与尊重。 |
 3.9 | Press Start 2P | PressStart2P-Regular.ttf | 熟悉的像素风，是不是让你有再一次重拾红白机的感觉呢？ | |
-3.10 | Josefin Sans | JustAnotherHand-Regular.ttf | OSCAR使用的就是少许改动过的Josefin Sans | |
-3.11 | Alike Angular | AlikeAngular-Regular.ttf | 字体中的钢铁直男说得大概就是它了 | 这款字体用短直线代替了所有的弧线作为笔画边缘 |
-3.12 | Fairwater Sailor Serif Regular | Fairwater Sailor Serif Regular | 植树节，在屏幕上种下一颗小树苗吧 | 然而我的Focus Forest已经遍地荒芜了，你们呢？ |
-3.13 | IM Fell DW Pica SC | IMFePIsc28P.ttf | 一款自带侦探片音效的字体 | 许多侦探小说翻拍的电影里都有打字机正在工作的镜头，而且一般内容都比较毛骨悚然（比如凶手的信之类的）。 |
-3.14 | JAF Domus Titling | Domus Titling Extrabold | 在因圆周率得名的π Day，当然要选一个字腔和笔画端头都圆得不能更圆的字体啦 | |
-3.15 | Calibri | Calibri | 「假的真不了，真的假不了」 | 巴基斯坦前总理在接受法院调查时提交了一份声称签署于06年的文件，却因为里面用的是直到07年才开放商用的Calibri字体而露馅 |
+3.10 | Josefin Sans | JustAnotherHand-Regular.ttf | 奥斯卡奖使用的就是少许改动过的#Josefin Sans。 | |
+3.11 | Alike Angular | AlikeAngular-Regular.ttf | 字体中的钢铁直男说得大概就是它#了！ | 这款字体用短直线代替了所有的弧线作为笔画边缘。 |
+3.12 | Fairwater | Fairwater Sailor Serif | 植树节，在屏幕上种下一颗小树苗#吧！ | |
+3.13 | IM Fell DW Pica SC | IMFePIsc28P.ttf | 一款自带侦探片音效的字体。 | 许多侦探小说翻拍的电影里都有打字机正在工作的镜头，而且一般内容都比较毛骨悚然（比如凶手的信之类的）。 |
+3.14 | JAF Domus Titling | Domus Titling | 在这个因圆周率得名的 Pi Day（因为Pi 的前几位是 3.14），当然要选一个字腔和笔画端头都圆得不能更圆的字体啦！ | |
+3.15 | Calibri | Calibri | 巴基斯坦前总理在接受法院调查时#提交了一份声称签署于 2006 年的文件，却因为里面用的是直到 2007 年才开放商用的 Calibri 字体而露馅。 | 但我觉得他也可能是被冤枉的，比如他可能是穿越过来的…… |
+3.16 | 站酷庆科黄油体 | ZCOOLQingKeHuangYou-Regular.ttf | 线条刚硬却有带着一些圆角，恰似黄油软糯的质地吧！ | 这款包含了九千多个汉字的字体，由设计师郑庆科在站酷和 Google Fonts 发布免费商用版权。 |
+3.17 | Dragon Serial | SoftMaker - DragonSerial.otf | 二月二，龙抬头。| 今天是农历二月初二，传说是龙抬头的日字。 |
+3.18 | Libre Barcode 39 Text | LibreBarcode39Text-Regular.ttf | 这是一款自带条形码的字体…… | |
 
-<!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.2 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
@@ -93,6 +94,7 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
+3.30 | Liquorstore 3D | Liquorstore 3D | Liquorstore 意为卖酒的店，是不是看起来特别像酒店的木质招牌呢？ | 今天是智利的品酒节。 |
 
 5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||

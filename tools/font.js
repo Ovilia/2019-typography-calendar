@@ -55,12 +55,21 @@ for (let line of dayInfoLines) {
         }
 
         if (name) {
-            shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/dark/${date}.png`
-                + ` --text "${name}" -c "${fontColor}" --font-size="23px" --dpr=3 --line-height=0.45`);
+            switch (date) {
+                case '3.9':
+                case '3.12':
+                    shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/dark/${date}.png`
+                        + ` --text "${name}" -c "${fontColor}" --font-size="18px" --dpr=3 --line-height=0.45`);
+                    break;
+                default:
+                    shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/fontName/dark/${date}.png`
+                        + ` --text "${name}" -c "${fontColor}" --font-size="23px" --dpr=3 --line-height=0.45`);
+            }
         }
 
         switch (date) {
             case '2.19':
+            case '3.16':
                 shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/story/dark/${date}.png`
                     + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
                 break;

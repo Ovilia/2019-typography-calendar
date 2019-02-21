@@ -1,0 +1,9 @@
+language: node_js
+branches:
+ only:
+  - master
+before_script:
+ - npm install -g ionic cordova
+script:
+ - ionic cordova build ios -- prod
+ - ionic cordova build android -- prod
