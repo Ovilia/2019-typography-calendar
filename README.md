@@ -1,7 +1,5 @@
 # 2019 字体日历 App
 
-[![Build Status](https://travis-ci.com/Ovilia/2019-typography-calendar.svg?branch=master)](https://travis-ci.com/Ovilia/2019-typography-calendar)
-
 ![Website](./design/website.png)
 
 ![Design](./design/all.png)
@@ -33,6 +31,8 @@
 | - [ ] 分享调起微信微博等            | bug     | 低    |     |
 
 ## 本地调试方法
+
+[![Build Status](https://travis-ci.com/Ovilia/2019-typography-calendar.svg?branch=master)](https://travis-ci.com/Ovilia/2019-typography-calendar)
 
 先安装 [Node.js](https://nodejs.org/en/)、[npm](https://www.npmjs.com/get-npm)。
 
