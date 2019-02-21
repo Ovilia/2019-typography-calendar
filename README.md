@@ -1,5 +1,7 @@
 # 2019 字体日历 App
 
+[![Build Status](https://travis-ci.com/Ovilia/2019-typography-calendar.svg?branch=master)](https://travis-ci.com/Ovilia/2019-typography-calendar)
+
 ![Website](./design/website.png)
 
 ![Design](./design/all.png)
@@ -18,7 +20,7 @@
 | - [x] 关于中增加版本号             | feat    | 中    |     |
 | - [ ] 导出的时候允许增加评论        | bug    | 中    |      |
 | - [x] 图片模糊                    | bug    | 中    |      |
-| - [ ] 批量撕日历                  | bug    | 低    |     |
+| - [x] 批量撕日历                  | bug    | 低    |     |
 | - [x] 摇一摇将撕下的页面摆整齐      | feat    | 低    |     |
 | - [x] 检查版本更新                | feat    | 低    | 仅ios |
 | - [x] 终止系统音乐播放             | bug     | 低    |    |
