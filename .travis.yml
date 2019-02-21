@@ -7,5 +7,4 @@ branches:
 before_script:
  - npm install -g ionic@3.20.1 cordova@8.1.0
 script:
- - ionic cordova build ios -- prod
- - ionic cordova build android -- prod
+ — ionic cordova build browser — prod
