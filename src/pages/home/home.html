@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-buttons *ngIf="!isAndroid" end>
-      <button end (click)="exportCanvas()" [ngStyle]="{color: themeColor}">
+      <button end (click)="share()" [ngStyle]="{color: themeColor}">
         <ion-icon name="share-alt"></ion-icon>
       </button>
       <button *ngIf="isDebug" end (click)="_clearStorage()" [ngStyle]="{color: themeColor}">

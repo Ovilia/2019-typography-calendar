@@ -18,8 +18,7 @@ export const STORE_KEY = {
     TORN_DATE: 'tornDate',
     HISTORY_PAGE: 'historyPage',
     FIRST_OPEN: 'firstOpen',
-    FIRST_TEAR: 'firstTear',
-    FIRST_HISTORY_SHAKE: 'firstHistoryShake'
+    FIRST_TEAR: 'firstTear'
 };
 
 export const NOTIIFICATION_ID_DAILY = 1;

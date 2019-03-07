@@ -4,6 +4,7 @@ import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { TapticEngine } from '@ionic-native/taptic-engine';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import * as moment from 'moment';
 
 import CalendarCanvas from '../../entities/calendarCanvas';
@@ -58,7 +59,8 @@ export class HomePage {
         public storage: StorageService,
         public taptic: TapticEngine,
         public browser: InAppBrowser,
-        public platfrom: Platform
+        public platfrom: Platform,
+        public socialSharing: SocialSharing
     ) {
         this.isDebug = IS_DEBUG;
     }
@@ -131,14 +133,37 @@ export class HomePage {
         // TODO: log click event
     }
 
+    async share() {
+        this.logService.logEvent(PAGE_NAME, 'share');
+        const msg = '我发现了一款超有爱的 #2019字体日历#！';
+        const subject = '分享 2019 字体日历';
+        const base64 = await getExportBase64(this.currentDate);
+        const url = 'http://zhangwenli.com/2019-typography-calendar/download.html?ref=share';
+        await this.socialSharing.share(msg, subject, base64, url)
+            .then(isSuccess => {
+                if (isSuccess) {
+                    this.logService.logEvent(PAGE_NAME, 'share_success');
+                    this._toast('分享成功啦！好东西和朋友分享是最开心的啦！');
+                }
+                else {
+                    // Canceled or failed
+                    this.logService.logEvent(PAGE_NAME, 'share_canceled_failed');
+                    return this.exportCanvas();
+                }
+            }, async err => {
+                this.logService.logEvent(PAGE_NAME, 'share_error', err);
+                return await this.exportCanvas();
+            });
+    }
+
     async exportCanvas() {
         this.logService.logEvent(PAGE_NAME, 'export_today', this.currentDate.format('MM-DD'));
 
         const base64 = await getExportBase64(this.currentDate);
-        this.base64ToGallery.base64ToGallery(base64).then(
+        await this.base64ToGallery.base64ToGallery(base64).then(
             () => {
                 this.logService.logEvent(PAGE_NAME, 'export_today_success');
-                this._toast('已经保存好啦，快把我从相册分享出去嘛！');
+                this._toast('已经保存到相册啦，快把我分享出去嘛！');
             },
             err => {
                 this.logService.logEvent(PAGE_NAME, 'export_today_fail', err);

@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams, ViewController, ToastController, Platform } from 'ionic-angular';
 import { TapticEngine } from '@ionic-native/taptic-engine';
-import { Subscription } from 'rxjs/Subscription';
 import * as zrender from 'zrender';
 import * as moment from 'moment';
 
@@ -38,7 +37,6 @@ export class HistoryPage {
     protected imgRenderWidth: number;
     protected imgRenderHeight: number;
     protected isTouchMoved: boolean;
-    protected shakeWatch: Subscription;
     protected historyPages: any[];
 
     constructor(

@@ -15,7 +15,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { TapticEngine } from '@ionic-native/taptic-engine';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
-import { Shake } from '@ionic-native/shake';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -69,7 +69,7 @@ import { AboutPage } from '../pages/about/about';
     AndroidFullScreen,
     AndroidPermissions,
     TapticEngine,
-    Shake
+    SocialSharing
   ]
 })
 export class AppModule {}
