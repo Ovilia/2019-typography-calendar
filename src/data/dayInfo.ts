@@ -68,10 +68,10 @@ export default `
 3.4 | Axia Stencil Black | Axia Stencil | Stencil 指的笔画镂空的字体模板，它们会使用细线连接字腔（比如 O 中的圈）和主体，印到成品上时这些细线就成为了截断笔画的部分。 | |
 3.5 | Just Another Hand | JustAnotherHand-Regular.ttf | 山穷水尽疑无路，#柳暗花明又一村。 | 它源于作者某次心血来潮用一种全新的笔迹写#字。当苦于当下的困境时，不妨试试换一个思#路？|
 3.6 | Average | Average-Regular.ttf | 这是一款用许多衬线字体平均出来的「标准字」。 | 和之前社交网站上火过的标准脸给我有同样的感觉——它们绝对比超过一半的样本好看。 |
-3.7 | Curly | Curly.otf | 对于一款不直不舒服斯基的字体，#Curly（卷曲）这个名字可以说#是很贴切了。 | |
+3.7 | Curly | Curly.otf | 对于一款不弯不舒服斯基的字体，#Curly（卷曲）这个名字可以说#是很贴切了。 | |
 3.8 | Eskorte | Eskorte Latin | 「妇女能顶半边天」 | 今天的字体来自于早期占少数的女性设计师，是她们用自己的才华赢得了平等与尊重。 |
 3.9 | Press Start 2P | PressStart2P-Regular.ttf | 熟悉的像素风，是不是让你有再一次重拾红白机的感觉呢？ | |
-3.10 | Josefin Sans | JustAnotherHand-Regular.ttf | 奥斯卡奖使用的就是少许改动过的#Josefin Sans。 | |
+3.10 | Josefin Sans | JosefinSans-Light.ttf | 奥斯卡奖使用的就是少许改动过的#Josefin Sans。 | |
 3.11 | Alike Angular | AlikeAngular-Regular.ttf | 字体中的钢铁直男说得大概就是它#了！ | 这款字体用短直线代替了所有的弧线作为笔画边缘。 |
 3.12 | Fairwater | Fairwater Sailor Serif | 植树节，在屏幕上种下一颗小树苗#吧！ | |
 3.13 | IM Fell DW Pica SC | IMFePIsc28P.ttf | 一款自带侦探片音效的字体。 | 许多侦探小说翻拍的电影里都有打字机正在工作的镜头，而且一般内容都比较毛骨悚然（比如凶手的信之类的）。 |
@@ -80,22 +80,32 @@ export default `
 3.16 | 站酷庆科黄油体 | ZCOOLQingKeHuangYou-Regular.ttf | 线条刚硬却有带着一些圆角，恰似黄油软糯的质地吧！ | 这款包含了九千多个汉字的字体，由设计师郑庆科在站酷和 Google Fonts 发布免费商用版权。 |
 3.17 | Dragon Serial | SoftMaker - DragonSerial.otf | 二月二，龙抬头。| 今天是农历二月初二，传说是龙抬头的日字。 |
 3.18 | Libre Barcode 39 Text | LibreBarcode39Text-Regular.ttf | 这是一款自带条形码的字体…… | |
-
+3.19 | Srisakdi | Srisakdi-Regular.ttf | 这款字体的设计者是一个泰国人。字母中的装饰性元素很大程度上受到了泰文的启发。 | |
+3.20 | Crimson Text | CrimsonText-Regular.ttf | 有时候我们选择一种字体是为了让字体的特色尽可能弱化，而让文字内容得以彰显。 | 这是一款专为印刷书籍设计的字体。 |
+3.21 | Bungee Shade | BungeeShade-Regular.ttf | 有时候我们也需要非常令人印象深刻的字体，使得我们的招牌在大量的文字背景中脱颖而出。 | 这是一款为都市生活设计的招牌字体。 |
+3.22 | Over the Rainbow | OvertheRainbow.ttf | Somewhere over the rainbow#Way up high#There's a land that I heard of#Once in a lullaby | 又到周五了，听首好歌让心情放个假！ |
+3.23 | Bangers | Bangers-Regular.ttf | 为什么欧美漫画总用大写字母？#原因有些众说纷纭，其中的一种说法是，早期手写文本的年代，大写字母的可读性比小写字母更好一些。 | 这是一款 19 世纪超级英雄漫画常用的字体。 |
+3.24 | Orbitron | Orbitron-Regular.ttf | 作为一款科幻感十足的字体，「飞碟巡航」的名字恰如其分。 | |
+-->
+3.25 | Audiowide | Audiowide-Regular.ttf | 昨天的 Orbitron 和今天的 Audiowide都带有科技和未来的感觉。如果说前者更偏重于科幻的话，那么后者可能更偏重于科技感。 | 但是，谁说未来一定是高科技的呢？ |
+3.26 | Unica One | UnicaOne-Regular.ttf | 因为大小写的关系，这款字体我们可能看着有些别扭，但也因此很适合在有特色的标题或短文本中使用。 | 「Unicase」的意思是不区分大小写，据说早期的字母都是不区分大小写的。 |
+3.27 | Major Mono Display | MajorMonoDisplay-Regular.ttf | 这是一款全大写的等宽字体，一些随性的跳脱的设计使得它成为一种活泼有趣的选择。 | 注意到全大写字体和不区分大小写字体的区别了吗？看看历史页面里昨天的页面吧！|
+<!--
+3.28 | Whitman | Whitman | 优雅的衬线体，搭配上富有诗意的名字，一看就是为印刷品设计的字体。 | 沃尔特·惠特曼是美国著名诗人、散文家。 |
+3.29 | Patrick Hand | PatrickHand-Regular.ttf | 顾名思义，这是 Patrick「写」出来的一款字体。 | 到底是字写的好看而成为了字体设计师，还是做字体设计让自己的字也变好看了呢？ |
+3.30 | Liquorstore 3D | Liquorstore 3D | 今天是智利的品酒节。不妨暂时忘了繁忙的工作，和我们一起来小酌一杯吧？ | Liquorstore 意为卖酒的店，是不是看起来特别像酒店的木质招牌呢？ |
+3.31 | Comfortaa | Comfortaa-Regular.ttf | 舒服啊啊…… | Comport 是「舒服」的意思，aa 是「啊啊」的意思。说真的，我应该去做教英语的 App 吧？ |
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.2 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
-2.9 | Clarendon Text | Clarendon Text Pro Bold | 年初五是迎财神的日子，就选看着就多金的字体祝大家新年有财运吧。 | Clarendon 是美国富国（WELLS FARGO）银行 Logo 使用的字体。 |
-2.11 | Over the Rainbow | OvertheRainbow.ttf | 「Somewhere over the rainbow way up high There's a land that I heard of once in lullaby」 | 节后第一个工作日，听首轻松欢快的歌儿吧~ |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
 2.15 | Mono45 Headline | Mono45-Headline Regular | 0 和 O 傻傻分不清楚？加一根斜线吧。 |  |
-2.19 | Patrick Hand | PatrickHand-Regular.ttf | 顾名思义，这是Patrick「写」出来的一款字体。 | 到底是字写的好看而成为了字体设计师，还是做字体设计让自己的字也变好看了呢？ |
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 |  |
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-3.30 | Liquorstore 3D | Liquorstore 3D | Liquorstore 意为卖酒的店，是不是看起来特别像酒店的木质招牌呢？ | 今天是智利的品酒节。 |
-
+4.23 | Bookmania | Bookmania | 今天是「世界图书与版权日」，让我们为图书狂欢吧！ | 字体名称中的 mania 是「狂热」的意思。|
 5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
 -->

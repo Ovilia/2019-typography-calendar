@@ -15,6 +15,7 @@ import { IS_DEBUG, NOTIIFICATION_ID_DAILY, STORE_KEY, LAST_AVAILABLE_DATE } from
 import { getDate } from '../../utils/time';
 import { AudioService } from '../../services/audio';
 import { getExportBase64 } from '../../utils/share';
+import random from '../../utils/random';
 
 const PAGE_NAME = 'home';
 
@@ -237,12 +238,19 @@ export class HomePage {
                 this.setNotification();
             }
             if (!this.canTear()) {
-                this._toast('还不能撕哦~ 等日历上的日子过了吧！');
+                const text = [
+                    '还不能撕哦~ 等日历上的日子过了吧！',
+                    '明天再来撕吧！期待哟~',
+                    '不要心急~ 今天也要好好过呀！',
+                    '再等等吧！明天才能撕哦~',
+                    '先把今天过好，再来撕明天的日历吧！'
+                ];
+                this._toast(random(text));
             } else if (this.needUpgrade()) {
                 this.promptUpdate();
             }
         }
-        else {
+        else if (this.canTear()) {
             this._toast('下拉撕去当前页哟~');
         }
     }

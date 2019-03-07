@@ -124,8 +124,14 @@ export default class CalendarCanvas {
             const targetWidth = 258;
             let targetHeight = 225;
 
-            if (date === '2.5') {
-                targetHeight = 350;
+            switch (date) {
+                case '2.5':
+                    targetHeight = 350;
+                    break;
+
+                case '3.31':
+                    targetHeight = 200;
+                    break;
             }
 
             const result = {
@@ -143,15 +149,23 @@ export default class CalendarCanvas {
                 result.width = result.height / img.height * img.width;
             }
 
-            if (result.width < 200) {
-                result.right = padding;
+            switch (date) {
+                case '3.31':
+                    result.right = padding;
+                    break;
+
+                default:
+                    if (result.width < 200) {
+                        result.right = padding;
+                    }
+                    else if (result.width > 260) {
+                        result.right = -padding * 2;
+                    }
+                    else {
+                        result.right = -padding;
+                    }
             }
-            else if (result.width > 260) {
-                result.right = -padding * 2;
-            }
-            else {
-                result.right = -padding;
-            }
+
             return result;
         };
         const datePos = getDatePosition(dateImg);
