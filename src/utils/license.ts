@@ -67,7 +67,7 @@ const license = [
     {
         id: 'others',
         name: '其他获得商用授权的字体',
-        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly', 'Dragon Serial']
+        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly']
     }
 ];
 
