@@ -158,6 +158,10 @@ export class HomePage {
 
     async exportCanvas() {
         this.logService.logEvent(PAGE_NAME, 'export_today', this.currentDate.format('MM-DD'));
+        if (this.platfrom.is('android')) {
+            // TODO: android has bug with exportCanvas
+            return;
+        }
 
         const base64 = await getExportBase64(this.currentDate);
         await this.base64ToGallery.base64ToGallery(base64).then(
