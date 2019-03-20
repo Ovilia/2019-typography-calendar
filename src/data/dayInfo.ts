@@ -78,9 +78,7 @@ export default `
 3.14 | JAF Domus Titling | Domus Titling | 在这个因圆周率得名的 Pi Day（因为Pi 的前几位是 3.14），当然要选一个字腔和笔画端头都圆得不能更圆的字体啦！ | |
 3.15 | Calibri | Calibri | 巴基斯坦前总理在接受法院调查时#提交了一份声称签署于 2006 年的文件，却因为里面用的是直到 2007 年才开放商用的 Calibri 字体而露馅。 | 但我觉得他也可能是被冤枉的，比如他可能是穿越过来的…… |
 3.16 | 站酷庆科黄油体 | ZCOOLQingKeHuangYou-Regular.ttf | 线条刚硬却有带着一些圆角，恰似黄油软糯的质地吧！ | 这款包含了九千多个汉字的字体，由设计师郑庆科在站酷和 Google Fonts 发布免费商用版权。 |
--->
-3.17 | Comfortaa | Comfortaa-Regular.ttf | 舒服啊啊…… | Comport 是「舒服」的意思，aa 是「啊啊」的意思。说真的，我应该去做教英语的 App 吧？ |
-<!--
+3.17 | Comfortaa | Comfortaa-Regular.ttf | 舒服啊啊…… | Comfort 是「舒服」的意思，aa 是「啊啊」的意思。说真的，我应该去做教英语的 App 吧？ |
 3.18 | Libre Barcode 39 Text | LibreBarcode39Text-Regular.ttf | 这是一款自带条形码的字体…… | |
 3.19 | Srisakdi | Srisakdi-Regular.ttf | 这款字体的设计者是一个泰国人。字母中的装饰性元素很大程度上受到了泰文的启发。 | |
 3.20 | Crimson Text | CrimsonText-Regular.ttf | 有时候我们选择一种字体是为了让字体的特色尽可能弱化，而让文字内容得以彰显。 | 这是一款专为印刷书籍设计的字体。 |
@@ -94,6 +92,14 @@ export default `
 3.28 | Whitman | Whitman | 优雅的衬线体，搭配上富有诗意的名字，一看就是为印刷品设计的字体。 | 沃尔特·惠特曼是美国著名诗人、散文家。 |
 3.29 | Patrick Hand | PatrickHand-Regular.ttf | 顾名思义，这是 Patrick「写」出来的一款字体。 | 到底是字写的好看而成为了字体设计师，还是做字体设计让自己的字也变好看了呢？ |
 3.30 | Liquorstore 3D | Liquorstore 3D | 今天是智利的品酒节。不妨暂时忘了繁忙的工作，和我们一起来小酌一杯吧？ | Liquorstore 意为卖酒的店，是不是看起来特别像酒店的木质招牌呢？ |
+3.31 | Cuisine | CuisineOT | Cuisine 是烹饪的意思，这个字体也很容易让人联想到咖啡或者面包的品牌。 ||
+4.1 | Schoolbell | Schoolbell-Regular.ttf | 嘿！张老师叫你去办公室！ | 已经好多年愚人节没被耍了，突然有点怀念起学生时代来…… |
+4.2 | Willow | Willow Std | 昔我往矣，杨柳依依；#今我来思，雨雪霏霏。| Willow 是柳树的意思，和这款字体瘦长的形象呼应。|
+4.3 | Ohno Blazeface | Ohno Blazeface | 欧，不！又长胖了…… |
+4.4 | Asap | Asap-Regular.ttf | 设计师将这款字体与斜体、粗体、粗斜体设计为同样宽度。这样，当在屏幕阅读时切换字形，将不会影响页面的排版。不得不说，真是一种贴心的设计啊！ | ASAP（As Soon As Possible）是尽快的意思。|
+4.5 | Turnip | Turnip | 设计者有意将这款字体设计得有些粗糙，甚至名字也起得非常接地气。 | Turnip 是萝卜的意思。 |
+4.6 | Poiret One | PoiretOne-Regular.ttf | 极细的线条，搭配饱满圆润的字腔，优雅是逃不脱的。||
+4.7 | Liana | Liana | 读外国名著的时候，我惊讶于为什么很多小说以主人公的名字命名。可能对于西方人而言，名字背后的典故带来了比我们能理解到的更多的信息。比如这款字体，设计师通过 Liana 这个名字，表现出一个优雅而充满学识的女性形象。|
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.2 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
@@ -106,6 +112,8 @@ export default `
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
 4.23 | Bookmania | Bookmania | 今天是「世界图书与版权日」，让我们为图书狂欢吧！ | 字体名称中的 mania 是「狂热」的意思。|
 5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
+6.1 | Mati |||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
+11.15 | Kepler | | | 开普勒于 1630 年 11 月 15 日逝世。|
 -->
 `;
