@@ -84,7 +84,7 @@ export default `
 3.20 | Crimson Text | CrimsonText-Regular.ttf | 有时候我们选择一种字体是为了让字体的特色尽可能弱化，而让文字内容得以彰显。 | 这是一款专为印刷书籍设计的字体。 |
 3.21 | Bungee Shade | BungeeShade-Regular.ttf | 有时候我们也需要非常令人印象深刻的字体，使得我们的招牌在大量的文字背景中脱颖而出。 | 这是一款为都市生活设计的招牌字体。 |
 3.22 | Over the Rainbow | OvertheRainbow.ttf | Somewhere over the rainbow#Way up high#There's a land that I heard of#Once in a lullaby | 又到周五了，听首好歌让心情放个假！ |
-3.23 | Bangers | Bangers-Regular.ttf | 为什么欧美漫画总用大写字母？#原因有些众说纷纭，其中的一种说法是，早期手写文本的年代，大写字母的可读性比小写字母更好一些。 | 这是一款 19 世纪超级英雄漫画常用的字体。 |
+3.23 | Bangers | Bangers-Regular.ttf | 为什么欧美漫画总用大写字母？#原因有些众说纷纭，其中的一种说法是，早期手写文本的年代，大写字母的可读性比小写字母更好一些。 | 这是一款 20 世纪中期超级英雄漫画常用风格的字体。 |
 3.24 | Orbitron | Orbitron-Regular.ttf | 作为一款科幻感十足的字体，「飞碟巡航」的名字恰如其分。 | |
 3.25 | Audiowide | Audiowide-Regular.ttf | 昨天的 Orbitron 和今天的 Audiowide都带有科技和未来的感觉。如果说前者更偏重于科幻的话，那么后者可能更偏重于科技感。 | 但是，谁说未来一定是高科技的呢？ |
 3.26 | Unica One | UnicaOne-Regular.ttf | 因为大小写的关系，这款字体我们可能看着有些别扭，但也因此很适合在有特色的标题或短文本中使用。 | 「Unicase」的意思是不区分大小写，据说早期的字母都是不区分大小写的。 |
