@@ -100,19 +100,45 @@ export default `
 4.5 | Turnip | Turnip | 设计者有意将这款字体设计得有些粗糙，甚至名字也起得非常接地气。 | Turnip 是萝卜的意思。 |
 4.6 | Poiret One | PoiretOne-Regular.ttf | 极细的线条，搭配饱满圆润的字腔，优雅是逃不脱的。||
 4.7 | Liana | Liana | 读外国名著的时候，我惊讶于为什么很多小说以主人公的名字命名。可能对于西方人而言，名字背后的典故带来了比我们能理解到的更多的信息。比如这款字体，设计师通过 Liana 这个名字，表现出一个优雅而充满学识的女性形象。|
+4.8 | Adobe Heiti | Adobe Heiti | 「饮水思源，爱国荣校」| 思源黑体中的中文字符部分便是以Adobe黑体为源，至于后半句…校庆日当然要庆祝一下啦。 |
+4.9 | Sign Painter Regular | Sign Painter Regular | 「Hello World」 | 手写字体的设计常常以练习临摹这样的招牌字体作为入门 ||
+4.10 | Mono 45 Headline | Mono45-Headline Regular | 0 和 O 傻傻分不清楚？加一根斜线吧。 ||
+4.11 | Lumiere Five | Lumiere Five.otf | 上帝说，要有光，于是人类发明了灯。| 这款字体的灵感来源于霓虹灯招牌，所以取名为了光 |
+4.12 | Skyhook Mono | SkyhookMono.ttf | 又是一款钢铁直男式的无弧线字体，还特地设计为了等宽字体以方便在命令行界面中使用——你们是不是对程序员有啥误解...||
+4.13 | Great Vibes | GreatVibes-Regular.ttf | 想象一下烛光晚餐的菜单上用这种优雅的字体将当晚的美味娓娓道来，是不是很有代入感？ ||
+4.14 | Juniper | Juniper Std Medium | 用一种松树的名字来命名这一款在笔画和衬线中充满了类三角形设计的字体，大概是因为三角形比较稳定？||
+4.15 | Shuriken Boy | Shuriken Boy Std Regular | 有在衬线里用三角形的，就有在字腔里用三角形的。 | 不过这个字体的O真的不是视频网站用来充数播放键的么… |
+4.16 | Trajan Color | Trajan Color | Trajan本身起源于罗马碑文，而字母中间的白色线条使得雕刻的感觉更加明显 ||
+4.17 | Brioso | Brioso Pro Regular | 衬线有时候就像眉毛——容易被忽略，但能够传达相当丰富的意味 | Brioso就是通过使用带弧度的衬线来增加一点活泼的感觉 |
+4.18 | Fredericka the Great | FrederickatheGreat-Regular.ttf | 素描风格的字体，有没有让你回忆起小时候用铅笔拓印硬币的乐趣呢 ||
+4.19 | Satisfy | Satisfy-Regular.ttf | 心满意足的时候，字迹都能透出快活的气息 ||
+4.20 | Flood | Flood Std Regular | 这款字体还原了笔刷末端的纹理，仿佛让你觉得在看公园里的老大爷拿着大号毛笔沾了水在地上写字 ||
+4.21 | Acme | Acme-Regular.ttf | 这个世界上最厉害的应该是汤姆猫，不管被折腾成啥样都能原地满血复活。| 今天是复活节，祝大家都能找到能治愈自己的东西（比如一种字体？）|
+4.22 | Permanent Marker |  | 它巧妙地模仿了马克笔的效果，以至于看到样稿的时候脑内浮出的头两个字是「办证」。 |
+4.23 | Bookmania | Bookmania | 今天是「世界图书与版权日」，让我们为图书狂欢吧！ | 字体名称中的 mania 是「狂热」的意思。|
+4.24 | CarlMarx | CarlMarx Std Regular | 这其实是一款Carl Marx在包豪斯学习时的字体设计作业 | 跟我们熟悉的那位马克思啥关系？Java和JavaScript之间的关系 |
+4.25 | Reross | Reross Quadratic | 字体设计和几何学其实算是近亲——它们都是从花式尺规作图开始的。| Reross就是一款纯靠尺规作图完成的字体。 |
+4.26 | Joschmi | Joschmi Regular | 是不是觉得昨天和前天的字体风格有点像？他们出自同一门课程的作业，这门课的教师正是Joschmi ||
+4.27 | Tinos | Tinos-Regular.ttf  | 根据作者的介绍来看Tinos大概是「Times New Roman Open Source」的隐晦缩写（我猜的）| 为了节约字体授权费用设计师们也是挺拼的… |
+4.28 | Play | Play-Regular.ttf | 虽然今天是工作日，但是想想五一就能出去玩啦~ ||
+4.29 | EB Garamond | EB Garamond | 作为旧衬线体的经典代表，Garamond有各种不同的电子化版本。 |  而我们从众多版本中挑了它是因为——它不要钱。|
+4.30 | Courgette | Courgette-Regular.ttf | 模仿画刷效果的字体一般被用在大字号的场景（比如招牌），因为字号小时这样的字体容易看不清，但Courgette很好地平衡了这一点。||
+
+
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
-2.2 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
+10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
-2.15 | Mono45 Headline | Mono45-Headline Regular | 0 和 O 傻傻分不清楚？加一根斜线吧。 |  |
+
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 |  |
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-4.23 | Bookmania | Bookmania | 今天是「世界图书与版权日」，让我们为图书狂欢吧！ | 字体名称中的 mania 是「狂热」的意思。|
+
 5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
 6.1 | Mati |||
+10.20 | Ubuntu | Ubuntu release ||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
 11.15 | Kepler | | | 开普勒于 1630 年 11 月 15 日逝世。|
 -->
