@@ -121,7 +121,7 @@ export default class CalendarCanvas {
         const dateImg = await getImage(datePath);
 
         const getDatePosition = img => {
-            const targetWidth = 258;
+            const targetWidth = 210;
             let targetHeight = 225;
 
             switch (date) {
@@ -137,7 +137,7 @@ export default class CalendarCanvas {
             const result = {
                 width: 0,
                 height: 0,
-                right: null
+                right: padding
             };
 
             if (img.width / img.height > targetWidth / targetHeight) {
@@ -147,23 +147,6 @@ export default class CalendarCanvas {
             else {
                 result.height = targetHeight;
                 result.width = result.height / img.height * img.width;
-            }
-
-            switch (date) {
-                case '3.31':
-                    result.right = padding;
-                    break;
-
-                default:
-                    if (result.width < 200) {
-                        result.right = padding;
-                    }
-                    else if (result.width > 260) {
-                        result.right = -padding * 2;
-                    }
-                    else {
-                        result.right = -padding;
-                    }
             }
 
             return result;
