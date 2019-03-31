@@ -105,7 +105,9 @@ export class AboutPage {
             this.logService.logWebsite(PAGE_NAME, url, 'update-android');
             this.browser.create(`${url}?ref=inapp-update-android`);
         }
-        this.updateIos();
+        else {
+            this.updateIos();
+        }
     }
 
     updateIos() {
