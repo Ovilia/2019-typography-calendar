@@ -16,7 +16,7 @@ const license = [
         fonts: ['Trajan Pro 3', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
             'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW',
             'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic',
-            'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans', 'New Zen', 'Source Han Sans', 'Study', 'Remedy', 'Anonymous', 'Lo-Res', 'Voltage', 'OCR A', 'Bello', 'Bell Centennial', 'Axia Stencil Black', 'DINosaur', 'Eskorte Latin Extrabold Italic', 'Fairwater Sailor Serif Regular', 'JAF Domus Titling','Calibri', 'Liquorstore 3D', 'Whitman', 'Cuisine', 'Willow', 'Ohno Blazeface', 'Turnip', 'Liana', 'Adobe Heiti', 'Sign Painter Regular', 'Mono 45 Headline', 'Juniper', 'Shuriken Boy', 'Trajan Color', 'Brioso', 'Flood', 'Permanent Marker', 'CarlMarx', 'Reross', 'Joschmi']
+            'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans', 'New Zen', 'Source Han Sans', 'Study', 'Remedy', 'Anonymous', 'Lo-Res', 'Voltage', 'OCR A', 'Bello', 'Bell Centennial', 'Axia Stencil Black', 'DINosaur', 'Eskorte Latin Extrabold Italic', 'Fairwater Sailor Serif Regular', 'JAF Domus Titling','Calibri', 'Liquorstore 3D', 'Whitman', 'Cuisine', 'Willow', 'Ohno Blazeface', 'Turnip', 'Liana', 'Adobe Heiti', 'Sign Painter Regular', 'Mono 45 Headline', 'Juniper', 'Shuriken Boy', 'Trajan Color', 'Brioso', 'Flood', 'Permanent Marker', 'CarlMarx', 'Reross', 'Joschmi', 'Worker', 'Flyswim']
     },
     {
         id: 'apache',
@@ -28,7 +28,8 @@ const license = [
         name: 'SIL Open Font License',
         desc: '以下字体来自 Google Fonts，基于 SIL Open Font License。',
         fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie',
-            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette'],
+            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette', 'Lato',
+            'Graduate', 'Freckle Face', 'Cute Font', 'Abril Fatface'],
         detail: `
             SIL Open Font License
             PREAMBLE
