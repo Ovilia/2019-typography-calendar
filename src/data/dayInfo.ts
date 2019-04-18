@@ -130,12 +130,35 @@ export default `
 5.3 | Cute Font | Cute Font | 这款以韩语字母为主的字体，最大的用户群体居然来自……中国台湾。||
 5.4 | Graduate | Graduate | 青年的定义是 14 岁到 28 岁。你，毕业了吗？ ||
 5.5 | Abril Fatface | Abril Fatface | 优雅的弧线和粗细强烈对比的灵感来自 19 世纪英国和法国的广告海报。||
-5.6 | Lato |  | Lato 在波兰语中的含义是「夏天」。 ||
+5.6 | Lato |  | Lato 在波兰语中的含义是「夏天」。 | 今日立夏 |
 5.7 | Neuropol | Neuropol X | 你现在是不是也对字体所代表的类型有一些潜意识的认知了呢？比如这款字体，有没有让你联想到未来科技呢？有趣的是，作者说这款字体中短了一截的设计（比如字母 e 的尾端），代表的是激光。|但是，为什么啊……|
 5.8 | Flyswim | Flyswim | Flyswin 指的是在失重情况下像游泳一般摆动身体。这款字体特别适合为这样的主题画一本绘本吧！||
+5.9 | Pitch | Pitch Black | 字如其名，厚重的笔画给整个字体带来一种跟沥青一样黏糊糊的感觉。 ||
+5.10 | Fira Sans | FiraSans-Regular.ttf | Fira最初为Firefox OS设计，目前也是新西兰政府官方选用的字体之一。|
+5.11 | Basic Sans | Basic Sans Regular | 「返璞归真」 ||
+5.12 | Goodlife Sans | Goodlife Sans Condensed | 「如果一切是1后面的那些0，那么健康就是那个最前面的1」 | 感谢那些最可爱的白衣天使们，让我们拥有享受这一切美好生活的基础。 |
+5.13 | Bree | Bree Thin | 作为一种中规中矩的书写体，Bree Thin有没有让你感觉回到了刚学英语临摹课本上的字母的时候？ ||
+5.14 | Battery Park | Battery Park Regular | 模板法的笔画分割，局部的损耗痕迹，是不是特别像停车场地上被轮胎压得有点掉漆的车位编号？ ||
+5.15 | Racing Sans One | RacingSansOne-Regular.ttf | 你看到的并不是斜体版本，只是这个字体的推背感有点强… ||
+5.16 | Asana-Math | Asana-Math.otf | 如果你最近经常看到它，那祝你的数学考试或者毕业论文好运。 | Asana-Math常用于数学公式的排版，Asana在古希腊语中就是智慧女神雅典娜。 |
+5.17 | Comic Neue | ComicNeue-Regular.otf | 虽然Comic Sans一度因为被过分滥用而臭名昭著，但如果坚持想用这样的字体并且考虑版权的话，它的兄弟Comic Neue还是个不错的选择 ||
+5.18 | Capitol | Capitol Medium Capitals | 如同名字所述，这是一款全大写字母字体。 | 全大写字体不缺，像这样把100%技能点往纵向发展的还蛮独特的。 |
+5.19 | Righteous | Righteous-Regular.ttf | 「虽然我的字腔很圆，但是我的衬线很尖呀」 ||
+5.20 | Bubblegum Pop | Bubblegum Pop Shadow | 京中有善口技者，能用口香糖吹字母形状的泡泡。 ||
+5.21 | Fascinate | Fascinate-Regular.ttf | Fascinate是一款致敬早期装饰派艺术之余，调整了字高和弧度以改善观感的字体。 |  对被致敬的代表Broadway，感受到作者的用意了吗？ |
+5.22 | Overlock | Overlock-Regular.ttf | Overlock本来想要模仿缝纫中「锁边」效果（指将布料角落稍向内缝合形成一个小圆角），却意外发现圆润的笔画末端能给人温暖的感觉。 ||
+5.23 | Boogaloo  | Boogaloo-Regular.ttf | Boogaloo是上世纪60年代拉美音乐的一种流派，这种风格的字体也常常出现在那个时候拉美音乐专辑的封面之上。 ||
+5.24 | Dazzle Unicase | Dazzle Unicase Light | 还记得我们曾说过字体设计最早是从尺规作图开始的吗？Dazzle Unicase又是一个经典示范。 ||
+5.25 | Dazzle | Dazzle Regular | 哎？系统好像有点卡… | 知道这个梗是在吐槽早期Windows的窗口瀑布流的，你们已经暴露年龄啦 |
+5.26 | Old Standard TT | OldStandard-Regular.ttf | 「虽然Old Standard这个名字听上去一点都不原创，但我要做的就是展现最原汁原味的20世纪初的字体」 ||
+5.27 | Algerian | AlgerianD.otf | 「为谁盛放花满路，旦复旦兮心如故」 复旦，114岁生日快乐。|  作为自招考场标识上的字体，Algerian见证了无数考生在此开垦美丽的未来。 |
+5.28 | Share Tech Mono | ShareTechMono-Regular.ttf | 虽然现代屏幕显示技术已经足够展现任何画面，但提到科技感的时候，大家好像联想到的还是笨拙的直线凑成的字母。 ||
+5.29 | Cuprum | Cuprum-Regular.ttf | 「铜虽然价值不及金银，只能拿来做锅子之类的，但日常生活里锅子比金牌实用多了呀」 | Cuprum是铜的意思 |
+5.30 | Shojumaru | Shojumaru-Regular.ttf | 早上刚睡醒的我 | 总有一小撮呆毛出现在了意想不到的方向 |
+5.31 | Adobe Handwritting Tiffany | Adobe Handwritting Tiffany | Adobe Original项目一共为3位设计师发行用他们的笔迹制作的字体。| 所以这里的Tiffany就是设计师的名字，并不是我们熟悉的知更鸟蛋蓝 |
+
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
-2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
 
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
