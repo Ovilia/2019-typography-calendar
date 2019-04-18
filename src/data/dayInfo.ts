@@ -125,6 +125,14 @@ export default `
 4.28 | Play | Play-Regular.ttf | 虽然今天是工作日，但是想想五一就能出去玩啦~ ||
 4.29 | EB Garamond | EB Garamond | 作为旧衬线体的经典代表，Gara#-mond 有各种不同的电子化版本。 | 而我们从众多版本中挑了它是因为——它不要#钱。|
 4.30 | Courgette | Courgette-Regular.ttf | 模仿画刷效果的字体一般被用在大字号的场景（比如招牌），因为字号小时这样的字体容易看不清，但 Cour#-gette 很好地平衡了这一点。||
+5.1 | Worker | Worker | 劳动最光荣！但是为什么劳动节反而要放假？因为劳动一时爽，一直劳动却不是一直爽啊！ ||
+5.2 | Freckle Face | Freckle Face | 这款字体的启发是设计师童年时候喜欢喝的一款饮料，而它的形态也很容易让我们联想起童年。||
+5.3 | Cute Font | Cute Font | 这款以韩语字母为主的字体，最大的用户群体居然来自……中国台湾。||
+5.4 | Graduate | Graduate | 青年的定义是 14 岁到 28 岁。你，毕业了吗？ ||
+5.5 | Abril Fatface | Abril Fatface | 优雅的弧线和粗细强烈对比的灵感来自 19 世纪英国和法国的广告海报。||
+5.6 | Lato |  | Lato 在波兰语中的含义是「夏天」。 ||
+5.7 | Neuropol | Neuropol X | 你现在是不是也对字体所代表的类型有一些潜意识的认知了呢？比如这款字体，有没有让你联想到未来科技呢？有趣的是，作者说这款字体中短了一截的设计（比如字母 e 的尾端），代表的是激光。|但是，为什么啊……|
+5.8 | Flyswim | Flyswim | Flyswin 指的是在失重情况下像游泳一般摆动身体。这款字体特别适合为这样的主题画一本绘本吧！||
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
@@ -136,8 +144,8 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
 6.1 | Mati |||
+6.9 | PT Serif || 俄罗斯彼得大帝 1672 年 6 月 9 日出生，这款字体是为了纪念 300 年前彼得大帝下令创建的 Civil Type 字体。||
 10.20 | Ubuntu | Ubuntu release ||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
 11.15 | Kepler | | | 开普勒于 1630 年 11 月 15 日逝世。|
