@@ -127,7 +127,6 @@ export default `
 4.30 | Courgette | Courgette-Regular.ttf | 模仿画刷效果的字体一般被用在大字号的场景（比如招牌），因为字号小时这样的字体容易看不清，但 Cour#-gette 很好地平衡了这一点。||
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
-10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 2.6 | JAF Domus Titling | Domus Titling Extrabold | 圆润的末端和字腔增加了几分卡通的色彩，字母 0 有没有长得像一个甜甜圈？反正我又饿了… |  |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
 
@@ -136,10 +135,15 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-5.06 | Lato | | Lato在波兰语中的含义是「夏天」||
 6.1 | Mati |||
+6.12 | B612 Mono |||
+7.21 | Armstrong | | |
+8.8 | Museo |
+10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 10.20 | Ubuntu | Ubuntu release ||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
 11.15 | Kepler | | | 开普勒于 1630 年 11 月 15 日逝世。|
+12.21 | Agency FB | ||
+12.31 | Coming Soon |||
 -->
 `;
