@@ -6,8 +6,8 @@ if (IS_DEBUG) {
     console.log('THIS IS IN DEBUG MODE.');
 }
 
-export const VERSION = '1.3.6';
-export const LAST_AVAILABLE_DATE = '2019-04-30';
+export const VERSION = '1.3.7';
+export const LAST_AVAILABLE_DATE = '2019-05-30';
 
 export const DPR = 2;
 export const IMAGE_DPR = 3;
