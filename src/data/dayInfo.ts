@@ -132,9 +132,11 @@ export default `
 5.7 | Neuropol | Neuropol X | 你现在是不是也对字体所代表的类型有一些直觉的认知了呢？比如这款字体，有没有让你联想到未来科技呢？有趣的是，作者说这款字体中短了一截的设计（比如字母 e 的尾端），代表的是激光。| 但是，为什么啊…… |
 5.8 | Flyswim | Flyswim | Flyswin 指的是在失重情况下，像游泳一般摆动身体。这款字体特别适合为这样的主题画一本绘本吧！||
 5.9 | Pitch | Pitch | 字如其名，厚重的笔画给整个字体带来一种跟沥青一样黏糊糊的感觉。 | Pitch 有沥青的意思。 |
-5.10 | Goodlife Sans | goodlife.ttf | 如果一切是 1 后面的那些 0，那么健康就是那个最前面的 1。 | 感谢那些最可爱的白衣天使们，让我们拥有享受这一切美好生活的基础。 |
+-->
+5.10 | Fira Sans | FiraSans-Regular.ttf | Fira 最初为 Firefox OS 设计，目前也是新西兰政府官方选用的字体之一。|
 5.11 | Basic Sans | Basic Sans | 返璞归真。 ||
-5.12 | Fira Sans | FiraSans-Regular.ttf | Fira 最初为 Firefox OS 设计，目前也是新西兰政府官方选用的字体之一。|
+5.12 | Goodlife Sans | goodlife.ttf | 如果一切是 1 后面的那些 0，那么健康就是那个最前面的 1。感谢那些最可爱的白衣天使们，让我们拥有享受这一切美好生活的基础。| 今天是国际护士节。 |
+<!--
 5.13 | Bree | Bree | 作为一种中规中矩的书写体，Bree 有没有让你感觉回到了刚学英语临摹课本上的字母的时候？ ||
 5.14 | Battery Park | Battery Park | 模板法的笔画分割，局部的损耗痕#迹，是不是特别像停车场地上被轮#胎压得有点掉漆的车位编号？ ||
 5.15 | Racing Sans One | RacingSansOne-Regular.ttf | 你看到的并不是斜体版本，只是这个字体的推背感有点强…… ||
