@@ -155,6 +155,39 @@ export default `
 5.28 | Share Tech Mono | ShareTechMono-Regular.ttf | 虽然现代屏幕显示技术已经足够展现任何画面，但提到科技感的时候，大家好像联想到的还是笨拙的直线凑成的字母。 ||
 5.29 | Cuprum | Cuprum-Regular.ttf | 铜虽然价值不及金银，只能拿来做锅子之类的，但日常生活里锅子比金牌实用多了呀！ | Cuprum 是铜的意思。#本 App 正式改名 2019 英语单词日历…… |
 5.30 | Shojumaru | Shojumaru-Regular.ttf | 早上刚睡醒的我…… | 总有一小撮呆毛出现在了意想不到的方向。#？？？ |
+5.31 | Becker Gothics Tuscan | Becker Gothics Tuscan | 这字体的灵感，大概来自于火车检票员吧？ | 设计在笔画上的切口是不是有点像检票钳留下的缺口？ |
+6.1 | Fredoka One | FredokaOne-Regular.ttf | 圆圆的字腔和笔画端头总能给人带来一种卡通的感觉 |  祝各位大小朋友儿童节快乐 |
+6.2 | Pulpo Rust | Pulpo Rust 75 | 万事开头难 | Pulpo Rust在Pulpo Rust 100诞生之后，靠调整黑色像素点的比例一口气出了25/50/75三个版本（要我就出100个= =） |
+6.3 | Input Sans | Input Sans | 生活就像一盒巧克力，写代码也是。调试的时候你永远不知道下一个输入会返回什么结果。 | |
+6.4 | VT323 | VT323-Regular.ttf | VT323复刻了DCE VT320的显示字体。 | DCE VT320是一种诞生于1987年的计算机终端，那个时候屏幕智能显示文字，没有图像 ||
+6.5 | Mr Eaves | Mr Eaves Mod OT Book  | 猜猜它的衬线体叫啥名字？ ||
+6.6 | Mrs Eaves | Mrs Eaves OT Roman | 昨天的问题，你猜对了吗？ ||
+6.7 | Special Elite | SpecialElite-Regular.ttf | 每次看到这种笔画参差不齐的衬线体就一阵头皮发麻，仿佛收到了封恐吓信似的。 ||
+6.8 | Ironstrike | Ironstrike Regular | 感受到硬邦邦的钢铁质感了吗？ ||
+6.9 | PT Serif | PT_Serif-Web-Regular.ttf | 俄罗斯彼得大帝 1672 年 6 月 9 日出生，这款字体是为了纪念 300 年前彼得大帝下令创建的 Civil Type 字体。||
+6.10 | Yeon Sung | YeonSung-Regular.ttf | 这是一款在笔画上模仿书法的字体。 | 觉得和看到的楷书的不太一样？没错它其实是为韩语设计的。 ||
+6.11 | Yesteryear | Yesteryear-Regular.ttf | Yesteryear来自1942年上映的电影「棕榈树的海滩」 ||
+6.12 | B612 | B612-Regular.ttf | 「如果你爱着一朵开在浩瀚星海里的花，那么当你抬头仰望繁星时，便会感到心满意足」 | 仰望星空的时候，你看到B612星球了吗？ |
+6.13 | Mate | Mate-Regular.ttf |  | |
+6.14 | Alta California | Alta California | 不要怀疑，它就是一种字体 | （虽然我也曾怀疑作者是不是把好几种别的字体各捡一个字符出来凑数）|
+6.15 | Economica | Economica-Regular.ttf | 把放到别的字体里会被当做窄体的宽度当做标准字母宽度，可以说是相当「经济」了。 | |
+6.16 | Architects Daughter | ArchitectsDaughter-Regular.ttf | 由笔迹而来的字体多以写字的人命名，而它被命名为「建筑师的女儿」，大概是作者感慨于父亲对于女儿的潜移默化的影响吧。| |
+6.17 | Black And White Picture | BlackAndWhitePicture-Regular.ttf | 为了高仿黑白扫描件，连噪点都不放过给加上去了。 | |
+6.18 | Bounce Script | Bounce Script | 有没有从字体中感受到跳跃的感觉？人家可是在很认真地点题呢。  | |
+6.19 | Philosopher | Philosopher-Regular.ttf | 「在早期发布时我故意留了一些纰漏，希望设计师们会逐渐习惯于按需改动而不是被动照搬现有的字体」 | 这个思路也是没谁了… |
+6.20 | Annie Use Your Telescope | AnnieUseYourTelescope-Regular.ttf | 这其实又是一款笔迹衍生的字体，而作者选择了用她最爱的乐队Jack’s Mannequin的一首歌的标题来命名。 | |
+6.21 | Lemonada | Lemonada | 在这拥有最长白天的夏至的午后，不妨来一杯柠檬汽水放松一下？ | |
+6.22 | Waiting for the Sunrise | WaitingfortheSunrise.ttf | 「尽管在设计它的时候我正处于人生低谷时刻，但活泼的它一直提醒着我黑暗之后终将迎来黎明」 | |
+6.23 | Love Ya Like A Sister | LoveYaLikeASister.ttf | 这款类似于儿童涂鸦的字体源于作者小时候与闺蜜互留的纸条，因上面的内容常以「Love Ya Like A Sister」结尾而得名。 | |
+6.24 | Homemade Apple | HomemadeApple-Regular.ttf | An apple a day keeps doctor away. A font a day keeps sleep away. | 为了写完一整年的字体日历，每个月总有那么两天要深夜里苦想… |
+6.25 | GFS Didot | GFSDidot-Regular.ttf | GFS Didot来源于Firmin Didot于1805年设计的希腊语字体为蓝本。直到20世纪末期之前Didot一直希腊字母排印的首选。 | |
+6.26 | Helvetica | Helvetica Now Display Black.otf | 大名鼎鼎的Helvetica可能无需任何赘述，毕竟随便一搜都能收到成千上万记载其历史的文字。 |
+6.27 | Chewy | Chewy-Regular.ttf | 一款很有「嚼劲」的字体，而且和别的字体不一样不会嚼多了没味哦。 | 作者莫不是嚼着某种号称美味持久的口香糖写下了介绍文案？ |
+6.28 | Six Caps | SixCaps.ttf | 没有最窄，只有更窄。Six Caps的诞生仿佛就像为了挑战最窄字体吉尼斯纪录似的。 | |
+6.29 | Vast Shadow | VastShadow-Regular.ttf | 有不断挑战更窄的就有挑战横向发展的。 | |
+6.30 | Aladin | Aladin-Regular.ttf | 2019年已经过去了一半，计划完成了多少呢？ | 还是需要一盏阿拉丁神灯来帮助你赶进度？ |
+7.1 | Julius Sans One | JuliusSansOne-Regular.ttf | 凯撒大帝以自己的名字Julius命名了7月（July），那么7月的第一天用Julius Sans One当然是最贴切的啦。 | |
+
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |

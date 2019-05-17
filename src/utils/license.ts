@@ -14,19 +14,19 @@ const license = [
         id: 'adobe',
         name: 'Adobe Font License',
         fonts: ['Trajan Pro 3', 'Baskerville PT', 'Source Han Serif', 'OCR B', 'P22 Underground', 'Eurostile',
-            'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW', 'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic', 'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans', 'New Zen', 'Source Han Sans', 'Study', 'Remedy', 'Anonymous', 'Lo-Res', 'Voltage', 'OCR A', 'Bello', 'Bell Centennial', 'Axia Stencil Black', 'DINosaur', 'Eskorte Latin Extrabold Italic', 'Fairwater Sailor Serif Regular', 'JAF Domus Titling','Calibri', 'Liquorstore 3D', 'Whitman', 'Cuisine', 'Willow', 'Ohno Blazeface', 'Turnip', 'Liana', 'Adobe Heiti', 'Sign Painter Regular', 'Mono 45 Headline', 'Juniper', 'Shuriken Boy', 'Trajan Color', 'Brioso', 'Flood', 'Permanent Marker', 'CarlMarx', 'Reross', 'Joschmi', 'Worker', 'Flyswim', 'Pitch', 'Basic Sans', 'Goodlife Sans', 'Bree', 'Battery Park', 'Capitol', 'Bubblegum Pop', 'Dazzle Unicase', 'Dazzle', 'Adobe Handwritting Tiffany']
+            'Myriad', 'Neue Aachen', 'Utopia', 'Gastromond', 'LTC Broadway', 'DIN 1451 Pro', 'Big Caslon', 'Balloon URW', 'Gill Sans Nova', 'Scriptorama Markdown JF', 'Matrix II', 'Volina', 'Oxtail', 'ITC Avant Garde Gothic', 'LTC Bodoni 175', 'Blenny Black', 'Rad', 'Variex', 'PMN Caecilia', 'PMN Caecilia Sans', 'New Zen', 'Source Han Sans', 'Study', 'Remedy', 'Anonymous', 'Lo-Res', 'Voltage', 'OCR A', 'Bello', 'Bell Centennial', 'Axia Stencil Black', 'DINosaur', 'Eskorte Latin Extrabold Italic', 'Fairwater Sailor Serif Regular', 'JAF Domus Titling','Calibri', 'Liquorstore 3D', 'Whitman', 'Cuisine', 'Willow', 'Ohno Blazeface', 'Turnip', 'Liana', 'Adobe Heiti', 'Sign Painter Regular', 'Mono 45 Headline', 'Juniper', 'Shuriken Boy', 'Trajan Color', 'Brioso', 'Flood', 'Permanent Marker', 'CarlMarx', 'Reross', 'Joschmi', 'Worker', 'Flyswim', 'Pitch', 'Basic Sans', 'Goodlife Sans', 'Bree', 'Battery Park', 'Capitol', 'Bubblegum Pop', 'Dazzle Unicase', 'Dazzle', 'Adobe Handwritting Tiffany', 'Becker Gothics Tuscan', 'Pulpo Rust', 'Input Sans', 'Mr Eaves', 'Mrs Eaves', 'Ironstrike', 'Alta California', 'Bounce Script']
     },
     {
         id: 'apache',
         name: 'Apache License, Version 2.0',
-        fonts: ['Roboto', 'Open Sans', 'Just Another Hand', 'Luckiest Guy', 'Schoolbell', 'Satisfy', 'Tinos']
+        fonts: ['Roboto', 'Open Sans', 'Just Another Hand', 'Luckiest Guy', 'Schoolbell', 'Satisfy', 'Tinos', 'Special Elite', 'Homemade Apple', 'Chewy']
     },
     {
         id: 'open',
         name: 'SIL Open Font License',
         desc: '以下字体基于 SIL Open Font License。',
         fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie',
-            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette', 'Lato', 'Graduate', 'Freckle Face', 'Cute Font', 'Abril Fatface', 'Fira Sans', 'Racing Sans One', 'Righteous', 'Fascinate', 'Overlock', 'Boogaloo', 'Old Standard TT', 'Share Tech Mono', 'Cuprum', 'Shojumaru', 'Asana-Math', 'Comic Neue'],
+            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette', 'Lato', 'Graduate', 'Freckle Face', 'Cute Font', 'Abril Fatface', 'Fira Sans', 'Racing Sans One', 'Righteous', 'Fascinate', 'Overlock', 'Boogaloo', 'Old Standard TT', 'Share Tech Mono', 'Cuprum', 'Shojumaru', 'Asana-Math', 'Comic Neue', 'Fredoka One', 'VT323', 'PT Serif', 'Yeon Sung', 'Yesteryear', 'B612', 'Mate', 'Economica', 'Architects Daughter', 'Black And White Picture', 'Philosopher', 'Annie Use Your Telescope', 'Lemonada', 'Waiting for the Sunrise', 'Love Ya Like A Sister', 'GFS Didot', 'Six Caps', 'Vast Shadow', 'Aladin', 'Julius Sans One'],
         detail: `
             SIL Open Font License
             PREAMBLE
@@ -65,7 +65,7 @@ const license = [
     {
         id: 'others',
         name: '其他获得商用授权的字体',
-        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly', 'Lumiere Five', 'Skyhook Mono', 'Algerian']
+        fonts: ['Frontage Condenced Outline', 'Carrara Light', 'Museo Sans', 'Sant Elia Rough-Line Two', 'Versica sans', 'Wreath Halftone', 'FM Pointifax A', 'Fabryka', 'Curly', 'Lumiere Five', 'Skyhook Mono', 'Algerian', 'Helvetica Now Display Black']
     }
 ];
 
