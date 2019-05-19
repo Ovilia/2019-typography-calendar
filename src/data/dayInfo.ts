@@ -130,7 +130,7 @@ export default `
 5.5 | Abril Fatface | AbrilFatface-Regular.ttf | 优雅的弧线和强烈的粗细对比，灵#感来自 19 世纪英国和法国的广告海报。||
 5.6 | Lato | Lato-Regular.ttf | Lato 在波兰语中的含义是「夏天」。 | 今日立夏。 |
 5.7 | Neuropol | Neuropol X | 你现在是不是也对字体所代表的类型有一些直觉的认知了呢？比如这款字体，有没有让你联想到未来科技呢？有趣的是，作者说这款字体中短了一截的设计（比如字母 e 的尾端），代表的是激光。| 但是，为什么啊…… |
-5.8 | Flyswim | Flyswim | Flyswin 指的是在失重情况下，像游泳一般摆动身体。这款字体特别适合为这样的主题画一本绘本吧！||
+5.8 | Flyswim | Flyswim | Flyswim 指的是在失重情况下，像游泳一般摆动身体。这款字体特别适合为这样的主题画一本绘本吧！||
 5.9 | Pitch | Pitch | 字如其名，厚重的笔画给整个字体带来一种跟沥青一样黏糊糊的感觉。 | Pitch 有沥青的意思。 |
 5.10 | Fira Sans | FiraSans-Regular.ttf | Fira 最初为 Firefox OS 设计，目前也是新西兰政府官方选用的字体之一。|
 5.11 | Basic Sans | Basic Sans | 返璞归真。 ||
