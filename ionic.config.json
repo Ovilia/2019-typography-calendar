@@ -1,8 +1,8 @@
 {
-  "name": "2019-typography-calendar",
+  "name": "",
+  "app_id": "",
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular",
-  "app_id": ""
+  "type": "ionic-angular"
 }

@@ -157,7 +157,7 @@ export default `
 6.1 | Fredoka One | FredokaOne-Regular.ttf | 圆圆的字腔和笔画端头总能给人带来一种卡通的感觉。 | 祝各位大小朋友儿童节快乐！ |
 6.2 | Pulpo Rust | Pulpo Rust | 万事开头难。 | Pulpo Rust 在 Pulpo Rust 100 诞生之后，靠调整黑色像素点的比例一口气出了 25/50/75 三个版本。 |
 6.3 | Input Sans | Input Sans | 绝大多数为代码编辑器定制的字体都是等宽字体，这样比较容易看清代码的对齐情况。然而这款字体却剑走偏锋，出于美观的考虑，提供了等宽和非等宽两种选择。 | |
-6.4 | VT323 | VT323-Regular.ttf | VT323 复刻了 DCE VT320 的显示字体。 | DCE VT320 是一种诞生于 1987 年的计算机终端，那个时候屏幕智能显示文字，没有图像。 ||
+6.4 | VT323 | VT323-Regular.ttf | VT323 复刻了 DCE VT320 的显示字体。 | DCE VT320 是一种诞生于 1987 年的计算机终端，那个时候屏幕只能显示文字，没有图像。 ||
 6.5 | Mr Eaves | Mr Eaves Mod OT | 猜猜它的衬线体叫啥名字？ ||
 6.6 | Mrs Eaves | Mrs Eaves OT | 昨天的问题，你猜对了吗？ ||
 6.7 | Special Elite | SpecialElite-Regular.ttf | 每次看到这种笔画参差不齐的衬线体就一阵头皮发麻，仿佛收到了封恐吓信似的。 ||
@@ -185,6 +185,20 @@ export default `
 6.29 | Vast Shadow | VastShadow-Regular.ttf | 有不断挑战更窄的就有挑战横向发展的。 | |
 6.30 | Aladin | Aladin-Regular.ttf | 2019 年已经过去了一半，计划完成了多少呢？ | 字体日历内容编辑的坑终于填完了一半…… |
 7.1 | Julius Sans One | JuliusSansOne-Regular.ttf | 凯撒大帝以自己的名字 Julius 命名了七月（July），那么这个月第一天用 Julius Sans One 当然最贴切啦！ | |
+7.2 | Hackman | Hackman | 今天是国际体育记者日，推荐一款看起来很适合体育新闻中使用的字体。 ||
+7.3 | Nothing You Could Do | NothingYouCouldDo.ttf | 今天是国际接吻日。||
+7.4 | Gunplay | Gunplay | 枪战。||
+7.5 | Stack#MortarBricks | Stack | 像砖块一样堆砌起来的字体！|
+7.6 | Totally Gothic | TotallyGothic OT | 这款名为「完全哥特」的字体看起来真是让人毛骨悚然。| |
+7.7 | Mr Darcy | Mr Darcy | 达西先生是简·奥斯汀著名小说《傲慢与偏见》里的男主角，这款字体用来作为小说的封面字体再合适不过。|
+7.8 | Capucine | Capucine Basic | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦! | Capucine 通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
+7.9 | Bad Neighborhood | BadNeighborhood | 如果邻里治安不好，你说不定会看到用这样字体喷漆的恐吓吧？ ||
+7.10 | Viva | Viva Std | Viva 有山呼万岁之意，这一款字体很适合用于庆祝胜利。||
+7.11 | Narly | Narly OT | 用点连成的形状表现字母，有一种印象派的感觉。||
+7.12 | Eco | Eco | 古怪又有点可爱。||
+7.13 | Brothers | Brothers OT | 是兄弟就和我一起来用这款字体啊！||
+7.14 | Catnip | Catnip | 这款字体或许是吸了猫薄荷的猫写#出来的。| Catnip 意为猫薄荷，是一种有特殊气味的植#物，据说大约有一般的猫对它感兴趣，喜欢#抓咬。|
+8.7 | Beloved | Beloved Script | 致亲爱的你…… | 今日农历七夕节。 ||
 
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
@@ -195,9 +209,6 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-6.1 | Mati |||
-6.9 | PT Serif || 俄罗斯彼得大帝 1672 年 6 月 9 日出生，这款字体是为了纪念 300 年前彼得大帝下令创建的 Civil Type 字体。||
-6.12 | B612 Mono |||
 7.21 | Armstrong | | |
 8.8 | Museo |
 10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
