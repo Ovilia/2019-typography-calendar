@@ -3,7 +3,6 @@ import * as moment from 'moment';
 
 import { StorageService } from './storage';
 import { STORE_KEY } from '../utils/constants';
-import CalendarCanvas from '../entities/calendarCanvas';
 
 @Injectable()
 export class HistoryService {
@@ -45,5 +44,16 @@ export class HistoryService {
 
     async isFirstTear(): Promise<boolean> {
         return !await this.storage.get(STORE_KEY.FIRST_TEAR);
+    }
+
+    async canPromptAd(): Promise<boolean> {
+        if (await this.storage.get(STORE_KEY.DONT_ASK_AD_AGAIN) === true) {
+            return false;
+        }
+        return Math.random() > 0.5;
+    }
+
+    async markDontPromptAd(): Promise<void> {
+        await this.storage.set(STORE_KEY.DONT_ASK_AD_AGAIN, true);
     }
 }

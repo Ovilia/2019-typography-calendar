@@ -43,6 +43,8 @@ export class HomePage {
     protected isTore: boolean;
     protected tearCnt: number;
     protected isAndroid: boolean;
+    protected isFirstOpen: boolean;
+    protected hasPromptedAd: boolean;
 
     private touchStartY: number;
     private toast: Toast;
@@ -63,6 +65,7 @@ export class HomePage {
         public socialSharing: SocialSharing
     ) {
         this.isDebug = IS_DEBUG;
+        this.hasPromptedAd = false;
     }
 
     async init() {
@@ -70,6 +73,8 @@ export class HomePage {
         this.isCanvasSweeping = false;
         this.isTearing = false;
         this.isTore = false;
+        this.isFirstOpen = await this.historyService.isFirstOpen();
+        await this.historyService.setFirstOpened();
         this.tearCnt = 0;
 
         const isFirst = await this.historyService.isFirstTear();
@@ -255,7 +260,7 @@ export class HomePage {
         }
     }
 
-    touchEnd(event) {
+    async touchEnd(event) {
         if (this.isTearing) {
             return;
         }
@@ -267,14 +272,20 @@ export class HomePage {
                 this.setNotification();
             }
             if (!this.canTear()) {
-                const text = [
-                    '还不能撕哦~ 等日历上的日子过了吧！',
-                    '明天再来撕吧！期待哟~',
-                    '不要心急~ 今天也要好好过呀！',
-                    '再等等吧！明天才能撕哦~',
-                    '先把今天过好，再来撕明天的日历吧！'
-                ];
-                this._toast(random(text));
+                const canPrompt = await this.historyService.canPromptAd();
+                if (!this.isFirstOpen && canPrompt && !this.hasPromptedAd) {
+                    this._promptAd();
+                }
+                else {
+                    const text = [
+                        '还不能撕哦~ 等日历上的日子过了吧！',
+                        '明天再来撕吧！期待哟~',
+                        '不要心急~ 今天也要好好过呀！',
+                        '再等等吧！明天才能撕哦~',
+                        '先把今天过好，再来撕明天的日历吧！'
+                    ];
+                    this._toast(random(text));
+                }
             } else if (this.needUpgrade()) {
                 this.promptUpdate();
             }
@@ -307,8 +318,14 @@ export class HomePage {
                         this.logService.logEvent(PAGE_NAME, 'tear_multi_ok');
                         this.isCanvasSweeping = !this.isCanvasSweeping;
                         const today = getDate(new Date());
-                        this.historyService.setTearDay(today.clone().subtract(1, 'day'))
-                            .then(() => this.setDate(today, true));
+                        const availableDate = getDate(LAST_AVAILABLE_DATE);
+                        let date = today;
+                        if (today.isAfter(availableDate)) {
+                            this._toast('请更新 App 以获取后面的日历');
+                            date = availableDate;
+                        }
+                        this.historyService.setTearDay(date.clone().subtract(1, 'day'))
+                            .then(() => this.setDate(date, true));
                     }
                 }
             ]
@@ -317,6 +334,7 @@ export class HomePage {
     }
 
     public promptUpdate() {
+        this.hasPromptedAd = true;
         const alert = this.alertCtrl.create({
             title: '更新日历',
             message: '后面的日历页需要更新后才能撕，是否前往更新？',
@@ -366,6 +384,31 @@ export class HomePage {
             ])
             .then(() => this.init());
         }
+    }
+
+    protected _promptAd() {
+        const alert = this.alertCtrl.create({
+            title: '不能撕明天的日历哦~',
+            message: '这么喜欢我的话，<br>要不要看看我们家的另一款 App？',
+            buttons: [{
+                text: '不要',
+                role: 'cancel'
+            }, {
+                text: '不再提醒',
+                handler: () => {
+                    this.logService.logEvent(PAGE_NAME, 'ad_never');
+                    this.historyService.markDontPromptAd();
+                }
+            }, {
+                text: '了解看看',
+                handler: () => {
+                    this.logService.logEvent(PAGE_NAME, 'ad_go');
+                    const url = 'https://apps.apple.com/cn/developer/wenli-zhang/id1142565234';
+                    this.browser.create(url);
+                }
+            }]
+        });
+        alert.present();
     }
 
 }

@@ -6,8 +6,8 @@ if (IS_DEBUG) {
     console.log('THIS IS IN DEBUG MODE.');
 }
 
-export const VERSION = '1.3.10';
-export const LAST_AVAILABLE_DATE = '2019-07-14';
+export const VERSION = '1.3.13';
+export const LAST_AVAILABLE_DATE = '2019-08-07';
 
 export const DPR = 2;
 export const IMAGE_DPR = 3;
@@ -18,7 +18,8 @@ export const STORE_KEY = {
     TORN_DATE: 'tornDate',
     HISTORY_PAGE: 'historyPage',
     FIRST_OPEN: 'firstOpen',
-    FIRST_TEAR: 'firstTear'
+    FIRST_TEAR: 'firstTear',
+    DONT_ASK_AD_AGAIN: 'notAgainAd'
 };
 
 export const NOTIIFICATION_ID_DAILY = 1;

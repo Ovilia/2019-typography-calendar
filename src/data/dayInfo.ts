@@ -198,19 +198,38 @@ export default `
 7.12 | Eco | Eco | 古怪又有点可爱。||
 7.13 | Brothers | Brothers OT | 是兄弟就和我一起来用这款字体啊！||
 7.14 | Catnip | Catnip | 这款字体或许是吸了猫薄荷的猫写#出来的。| Catnip 意为猫薄荷，是一种有特殊气味的植#物，据说大约有一般的猫对它感兴趣，喜欢#抓咬。|
+7.15 | Arya Double | Arya | Arya 估计很容易让我们联想到《冰与火之歌》中的艾莉亚·史塔克，虽然这两者估计没什么关系……这款字体提供了 Single、Double、Triple 三个版本，正如今天展示的 Double 由两条线组成笔画，Single 与 Triple 分别由一条与三条线组成。||
+7.16 | Sophisto | Sophisto OT | 诡辩家。||
+7.17 | Lust | Lust | 欲望。||
+7.18 | Magpie | Magpie | 喜鹊。| （今日背单词计划……） |
+7.19 | Elliotts Blue EyeShadow | Elliotts OT | 看起来很花哨的部分是想模拟文字的阴影，看起来像是梦境。| 有必要备注一下这个字体叫 Elliotts Blue#EyeShadow，因为文字本身的可读性太差了… |
+7.20 | Kiro | Kiro | 拥有曼妙身姿、打扮得精致优雅的少女，是谁教会了她把自己的棱角藏起来？||
+7.21 | Armstrong | Armstrong | 50 年前的今天（1969.7.21），阿姆斯特朗成为了第一个登上月球的宇航员。||
+7.22 | Rokkitt | Rokkitt | 拥有多种字重的一款衬线体。||
+7.23 | Oswald | Oswald | 同样拥有多种字重的一款非衬线体，和昨天的字体出自同一位设计师。||
+7.24 | Dunbar Low | Dunbar Low | 高出天际的「升部」。 ||
+7.25 | Demos Next | Demos Next Pro | Demo 已经有了，那么接下来呢？||
+7.26 | Dead History | Dead History OT | 斑驳的历史，磨损的笔记。||
+7.27 | Vaccine | Vaccine | 这款字体看起来很漂亮，不知道设计师将其命名为「疫苗」的脑洞出自何处——很可能是跟我一样实在编不下去了…… ||
+7.29 | Tenby Four | fourby.ttf | Tenby Four 是一款横竖比例为 4x10的等宽字体。设计师还设计了#Tenby Five 到 Tenby Eight 的字体，分别是 5x10、6x10、7x10、8x10。||
+7.30 | Kazimir | Kazimir | Kazimir 也是一个人名。不知道如果我们做一款全是人名的字体日历，能不能凑够 365 天。||
+7.31 | ClickClack | ClickClack | Click Clack 是用算盘计算的意思，这款字体大概是用算盘计算完后，写在账本上的字体。||
+8.1 | Realist | Realist | 八月了，这个 App 还是没卖出几份，离独立开发者又远了一步。或许，我还是应该现实一点吧…… ||
+8.2 | GoodKitty | GoodKitty | Kitty 有小猫的意思，这款字体很适合卡通漫画中使用。||
+8.3 | Nelson Engraved | Nelson Engraved | 看起来有点像雕刻在木牌上的文字，在复古的 logo 中使用会有很味道。||
+8.4 | Geneo Std | Geneo Std | 看起来是一款没什么特殊的衬线体，但是在一些细节上暗藏了设计师的小心思——比如字母 d 的笔画之间没有闭合。||
+8.5 | Macha | Macha | 玛查，凯尔特神话中的命运与战争的三女神之一。||
+8.6 | Video | Video | 今天是国际电影节，但是我们没有找到叫 Movie 的字体，所以就找了这款名为 Video 的字体来凑数…… ||
 8.7 | Beloved | Beloved Script | 致亲爱的你…… | 今日农历七夕节。 ||
-
-<!--
+-->
+8.8 | Museo | Museo | （略） ||
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
 2.13 | Capucine | Capucine Basic Light | 工作久了的时候，不妨伸个懒腰，可以看上去更活力哦 | Capucine通过垂直笔画上稍稍弯曲让整体看上去不那么死板。 |
-
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 |  |
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
-7.21 | Armstrong | | |
-8.8 | Museo |
 10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 10.20 | Ubuntu | Ubuntu release ||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
