@@ -211,6 +211,7 @@ export default `
 7.25 | Demos Next | Demos Next Pro | Demo 已经有了，那么接下来呢？||
 7.26 | Dead History | Dead History OT | 斑驳的历史，磨损的笔记。||
 7.27 | Vaccine | Vaccine | 这款字体看起来很漂亮，不知道设计师将其命名为「疫苗」的脑洞出自何处——很可能是跟我一样实在编不下去了…… ||
+7.28 | Beastly | Beastly | 太暴力了…… ||
 7.29 | Tenby Four | fourby.ttf | Tenby Four 是一款横竖比例为 4x10的等宽字体。设计师还设计了#Tenby Five 到 Tenby Eight 的字体，分别是 5x10、6x10、7x10、8x10。||
 7.30 | Kazimir | Kazimir | Kazimir 也是一个人名。不知道如果我们做一款全是人名的字体日历，能不能凑够 365 天。||
 7.31 | ClickClack | ClickClack | Click Clack 是用算盘计算的意思，这款字体大概是用算盘计算完后，写在账本上的字体。||
