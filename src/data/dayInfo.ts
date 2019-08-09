@@ -211,6 +211,7 @@ export default `
 7.25 | Demos Next | Demos Next Pro | Demo 已经有了，那么接下来呢？||
 7.26 | Dead History | Dead History OT | 斑驳的历史，磨损的笔记。||
 7.27 | Vaccine | Vaccine | 这款字体看起来很漂亮，不知道设计师将其命名为「疫苗」的脑洞出自何处——很可能是跟我一样实在编不下去了…… ||
+7.28 | Beastly | Beastly | 太暴力了…… ||
 7.29 | Tenby Four | fourby.ttf | Tenby Four 是一款横竖比例为 4x10的等宽字体。设计师还设计了#Tenby Five 到 Tenby Eight 的字体，分别是 5x10、6x10、7x10、8x10。||
 7.30 | Kazimir | Kazimir | Kazimir 也是一个人名。不知道如果我们做一款全是人名的字体日历，能不能凑够 365 天。||
 7.31 | ClickClack | ClickClack | Click Clack 是用算盘计算的意思，这款字体大概是用算盘计算完后，写在账本上的字体。||
@@ -221,8 +222,9 @@ export default `
 8.5 | Macha | Macha | 玛查，凯尔特神话中的命运与战争的三女神之一。||
 8.6 | Video | Video | 今天是国际电影节，但是我们没有找到叫 Movie 的字体，所以就找了这款名为 Video 的字体来凑数…… ||
 8.7 | Beloved | Beloved Script | 致亲爱的你…… | 今日农历七夕节。 ||
-8.8 | Museo | Museo | Museo这款字体因其对称性而出名，而今天大概是一年中最对称的日子了吧。 | 
+8.8 | Museo | Museo | Museo 这款字体因其对称性而出名，而今天大概是一年中最对称的日子了吧。 |
 8.9 | Kaushan Script | KaushanScript-Regular.ttf | 「（设计字体时）你越去修改那些字母，反而越容易带走字体本身的灵动」秉着这样的观念，这款字体基本维持了粗稿时的模样。  | 哎，我好像找到了个新的不让甲方提改稿需求的理由呢。|
+<<<<<<< HEAD
 8.10 | Beth Ellen | BethEllen-Regular.ttf | 「死亡並不可怕，遗忘才是最终的告別」——《飞屋环游记》 | 作者将其因癌症去世的母亲的笔记制作成了这款字体，因为他觉得只要还有人在使用它，就像他的母亲还陪在身边一样。 |
 8.11 | Pangolin | Pangolin-Regular.ttf | Pangolin是作者在为Google设计2017年情人节Doodle时顺带设计的字体。原Doodle讲的是两只穿山甲的爱情，而这款字体也就被命名为「穿山甲」 | |
 8.12 | Cormorant | Cormorant-Regular.ttf | 虽然作者没有从任何一个已有的字体出发，完全从草图开始设计了整套字体，但发现依旧留下了浓浓的给深刻印象的Garamond的痕迹。有时候潜移默化就是这么神奇。 || 
@@ -254,6 +256,22 @@ export default `
 2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 ||
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 ||
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 ||
+=======
+8.10 | Beth Ellen | BethEllen-Regular.ttf | 「死亡并不可怕，遗忘才是最终的告别」#——《飞屋环游记》 | 作者将其因癌症去世的母亲的笔记制作成了这款字体，因为他觉得只要还有人在使用它，就像他的母亲还陪在身边一样。 |
+8.11 | Pangolin | Pangolin-Regular.ttf | Pangolin 是作者在为 Google 设计#2017 年情人节 Doodle 时顺带设计的字体。原 Doodle 讲的是两只穿山甲的爱情，而这款字体也就被命名为#「穿山甲」。 | |
+8.12 | Cormorant | Cormorant-Regular.ttf | 虽然作者没有从任何一个已有的字体出发，完全从草图开始设计了整套字体，但发现依旧留下了浓浓的给深刻印象的 Garamond 的痕迹。有时候潜移默化就是这么神奇。 ||
+8.13 | Ewert | Ewert-Regular.ttf | Ewert 的灵感来源于爱沙尼亚艺术家Olev Soans 的作品，在每个字符都留下了最突出的特征——那些像鲸鱼尾巴的装饰线。 | |
+8.14 | Red Hat Text | RedHatText-Regular.ttf | 顾名思义，它就是 Red Hat（一种#Linux 系统）所使用的字体。 | |
+8.15 | Markazi Text | MarkaziText-Regular.ttf | Markazi 是伊朗的一个省，其意义为「波斯的中心」。这是一款伊朗设计师创造的适用于阿拉伯语和拉丁文字的字体。 | 虽说我们只有英语小课堂的？这不还有地理小课堂呢。 |
+-->
+<!--
+2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 |  |
+2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 |  |
+2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 |  |
+2.25 | Faster One | FasterOne-Regular.ttf | 「Run Faster than HK Journalists」 |  |
+2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 |  |
+2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 |  |
+>>>>>>> a1afccef7c7bce371b33cadadf26904b4d595952
 10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
 10.20 | Ubuntu | Ubuntu release ||
 10.24 | Hack | 又一款专为代码编辑设计的字体 ||
