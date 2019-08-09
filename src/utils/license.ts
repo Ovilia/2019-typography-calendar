@@ -19,14 +19,14 @@ const license = [
     {
         id: 'apache',
         name: 'Apache License, Version 2.0',
-        fonts: ['Roboto', 'Open Sans', 'Just Another Hand', 'Luckiest Guy', 'Schoolbell', 'Satisfy', 'Tinos', 'Special Elite', 'Homemade Apple', 'Chewy']
+        fonts: ['Roboto', 'Open Sans', 'Just Another Hand', 'Luckiest Guy', 'Schoolbell', 'Satisfy', 'Tinos', 'Special Elite', 'Homemade Apple', 'Chewy', 'Ultra']
     },
     {
         id: 'open',
         name: 'SIL Open Font License',
         desc: '以下字体基于 SIL Open Font License。',
         fonts: ['Gloria Hallelujah', 'Bad Script', 'Merienda', 'Monoton', 'Dancing Script', 'Lobster', 'Vollkorn', 'Cookie',
-            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette', 'Lato', 'Graduate', 'Freckle Face', 'Cute Font', 'Abril Fatface', 'Fira Sans', 'Racing Sans One', 'Righteous', 'Fascinate', 'Overlock', 'Boogaloo', 'Old Standard TT', 'Share Tech Mono', 'Cuprum', 'Shojumaru', 'Asana-Math', 'Comic Neue', 'Fredoka One', 'VT323', 'PT Serif', 'Yeon Sung', 'Yesteryear', 'B612', 'Mate', 'Economica', 'Architects Daughter', 'Black And White Picture', 'Philosopher', 'Annie Use Your Telescope', 'Lemonada', 'Waiting for the Sunrise', 'Love Ya Like A Sister', 'GFS Didot', 'Six Caps', 'Vast Shadow', 'Aladin', 'Julius Sans One', ' Nothing You Could Do', 'Kaushan Script','Beth Ellen','Pangolin','Cormorant','Ewert','Red Hat Text','Markazi Text'],
+            'Tangerine','Alice','Cinzel','Average','Press Start 2P','Josefin Sans','Alike Angular','IM Fell DW Pica SC', '站酷庆科黄油体', 'Libre Barcode 39 Text', 'Srisakdi', 'Crimson Text', 'Bungee Shade', 'Over the Rainbow', 'Orbitron', 'Audiowide', 'Unica One', 'Major Mono Display', 'Bangers', 'Whitman', 'Comfortaa', 'Liquorstore 3D', 'Patrick Hand', 'Schoolbell', 'Asap', 'Poiret One', 'Great Vibes', 'Fredericka the Great', 'Acme', 'Play', 'EB Garamond', 'Courgette', 'Lato', 'Graduate', 'Freckle Face', 'Cute Font', 'Abril Fatface', 'Fira Sans', 'Racing Sans One', 'Righteous', 'Fascinate', 'Overlock', 'Boogaloo', 'Old Standard TT', 'Share Tech Mono', 'Cuprum', 'Shojumaru', 'Asana-Math', 'Comic Neue', 'Fredoka One', 'VT323', 'PT Serif', 'Yeon Sung', 'Yesteryear', 'B612', 'Mate', 'Economica', 'Architects Daughter', 'Black And White Picture', 'Philosopher', 'Annie Use Your Telescope', 'Lemonada', 'Waiting for the Sunrise', 'Love Ya Like A Sister', 'GFS Didot', 'Six Caps', 'Vast Shadow', 'Aladin', 'Julius Sans One', ' Nothing You Could Do', 'Kaushan Script','Beth Ellen','Pangolin','Cormorant','Ewert','Red Hat Text','Markazi Text', 'Merriweather Sans', 'Dosis', 'Barriecito', 'Creepster', 'Codystar', 'Electrolize', 'Parisienne', 'Averia Sans Libre', 'Marcellus SC', 'Heebo', 'Rubik Mono One', 'Frijole', 'Life Savers', 'El Messiri', 'Archivo Narrow', 'Abel'],
         detail: `
             SIL Open Font License
             PREAMBLE
