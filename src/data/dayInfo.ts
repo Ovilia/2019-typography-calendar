@@ -230,25 +230,25 @@ export default `
 8.13 | Ewert | Ewert-Regular.ttf | Ewert 的灵感来源于爱沙尼亚艺术家Olev Soans 的作品，在每个字符都留下了最突出的特征——那些像鲸鱼尾巴的装饰线。 | |
 8.14 | Red Hat Text | RedHatText-Regular.ttf | 顾名思义，它就是 Red Hat（一种#Linux 系统）所使用的字体。 | |
 8.15 | Markazi Text | MarkaziText-Regular.ttf | Markazi 是伊朗的一个省，其意义为「波斯的中心」。这是一款伊朗设计师创造的适用于阿拉伯语和拉丁文字的字体。 | 虽说我们只有英语小课堂的？这不还有地理小课堂呢。 |
+8.16 | Ultra | Ultra-Regular.ttf | 一个字体叫 Ultra，就像一个字体叫 Normal 一样奇怪（因为他们都表示一种字重）。但是 Ultra 并不在意，有够粗，就是这么自信。 ||
+8.17 | Merriweather Sans | MerriweatherSans-Regular.ttf | 字体不一定要大号才能吸人眼球，缩到最小也能看清也是一种极致。#在遇到的众多号称小字号下易读的字体中，这是第一款让 600 度近视的小编不带眼镜也能看清半米外的 8px 大小的字体，可以说是很优秀了。 ||
+8.18 | Dosis | Dosis-Regular.ttf | 圆头的非衬线体总是让人联想到日本街头告示随处可见的圆黑体。 | 日本到处都是圆黑体的一大原因是手工绘制时要比黑体快得多，不知道设计师设计 Dosis 的是不是也是在手绘上省了一点功夫…… |
+8.19 | Barriecito | Barriecito-Regular.ttf | 「我们刻意通过显得有些业余的外观设计，来传达一种亲和的感觉。」 | ——「说人话」#——「这笔不太好使……」|
+8.20 | Creepster | Creepster-Regular.ttf | 虽然说作者设计这个字体是为了制造惊悚的感觉，但我觉得它更适合消夏——#字母有没有像稍微化掉了一点点的冰淇淋？ | 如果没有，就当我给你讲了个用来降温的冷笑话吧…… |
+8.21 | Codystar | Codystar-Regular.ttf | 在 LCD 屏幕被大规模应用前，动态显示字母通常只能靠点阵式的机械翻转屏或者 LED 屏幕完成。而在屏幕分辨率不断突破极限的今天，人们对于点阵字体的热爱依旧没有改变。 | |
+8.22 | Electrolize | Electrolize-Regular.ttf | 相比于 LED 屏幕，早期的火车侧面因为需要切换显示的只有相对固定的终点站信息，所以采用了对使用字体自由度更高的滚动幕布。而设计师们在维持可读性之余，也为这些幕布们设计了风格迥异的字体。 | Electrolize 的灵感来源于某趟俄罗斯的火车上所使用的字体。 |
+8.23 | Parisienne | Parisienne-Regular.ttf | Parisienne 起源于上世纪 60 年代一则女性内衣的广告。似乎许多女性用品的广告里都会用文字或画面营造一种「用了……一身轻松」的感觉，不知道算不算一种无意识的偏见呢…… | |
+8.24 | Averia Sans Libre | AveriaSansLibre-Regular.ttf | 还记得标准字「Average」吗？#这同样是一款作者拿自己电脑里所有非衬线体计算出来的平均字体，而#Averia 正是西班牙语中「平均」的意思。 | |
+8.25 | Marcellus SC | MarcellusSC-Regular.ttf | 如果说罗马碑文是衬线体的起源，而Trajan 作为其中的祖师爷出场（使用授权）费太高的话，Marcellus 是一个不错的选择。 | |
+8.26 | Heebo | Heebo-Regular.ttf | 这是一款为希伯来语设计的字体。 | |
+8.27 | Rubik Mono One | RubikMonoOne-Regular.ttf | Google 在魔方发明 40 周年的时候启动了 Chrome Cube Lab，允许开发者使用其开源的代码构建一个自己设计贴面的、能够在 Web 页面上自由转动的魔方。而这个项目的衍生产品之一便是这款和魔方及其发明者同名的字体。 | |
+8.28 | Frijole | Frijole-Regular.ttf | 一款有点像印章印出来的字体，在试用的时候给自己写了一个大大的——「Accepted」！意外地觉得减压效果还不错。 | |
+8.29 | Life Savers | LifeSavers-Regular.ttf | 「Life Saver」是上世纪 50 年代的一个糖果品牌，那时候的广告中使用的字母可都是来自艺术家们亲手绘制，而这款字体展现了其中一条广告上出现的字母的样式。 | |
 -->
-8.16 | Ultra | Ultra-Regular.ttf | 「任何一件事情，当能做到别人用「辣笔」（上海话，意思是极其的）开头来形容的时候，总归会有人买单的」 | Ultra就在粗上面下了足够的功夫。 |
-8.17 | Merriweather Sans | MerriweatherSans-Regular.ttf | 字体不一定要大号才能吸人眼球，缩到最小也能看清也是一种极致。 | 在遇到的众多号称小字号下易读的字体中，这是第一款让600度近视的我不带眼镜也能看清半米外的8px大小的字体，可以说是很优秀了。 |
-8.18 | Dosis | Dosis-Regular.ttf | 圆头的非衬线体总是让人联想到日本街头告示随处可见的圆黑体。 | 日本到处都是圆黑体的一大原因是手工绘制时要比黑体快得多，不知道设计师设计Dosis的是不是也是在手绘上省了一点功夫… |
-8.19 | Barriecito | Barriecito-Regular.ttf | 「我们刻意通过显得有些业余的外观设计，来传达一种亲和的感觉」 | （「说人话」 「这笔不太好使….」）|
-8.20 | Creepster | Creepster-Regular.ttf | 虽然说作者设计这个字体是为了制造惊悚的感觉，但我觉得它更适合消夏——字母有没有像稍微化掉了一点点的冰淇淋？ | 如果没有，就当我给你讲了个用来降温的冷笑话吧… |
-8.21 | Codystar | Codystar-Regular.ttf | 在LCD屏幕被大规模应用前，动态显示字母通常只能靠点阵式的机械翻转屏或者LED屏幕完成。而在屏幕分辨率不断突破极限的今天，人们对于点阵字体的热爱依旧没有改变。 | |
-8.22 | Electrolize | Electrolize-Regular.ttf | 相比于LED屏幕，早期的火车侧面因为需要切换显示的只有相对固定的终点站信息，所以采用了对使用字体自由度更高的滚动幕布，而设计师们在维持可读性之余，也为这些幕布们设计了风格迥异的字体。 | Electrolize的灵感来源于某趟俄罗斯的火车上所使用的字体。 |
-8.23 | Parisienne | Parisienne-Regular.ttf | Parisienne起源于上世纪60年代一则女性内衣的广告。似乎许多女性用品的广告里都会用文字/画面营造一种「用了XXX一身轻松」的感觉，不知道算不算一种无意识的偏见呢… | |
-8.24 | Averia Sans Libre | AveriaSansLibre-Regular.ttf | 还记得我们曾经介绍过的标准字「Average」吗，这同样是一款作者拿自己电脑里所有非衬线体计算出来的平均字体，而Averia正是西班牙语中「平均」的意思。 | |
-8.25 | Marcellus SC | MarcellusSC-Regular.ttf | 如果说罗马碑文是衬线体最初的起源，而Trajan作为其中的祖师爷出场（使用授权）费太高的话，Marcellus是一个不错的选择。 | |
-8.26 | Heebo | Heebo-Regular.ttf | 这是一款为希伯来语字母设计的字体。 | |
-8.27 | Rubik Mono One | RubikMonoOne-Regular.ttf | Google在魔方发明40周年的时候启动了Chrome Cube Lab，允许开发者使用其开源的代码构建一个自己设计贴面的、能够在Web页面上自由转动的魔方。而这个项目的衍生产品之一便是这款和魔方及其发明者同名的字体。 | |
-8.28 | Frijole | Frijole-Regular.ttf | 一款有点像印章印出来的字体，在试用的时候给自己写了一个大大的「Accepted」，意外地觉得减压效果还不错。 | |
-8.29 | Life Savers | LifeSavers-Regular.ttf | 「Life Saver」是上世纪50年代的一个糖果品牌，那时候的广告中使用的字母可都是来自艺术家们亲手绘制（毕竟那个年代没有PS），而这款字体展现了其中一条广告上出现的字母的样式。 | |
-8.30 | El Messiri | ElMessiri-Regular.ttf | 由于字太难看不像羡辙那样拿得出手，就只好在生日许愿祝自己早日暴富了… | El Messiri是拥有全世界一半以上A380的、毫无疑问是世界上最土豪的航司之一的阿联酋航空所使用的字体。 |
-8.31 | Archivo Narrow | ArchivoNarrow-Regular.ttf | 要留档（Archive）的文件，自然是要严肃认真的啦。 | |
-9.1 | Abel | Abel-Regular.ttf | 背单词背多了，到最后记的最深的永远是第一个单词Abandon。如果字体也有一个字典并且要求背诵的话，Abel应该也会令人印象深刻吧… | |
+8.30 | El Messiri | ElMessiri-Regular.ttf | El Messiri 长得很像阿联酋航空所使用的字体，而拥有一百多架 A380#（单价 25 亿人民币）的阿联酋航空无疑是世界上最土豪的公司之一。 | 由于小编字太难看不像羡辙那样拿得出手，就只好在生日偷偷埋个彩蛋许愿祝自己早日暴富了。（希望不仅仅是「长得很像」有钱人吧……） |
 <!--
+8.31 | Archivo Narrow | ArchivoNarrow-Regular.ttf | 要留档（Archive）的文件，自然是要严肃认真的啦！ | |
+9.1 | Abel | Abel-Regular.ttf | 背单词背多了，到最后记的最深的永远是第一个单词 Abandon。如果字体也有一个字典并且要求背诵的话，#Abel 应该也会令人印象深刻吧…… | |
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 ||
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 ||
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 ||
