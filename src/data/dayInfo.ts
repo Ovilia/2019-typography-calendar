@@ -256,7 +256,7 @@ export default `
 9.3 | Wire One | WireOne-Regular.ttf | 看了昨天的日历却不知道何为等线体？今天就来个例子吧。 | |
 9.4 | Rye | Rye-Regular.ttf | 「快来用我们的字体印广告吧，独特的装饰线很吸睛的哟！」 | 从我在茫茫字海中打开了这个字体的详情页来看，人家这描述并没有在瞎扯…… |
 9.5 | Finger Paint | FingerPaint-Regular.ttf | 在天冷或者下雨的时候，我总喜欢往窗上哈一口气，然后用手指在玻璃窗上写字。看来，有这个小癖好的远不只有我一个。 | 这款字体的起源正是艺术家拿手沾墨写下的字。 |
-9.6 | Vollkorn | Vollkorn-Regular.ttf | Vollkorn在德语中意为「全麦」，作者希望将此字体用于普通的日常生活，就像对待面包和黄油一样。 |  |
+9.6 | Lexend Mega | LexendMega-Regular.ttf | Lexend是一系列为了提高阅读速度而特殊设计的字体。 | 虽然在我看来主要特点是稍微把字腔放大了一点，但说不定很有用... |
 9.7 | Pompiere | Pompiere-Regular.ttf | 一般而言为了可读性，字体的 x 字高都会不低于上升部。而 Pompiere 则反其道而行之，虽然牺牲了小字号下的可读性，却在大字号下收获了意外的趣味性。 | |
 9.8 | Happy Monkey | HappyMonkey-Regular.ttf | 周末宜逛动物园放松身心。不知道这款轻松的字体能不能让你联想到正在吃香蕉的猴子脸上浮现的快乐的表情呢？ | |
 9.9 | Oxygen | Oxygen-Regular.ttf | 受到开源协议的限制，许多开源的操作系统都为自己重新设计了一套字体，而这些字体也占据了开源字体中相当一部分。 | Oxygen便是其中之一 |
