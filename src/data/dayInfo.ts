@@ -229,14 +229,10 @@ export default `
 8.12 | Cormorant | Cormorant-Regular.ttf | 虽然作者没有从任何一个已有的字体出发，完全从草图开始设计了整套字体，但发现依旧留下了浓浓的给深刻印象的 Garamond 的痕迹。有时候潜移默化就是这么神奇。 ||
 8.13 | Ewert | Ewert-Regular.ttf | Ewert 的灵感来源于爱沙尼亚艺术家Olev Soans 的作品，在每个字符都留下了最突出的特征——那些像鲸鱼尾巴的装饰线。 | |
 8.14 | Red Hat Text | RedHatText-Regular.ttf | 顾名思义，它就是 Red Hat（一种#Linux 系统）所使用的字体。 | |
--->
 8.15 | Markazi Text | MarkaziText-Regular.ttf | Markazi 是伊朗的一个省，其意义为「波斯的中心」。这是一款伊朗设计师创造的适用于阿拉伯语和拉丁文字的字体。 | 谁说我们只有英语小课堂的？这不还有地理小课堂呢。 |
-<!--
 8.16 | Ultra | Ultra-Regular.ttf | 一个字体叫 Ultra，就像一个字体叫 Normal 一样奇怪（因为他们都表示一种字重）。但是 Ultra 并不在意，有够粗，就是这么自信。 ||
 8.17 | Merriweather Sans | MerriweatherSans-Regular.ttf | 字体不一定要大号才能吸人眼球，缩到最小也能看清也是一种极致。#在遇到的众多号称小字号下易读的字体中，这是第一款让 600 度近视的小编不带眼镜也能看清半米外的 8px 大小的字体，可以说是很优秀了。 ||
--->
 8.18 | Dosis | Dosis-Regular.ttf | 圆头的非衬线体总是让人联想到日本街头告示随处可见的圆黑体。 | 日本到处都是圆黑体的一大原因是手工绘制时要比黑体快得多，不知道设计师设计 Dosis，是不是也是为了在手绘上省了一点功夫…… |
-<!--
 8.19 | Barriecito | Barriecito-Regular.ttf | 「我们刻意通过显得有些业余的外观设计，来传达一种亲和的感觉。」 | ——「说人话」#——「这笔不太好使……」|
 8.20 | Creepster | Creepster-Regular.ttf | 虽然说作者设计这个字体是为了制造惊悚的感觉，但我觉得它更适合消夏——#字母有没有像稍微化掉了一点点的冰淇淋？ | 如果没有，就当我给你讲了个用来降温的冷笑话吧…… |
 8.21 | Codystar | Codystar-Regular.ttf | 在 LCD 屏幕被大规模应用前，动态显示字母通常只能靠点阵式的机械翻转屏或者 LED 屏幕完成。而在屏幕分辨率不断突破极限的今天，人们对于点阵字体的热爱依旧没有改变。 | |
@@ -251,25 +247,26 @@ export default `
 8.30 | El Messiri | ElMessiri-Regular.ttf | El Messiri 长得很像阿联酋航空所使用的字体，而拥有一百多架 A380#（单价 25 亿人民币）的阿联酋航空无疑是世界上最土豪的公司之一。 | 由于小编字太难看不像羡辙那样拿得出手，就只好在生日偷偷埋个彩蛋许愿祝自己早日暴富了。（希望不仅仅是「长得很像」有钱人吧……） |
 8.31 | Archivo Narrow | ArchivoNarrow-Regular.ttf | 要留档（Archive）的文件，自然是要严肃认真的啦！ | |
 9.1 | Abel | Abel-Regular.ttf | 背单词背多了，到最后记的最深的永远是第一个单词 Abandon。如果字体也有一个字典并且要求背诵的话，#Abel 应该也会令人印象深刻吧…… | |
--->
-9.2 | Limelight | Limelight-Regular.ttf | 非衬线字体诞生之初多流行笔画粗细对比强烈的字体，虽然如今等线体逐渐成为了主流。 | 当年的百老汇和好莱坞在推动这一潮流的过程中功不可没。这也是许多类似的字体以 Broadway 命名的缘故。 |
-9.3 | Wire One | WireOne-Regular.ttf | 看了昨天的日历却不知道何为等线体？今天就来个例子吧。 | |
-9.4 | Rye | Rye-Regular.ttf | 「快来用我们的字体印广告吧，独特的装饰线很吸睛的哟！」 | 从我在茫茫字海中打开了这个字体的详情页来看，人家这描述并没有在瞎扯…… |
+9.2 | Limelight | Limelight-Regular.ttf | 非衬线字体诞生之初，多流行笔画粗细对比强烈的字体，虽然如今等线体逐渐成为了主流。 | 当年百老汇和好莱坞在推动这一潮流的过程中功不可没。这也是许多类似的字体以 Broadway 命名的缘故。 |
+9.3 | Wire One | WireOne-Regular.ttf | 看了昨天的日历却不知何为等线体？今天就来个例子吧。 | |
+9.4 | Rye | Rye-Regular.ttf | 「快来用我们的字体印广告吧，独特的装饰线很吸睛的哟！」 | 从我在茫茫字海中打开了这个字体的详情页这点来看，人家这描述并没有在瞎扯…… |
 9.5 | Finger Paint | FingerPaint-Regular.ttf | 在天冷或者下雨的时候，我总喜欢往窗上哈一口气，然后用手指在玻璃窗上写字。看来，有这个小癖好的远不只有我一个。 | 这款字体的起源正是艺术家拿手沾墨写下的字。 |
-9.6 | Lexend Mega | LexendMega-Regular.ttf | Lexend是一系列为了提高阅读速度而特殊设计的字体。 | 虽然在我看来主要特点是稍微把字腔放大了一点，但说不定很有用... |
+9.6 | Lexend Mega | LexendMega-Regular.ttf | Lexend 是一系列为了提高阅读速度而特殊设计的字体。 | |
 9.7 | Pompiere | Pompiere-Regular.ttf | 一般而言为了可读性，字体的 x 字高都会不低于上升部。而 Pompiere 则反其道而行之，虽然牺牲了小字号下的可读性，却在大字号下收获了意外的趣味性。 | |
 9.8 | Happy Monkey | HappyMonkey-Regular.ttf | 周末宜逛动物园放松身心。不知道这款轻松的字体能不能让你联想到正在吃香蕉的猴子脸上浮现的快乐的表情呢？ | |
-9.9 | Oxygen | Oxygen-Regular.ttf | 受到开源协议的限制，许多开源的操作系统都为自己重新设计了一套字体，而这些字体也占据了开源字体中相当一部分。 | Oxygen便是其中之一 |
+9.9 | Oxygen | Oxygen-Regular.ttf | 受到开源协议的限制，许多开源的操作系统都重新设计了一套字体，而这些字体也占据了开源字体中相当一部分——Oxygen 便是其中之一。 |  |
 9.10 | The Girl Next Door | TheGirlNextDoor-Regular.ttf | 以为这是邻家女孩的字？不，这是作者的一位地理老师的字。但在作者看来，这位老师就像邻家女孩一样，能让你在任何时候都感到放松与安心。 | 今天是教师节，祝每一位曾带给我们知识和温暖的老师节日快乐！ |
-9.11 | Buda | Buda-Light.ttf | 多瑙河将布达佩斯分为了布达与佩斯两个部分，而这个字体的名字正是源于一侧的布达。 | 一开始我找了老半天并没有找到叫佩斯的字体，后来仔细读了介绍才发现人家把布达与佩斯的对比融入了这个字体里——也就是说，他没有兄弟叫佩斯。 |
+9.11 | Buda | Buda-Light.ttf | 多瑙河将布达佩斯分为了布达与佩斯两个部分，而这个字体的名字正是源于一侧的布达。 | 一开始我找了老半天并没有找到叫佩斯的字体，后来仔细读了介绍才发现人家把布达与佩斯的对比融入了这个字体里——也就是说，它没有兄弟叫佩斯。 |
 9.12 | Wallpoet | Wallpoet-Regular.ttf | 许多墙上的文字是使用镂空的模板喷涂而成。而这个字体为了方便制作镂空模板，把所有的笔画曲线全部改成了直线。 | |
 9.13 | Montserrat Subrayada | MontserratSubrayada-Regular.ttf | 一款自带下划线的字体。 | |
 9.14 | Sue Ellen Francisco | SueEllenFrancisco-Regular.ttf | 许多由笔迹衍生而来的字体通常依旧会经历在造字软件中被调整细节的过程，而 Sue Ellen Francisco 则是作者完完全全在 Illustrator 中直接使用数位板书写而成。 | |
-9.15 | Kite One | KiteOne-Regular.ttf | 毕竟文字是用来阅读的，如何提高字体在大段文字场景下的阅读舒适度也是一个亘古不变的话题。而作者用 Kite One 提出了一个观点，字母在向右倾斜 7 度的时候最适宜阅读。 | |
-9.16 | Sirin Stencil | SirinStencil-Regular.ttf | 听说你们爱在 PPT 里用立体字？那自带3D效果的字体可不能错过。 | |
-9.17 | Poly | Poly-Regular.ttf | 这款字体最初为那些动不动就充满了（由大堆词根拼接而成的）长单词的文章而设计，通过调整 x 字高和字符间距使得其相比于普通的字体在同等字号下更节约空间。 | 听上去很适合动不动就写长句子的我，但是可惜它没有中文款…… |
-9.18 | 站酷快乐体 | ZCOOLKuaiLe-Regular.ttf | 站酷快乐体是站酷第二款以众人合作的方式完成的字体。至于第一款是啥，暂时先卖个关子。 | |
-9.19 | Yatra One | YatraOne-Regular.ttf | Yatra 在印度教里意为「朝圣之旅」。用这样一款为梵文设计的字体抄写经文是不是可能有额外的功效加成…… | |
+9.15 | Kite One | KiteOne-Regular.ttf | 毕竟文字是用来阅读的，如何提高字体在大段文字场景下的阅读舒适度也是一个亘古不变的话题。而作者用#Kite One 提出了一个观点，字母在向右倾斜 7 度的时候最适宜阅读。 | |
+9.16 | Sirin Stencil | SirinStencil-Regular.ttf | 听说你们爱在 PPT 里用立体字？那自带 3D 效果的字体可不能错过。 | |
+-->
+9.17 | 站酷快乐体 | ZCOOLKuaiLe-Regular.ttf | 站酷快乐体是站酷第二款以众人合作的方式完成的字体。至于第一款是啥，暂时先卖个关子。 | |
+9.18 | Poly | Poly-Regular.ttf | 这款字体最初为那些动不动就充满了（由大堆词根拼接而成的）长单词的文章而设计，通过调整 x 字高和字符间距使得其相比于普通的字体在同等字号下更节约空间。 | 听上去很适合动不动就写长句子的我，但是可惜它没有中文款…… |
+<!--
+9.19 | Yatra One | YatraOne-Regular.ttf | Yatra 这一单词在印度教里意为「朝圣之旅」。用这样一款为梵文设计的字体抄写经文是不是可能有额外的功效加成…… | |
 9.20 | Work Sans | WorkSans-Regular.ttf | 这是一款主要为中等字号屏幕显示设计的的字体————简而言之，方便人们搬砖用的字体。 | 把提高工作效率发挥到极致听上去像是勤劳的中华民族干的事儿...果然设计师是华裔。 |
 9.21 | Spicy Rice | SpicyRice-Regular.ttf | 以前想不好吃啥的时候，觉得老干妈拌饭也不错。在更新截止日之前还差一个字体不知道想放啥的时候，这碗「辣饭」也挺好的嘛！ | |
 
