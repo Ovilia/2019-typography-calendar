@@ -70,6 +70,7 @@ for (let line of dayInfoLines) {
         switch (date) {
             case '2.19':
             case '3.16':
+            case '9.17':
                 shell.exec(`font2img -f "${fontPath}" -o ../src/assets/imgs/fonts/story/dark/${date}.png`
                     + ` --text "${story}" -c "${storyColor}" --font-size="18px" --dpr=3 --max-width=280 --line-height=0.4`);
                 break;
