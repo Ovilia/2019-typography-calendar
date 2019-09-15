@@ -262,33 +262,32 @@ export default `
 9.14 | Sue Ellen Francisco | SueEllenFrancisco-Regular.ttf | 许多由笔迹衍生而来的字体通常依旧会经历在造字软件中被调整细节的过程，而 Sue Ellen Francisco 则是作者完完全全在 Illustrator 中直接使用数位板书写而成。 | |
 9.15 | Kite One | KiteOne-Regular.ttf | 毕竟文字是用来阅读的，如何提高字体在大段文字场景下的阅读舒适度也是一个亘古不变的话题。而作者用#Kite One 提出了一个观点，字母在向右倾斜 7 度的时候最适宜阅读。 | |
 9.16 | Sirin Stencil | SirinStencil-Regular.ttf | 听说你们爱在 PPT 里用立体字？那自带 3D 效果的字体可不能错过。 | |
--->
 9.17 | 站酷快乐体 | ZCOOLKuaiLe-Regular.ttf | 站酷快乐体是站酷第二款以众人合作的方式完成的字体。至于第一款是啥，暂时先卖个关子。 | |
 9.18 | Poly | Poly-Regular.ttf | 这款字体最初为那些动不动就充满了（由大堆词根拼接而成的）长单词的文章而设计，通过调整 x 字高和字符间距使得其相比于普通的字体在同等字号下更节约空间。 | 听上去很适合动不动就写长句子的我，但是可惜它没有中文款…… |
-<!--
 9.19 | Yatra One | YatraOne-Regular.ttf | Yatra 这一单词在印度教里意为「朝圣之旅」。用这样一款为梵文设计的字体抄写经文是不是可能有额外的功效加成…… | |
-9.20 | Work Sans | WorkSans-Regular.ttf | 这是一款主要为中等字号屏幕显示设计的的字体————简而言之，方便人们搬砖用的字体。 | 把提高工作效率发挥到极致听上去像是勤劳的中华民族干的事儿...果然设计师是华裔。 |
+9.20 | Work Sans | WorkSans-Regular.ttf | 这是一款主要为中等字号屏幕显示设计的的字体——简而言之，方便人们搬砖用的字体。 | 把提高工作效率发挥到极致听上去像是勤劳的中华民族干的事儿……果然设计师是华裔。 |
 9.21 | Spicy Rice | SpicyRice-Regular.ttf | 以前想不好吃啥的时候，觉得老干妈拌饭也不错。在更新截止日之前还差一个字体不知道想放啥的时候，这碗「辣饭」也挺好的嘛！ | |
-9.22 | Libre Baskerville | LibreBaskerville-Regular.ttf | 虽然听到Baskerville这个名字多数人的第一联想是福尔摩斯系列故事里的「巴斯克维尔的猎犬」，但诞生于18世纪50年代的Baskerville事实上是字体里不折不扣的元老之一——复刻仿作能出一本系列的那种。 | 这款字体便是其中一款开源的复制作品，它以1940年前后American Typewriter雕刻的活字为蓝本。 |
-9.23 | Ma Shan Zheng | MaShanZheng-Regular.ttf | 秋分者，阴阳相半也，故昼夜均而寒暑平。 | 今日秋分 |
-9.24 | Literata | Literata-Regular.ttf | Literta曾是为Google为Play Books的内容显示委约设计的字体，然而从这个字体并不高的使用量来看，Google Play Books做的好像不太成功… |  |
-9.25 | Chilanka | Chilanka-Regular.ttf | Google Font里除了拉丁语字母字体之外最大一部分来自印度。是因为印度IT产业发达吗？不，是因为印度的语种太多了… | Chilanka里囊括了马拉雅拉姆语的字母，马拉雅拉姆语是印度22种官方语言之一（划重点，22种官方语言） |
-9.26 | Montez | Montez-Regular.ttf | Montez的灵感来源于上世纪60年代美容护肤产品的广告，而这个字体的风格和广告上那些满满胶原蛋白的皮肤可以说是一样的弹力十足。 | |
-9.27 | Hanalei | Hanalei-Regular.ttf | 或许是因为熊猫们过于可爱，竹子也跟随着国为世界所熟知。而这款使用竹节作为笔画的字体，灵感正是来源于一家使用竹子做Logo的中餐馆。 | |
-9.28 | News Cycle | NewsCycle-Regular.ttf | News Cycle来源于一款上世纪初在报纸上使用的字体。一般而言，字体或是偏向于吸引眼球，或是偏向于无甚特色却适宜于大段阅读。而报纸上所选用的字体通常则需要很好的平衡这两点（以便标题正文都能用）。 | | 
-9.29 | Cardo | Cardo-Regular.ttf | 对于古籍学者来说现代字库可能并不算太友好，因为毕竟他们需要许多现代语言已经不再使用的字。 Cardo 则不仅在设计上模仿了以前的样式，在字符集上也覆盖了几乎所有的拉丁字母。 |  |
-9.30 | Asap Condensed | AsapCondensed-Regular.ttf | 「快点！再快一点！」 | As Soon As Possible也不足以形容季末的心焦？那就再压缩一下吧。 |
-10.1 | Zhi Mang Xing | ZhiMangXing-Regular.ttf | 「我和我的祖国 一刻也不能分割 无论我走到哪里 都流出一首赞歌」 | 热烈庆祝中华人民共和国成立70周年 |
-10.2 | Slabo 27px | Slabo27px-Regular.ttf | 粗衬线体（Slab Serif）是一种特殊的衬线字体，它的衬线相比于普通的衬线更粗且成块状。 | Slabo的名字便源于粗衬线Slab，你可以在日历的数字上观察到这种衬线的特征。 |
-10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I ❤ NY」用的就是 American Typewriter。 |
-10.4 | Arsenal | Arsenal-Regular.ttf | 如果你看到这个字体放在今天的时候有过会心一笑，那说明——你是个看英超的小伙伴。 | 阿森纳队曾在11个赛季里拿了6个第四，让阿森纳永远第四成为了那些英超的段子里常见的梗。 |
-10.5 | Notable | Notable-Regular.ttf | 这个字体名来源于Note的一种平时不太用到的中文释义——纸币，因为这个字体仿制的是美元纸币上的文字。 | |
-10.6 | IBM Plex Sans | IBMPlexSans-Regular.ttf | 为了「优秀的字体设计应该能够传达出公司的价值观」，IBM Plex应运而生。 | 虽然我觉得就像我之前高中语文阅读理解从未得高分一样，我并没有领悟到介绍中说的IBM的意图= = |
-10.7 | Manrope | manrope-regular.otf | 「现代生活中不需要斜体」 | 秉承着这样的信念，作者选择了不给它制作斜体版本… |
-10.8 | Bitter | Bitter-Regular.ttf | 一款能够在屏幕中表现优秀的衬线字体，它结合了常规的X基线高度且在粗细结构对比中使用了最小的变化。 | 所以可以根据之前讲到的故事推断，它其实是一款相当年轻的字体。 |
-10.9 | Lora | Lora-Regular.ttf | Lora最初源于书法体，尽管设计师为了使其用于屏幕呈现做了相当的优化，但它似乎依然更适合出现在印刷制品上。 | |
-10.10 | Exo | Exo-Regular.ttf | 字重从细到粗有10种，一般一种字体会制作4-6个字重。而相比于Exo传达的科技感而言，它自己做全了100到900共9种字重及其对应的斜体的全覆盖更让我震撼。 | | 
-10.11 | Modak | Modak-Regular.ttf | 对于笔画超级粗的字体来说，留白的那部分就变得挺重要。而Modak的大写M的那一抹「微笑」，第一眼就能留下相当好的印象。 | | 
+9.22 | Libre Baskerville | LibreBaskerville-Regular.ttf | 虽然听到 Baskerville 这个名字多数人的第一联想是福尔摩斯系列故事里的「巴斯克维尔的猎犬」，但诞生于#18 世纪 50 年代的 Baskerville 事实上是字体里不折不扣的元老之一——复刻仿作能出一本系列的那种。 | 这款字体便是其中一款开源的复制作品，它以#1940 年前后 American Typewriter 雕刻的活字为蓝本。 |
+9.23 | Ma Shan Zheng | MaShanZheng-Regular.ttf | 秋分者，阴阳相半也，故昼夜均而寒暑平。 | 今日秋分。 |
+9.24 | Literata | Literata-Regular.ttf | Literata 曾是为 Google 为 Play#Books 的内容显示委约设计的字体。 |  |
+9.25 | Chilanka | Chilanka-Regular.ttf | Google Font 里除了拉丁语字母字体之外，最大一部分来自印度。是因为印度 IT 产业发达吗？不，是因为印度的语种太多了…… | Chilanka 里囊括了马拉雅拉姆语的字母，马拉雅拉姆语是印度 22 种官方语言之一（划重点，22 种官方语言）。 |
+9.26 | Montez | Montez-Regular.ttf | Montez 的灵感来源于上世纪 60 年代美容护肤产品的广告，而这个字体的风格和广告上那些满满胶原蛋白的皮肤可以说是一样的弹力十足。 | |
+9.27 | Hanalei | Hanalei-Regular.ttf | 或许是因为熊猫们过于可爱，竹子也跟随着国为世界所熟知。而这款使用竹节作为笔画的字体，灵感正是来源于一家使用竹子做 Logo 的中餐馆。 | |
+9.28 | News Cycle | NewsCycle-Regular.ttf | News Cycle 来源于一款上世纪初在报纸上使用的字体。一般而言，字体或是偏向于吸引眼球，或是偏向于无甚特色却适宜于大段阅读。而报纸上所选用的字体通常则需要很好的平衡这两点（以便标题正文都能用）。 | |
+9.29 | Cardo | Cardo-Regular.ttf | 对于古籍学者来说现代字库可能并不算太友好，因为毕竟他们需要许多现代语言已经不再使用的字。Cardo 则不仅在设计上模仿了以前的样式，在字符集上也覆盖了几乎所有的拉丁字母。 |  |
+9.30 | Asap Condensed | AsapCondensed-Regular.ttf | 「快点！再快一点！」 | As Soon As Possible 也不足以形容季末的心#焦？那就再压缩一下吧。 |
+10.1 | Zhi Mang Xing | ZhiMangXing-Regular.ttf | 我和我的祖国#一刻也不能分割#无论我走到哪里#都流出一首赞歌 | 热烈庆祝中华人民共和国成立 70 周年！ |
+10.2 | Slabo 27px | Slabo27px-Regular.ttf | 粗衬线体（Slab Serif）是一种特殊的衬线字体，它的衬线相比于普通的衬线更粗且成块状。 | Slabo 的名字便源于粗衬线 Slab，你可以在日历的数字上观察到这种衬线的特征。 |
+10.3 | ITC American Typewriter | itc-american-typewriter.ttf | 「一锅火热的爱」 | 经典的「I   NY」用的就是 American#Typewriter。 |
+10.4 | Arsenal | Arsenal-Regular.ttf | 如果你看到这个字体放在今天的时候有过会心一笑，那说明——你是个看英超的小伙伴。 | 阿森纳队曾在 11 个赛季里拿了 6 个第四，让阿森纳永远第四成为了那些英超的段子里常见的#梗。 |
+10.5 | Notable | Notable-Regular.ttf | 这个字体名来源于 Note 的一种平时不太用到的中文释义——纸币，因为这个字体仿制的是美元纸币上的文#字。 | |
+10.6 | IBM Plex Sans | IBMPlexSans-Regular.ttf | 为了「优秀的字体设计应该能够传达出公司的价值观」，IBM Plex 应运而生。 | 虽然我觉得就像我之前高中语文阅读理解从未得高分一样，我并没有领悟到介绍中说的 IBM 的意图…… |
+10.7 | Manrope | manrope-regular.ttf | 「现代生活中不需要斜体。」 | 秉承着这样的信念，作者选择了不给它制作斜体版本…… |
+10.8 | Bitter | Bitter-Regular.ttf | 一款能够在屏幕中表现优秀的衬线字体，它结合了常规的 x 基线高度且在粗细结构对比中使用了最小的变化。 | 所以可以根据之前讲到的故事推断，它其实是一款相当年轻的字体。 |
+10.9 | Lora | Lora-Regular.ttf | Lora 最初源于书法体，尽管设计师为了使其用于屏幕呈现做了相当程度的优化，但它似乎依然更适合出现在印刷制品上。 | |
+10.10 | Exo | Exo-Regular.ttf | 字重从细到粗有 10 种，一般一种字体会制作 4-6 个字重。而相比于#Exo 传达的科技感而言，它自己做全了 100 到 900 共 9 种字重及其对应的斜体的全覆盖更让我震撼。 | |
+10.11 | Modak | Modak-Regular.ttf | 对于笔画超级粗的字体来说，留白的那部分就变得挺重要。而 Modak 的大写 M 的那一抹「微笑」，第一眼就能留下相当好的印象。 | |
+-->
 
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 ||
