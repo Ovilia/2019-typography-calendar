@@ -18,3 +18,4 @@ npm install -g cordova@8.1.0
 ```
 
 然后执行 `ionic serve` 会起一个本地服务器，在 Chrome 中调试。
+tis is an amazing
