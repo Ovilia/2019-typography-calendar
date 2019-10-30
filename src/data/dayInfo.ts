@@ -287,35 +287,49 @@ export default `
 10.9 | Lora | Lora-Regular.ttf | Lora 最初源于书法体，尽管设计师为了使其用于屏幕呈现做了相当程度的优化，但它似乎依然更适合出现在印刷制品上。 | |
 10.10 | Exo | Exo-Regular.ttf | 字重从细到粗有 10 种，一般一种字体会制作 4-6 个字重。而相比于#Exo 传达的科技感而言，它自己做全了 100 到 900 共 9 种字重及其对应的斜体的全覆盖更让我震撼。 | |
 10.11 | Modak | Modak-Regular.ttf | 对于笔画超级粗的字体来说，留白的那部分就变得挺重要。而 Modak 的大写 M 的那一抹「微笑」，第一眼就能留下相当好的印象。 | |
-10.12 | Rock Salt | RockSalt-Regular.ttf | 即便是用书写的方式开始创作一款新的字体，不同的笔触也会带来不同的感觉。Rock Salt使用的就是一支签字笔，而且看上去是那种正在被文思如泉涌的人奋笔疾书的那种。 |  |
-10.13 | Big Shoulders Display | BigShouldersDisplay-Regular.ttf | Big Shoulders为芝加哥城市VI标准而设计，其灵感来源于芝加哥历史悠久的铁路标识和报纸等地方所使用的字体。 | 今天是2019年芝加哥马拉松的比赛日，而当你看到这份日历的时候写下这条的我正在赛道上，祝我好运吧。 |
-10.14 | Bree Serif | BreeSerif-Regular.ttf | 相比于普通的罗马体，意大利体除了在字母整体向右倾斜之外，部分笔画也变得更柔和。而这个特点后来也被部分字体吸收，形成了「笔画柔和但并不斜」的新系列。Bree Serif就是这种系列的代表字体之一。 |  |
-10.15 | Quattrocento | Quattrocento-Regular.ttf | 想要找一个字体表现古典的感觉？Quattrocento用它的名字告诉你「选我，一秒回到文艺复兴」 | Quattrocento的意思是「十五世纪」 |
-10.16 | Raleway | Raleway-Regular.ttf | 虽然等线可以和现代画上约等号，但Raleway依旧保留了传统字体中数字高低略带错落有致的设计，使得它额外多出了一份的优雅的感觉。 |  |
-10.17 | Titillium web | TitilliumWeb-Regular.ttf | Titillium web由意大利的一个设计项目创造。每个学年都有十几名学生参与该项目，进一步开发并解决问题。 |  |
-10.18 | Sunflower | Sunflower-Medium.ttf | Sunflower是一款略带可爱的韩文字体，然而使用这款字体比韩国人还频繁的居然是…印度人？ |  |
-10.19 | Questrial | Questrial-Regular.ttf | Questrial从瑞士的设计中汲取灵感，也让它带有了一些「瑞士的」痕迹（Helvetica的意思就是「瑞士的」）。 | 不过它相比于Helvetica更让处女座感到舒适的是，它的数字是等宽的——这使得它在财务报表上看起来更整齐。 | 
-10.20 | Ubuntu | Ubuntu-Regular.ttf | 2004年10月20日，Ubuntu首个版本发布。 | |
-10.21 | M PLUS 1p | MPLUS1p-Regular.ttf | 虽然日文中有大量的汉字，然而即便是面对同样的汉字两国的设计师处理方式也不尽相同，以至于两种风格如果兑换出现在对方的国度都会有一点违和。比如，M Plus 1P其实一款日文汉字字体。 | |
-10.22 | Mansalva | Mansalva-Regular.ttf | 随着技术的发展，OpenTypeFont现在已经支持针对同一个字体的同一个字母设定不同的变体，以使得同一个字母在相邻的字母不同时能展现最自然的连接形态。 | Mansalva正是充分利用了这种特性使得手写体看上去更接近手写的状态。可以看到字体名字里两个a是不一样的形态。 |
-10.23 | Handlee | Handlee-Regular.ttf | 除了为字母设定变体之外，Handlee的设计师Jon Prince有意地轻微随机调整了部分字母的基线高度和上升部/下降部的高度，以使整体效果更接近手写——毕竟人不是机器，不可能写出完全等高的字。 |  |
-10.24 | Hack | 又一款专为代码编辑设计的字体 | 祝程序员们节日快乐 |
-10.25 | Domine | Domine-Regular.ttf | 作为一款为长篇阅读而设计的字体，Domine自诞生之初就一直在14px和16px两个字号下被不断调整优化。但为什么浏览器上默认的显示字号是14px或是16px？ | 一个冷知识是，早期的IE遇到字体大小奇数就会渲染成大一号的偶数。大概后来设计师们就习惯了这个奇怪的Bug就这么不成文地流传下来了吧。 |
-10.26 | Amiri | Amiri-Regular.ttf | 觉得这个字体的设计偏向传统？它模仿了埃及开罗的一家报社20世纪初期所使用的字体，而字体名也由这家报社（Amiria Press）演化而来。 |  |
-10.27 | Gochi Hand | GochiHand-Regular.ttf | 「Gochi Hand的字体来源于一位小女孩，相比于字体设计师刻意制作的手写体，这样的字迹跟接近于普通人的日常书写。」 | 
+10.12 | Rock Salt | RockSalt-Regular.ttf | 即便是用书写的方式开始创作一款新的字体，不同的笔触也会带来不同的感觉。Rock Salt 使用的就是一支签字笔，而且看上去是那种正在被文思如泉涌的人奋笔疾书的那种。 |  |
+10.13 | Big Shoulders Display | BigShouldersDisplay-Regular.ttf | Big Shoulders 为芝加哥城市 VI 标准而设计，其灵感来源于芝加哥历史悠久的铁路标识和报纸等地方所使用的字体。 | 今天是 2019 年芝加哥马拉松的比赛日，而当你看到这份日历的时候，写下这条的小编正在赛道上，祝我好运吧。 |
+10.14 | Bree Serif | BreeSerif-Regular.ttf | 相比于普通的罗马体，意大利体除了在字母整体向右倾斜之外，部分笔画也变得更柔和。而这个特点后来也被部分字体吸收，形成了「笔画柔和但并不斜」的新系列。Bree Serif 就是这种系列的代表字体之一。 |  |
+10.15 | Quattrocento | Quattrocento-Regular.ttf | 想要找一个字体表现古典的感觉？#Quattrocento 用它的名字告诉你：#「选我，一秒回到文艺复兴」。 | Quattrocento 的意思是「十五世纪」。 |
+10.16 | Raleway | Raleway-Regular.ttf | 虽然等线可以和现代画上约等号，但Raleway 依旧保留了传统字体中数字高低略带错落有致的设计，使得它额外多出了一份的优雅的感觉。 |  |
+10.17 | Titillium web | TitilliumWeb-Regular.ttf | Titillium web 由意大利的一个设计项目创造。每个学年都有十几名学生参与该项目，进一步开发并解决问题。 |  |
+10.18 | Sunflower | Sunflower-Medium.ttf | Sunflower 是一款略带可爱的韩文字体，然而使用这款字体比韩国人还频繁的居然是……印度人？ |  |
+10.19 | Questrial | Questrial-Regular.ttf | Questrial 从瑞士的设计中汲取灵感，也让它带有了一些「瑞士的」痕迹。|  Helvetica 的意思就是「瑞士的」。 |
+10.20 | Ubuntu | Ubuntu-Regular.ttf | 2004 年 10 月 20 日，Ubuntu 首个版本发布。 | |
+10.21 | M PLUS 1p | MPLUS1p-Regular.ttf | 虽然日文中有大量的汉字，然而即便是面对同样的汉字两国的设计师处理方式也不尽相同，以至于两种风格如果对换出现在对方的国度都会有一点违和。比如，M Plus 1P 其实一款日文汉字字体。 | |
+10.22 | | Mansalva-Regular.ttf | 随着技术的发展，OpenTypeFont 现在已经支持针对同一个字体的同一个字母设定不同的变体，以使得同一个字母在相邻的字母不同时能展现最自然的连接形态。 | Mansalva 正是充分利用了这种特性使得手写体看上去更接近手写的状态。可以看到字体名字里a 的两种形态。 |
+10.23 | Handlee | Handlee-Regular.ttf | 除了为字母设定变体之外，Handlee的设计师 Jon Prince 有意地轻微随机调整了部分字母的基线高度和上升部/下降部的高度，以使整体效果更接近手写——毕竟人不是机器，不可能写出完全等高的字。 |  |
+10.24 | Hack | Hack | 祝程序员们节日快乐！ | 又一款专为代码编辑设计的字体。 |
+10.25 | Domine | Domine-Regular.ttf | 作为一款为长篇阅读而设计的字体，Domine 自诞生之初就一直在 14px 和16px 两个字号下被不断调整优化。但为什么浏览器上默认的显示字号是#14px 或是 16px？ | 一个冷知识是，早期的 IE 遇到字体大小奇数就会渲染成大一号的偶数。大概后来设计师们就习惯了这个奇怪的 Bug 就这么不成文地流传下来了吧。 |
+10.26 | Amiri | Amiri-Regular.ttf | 觉得这个字体的设计偏向传统？它模仿了埃及开罗的一家报社 20 世纪初期所使用的字体，而字体名也由这家报社（Amiria Press）演化而来。 |  |
+10.27 | Gochi Hand | GochiHand-Regular.ttf | 「Gochi Hand 的字体来源于一位小女孩，相比于字体设计师刻意制作的手写体，这样的字迹跟接近于普通人的日常书写。」 |
 10.28 | Underdog | Underdog-Regular.ttf | 以前家里总吐槽撕得不整齐的（纸、保鲜膜之类的）边缘为「被狗啃过似的」，从边角和名字来看这个字体也有狗狗的功劳？ |  |
-10.29 | Hammersmith One | HammersmithOne-Regular.ttf | 咋一看以为是伦敦地铁所使用的Johnston，再仔细一看…果然是一款学习了Johnston的字体。 |  |
-10.30 | Eater | Eater-Regular.ttf | 「Trick or Treat」 | 无论是个吃糖的捣蛋鬼还是个吃可怕东西的魔鬼，Eater这个名字还蛮符合今天这个节日的…当然字体本身也是 | 
-10.31 | Montserrat Alternates | MontserratAlternates-Regular.ttf | Montserrat是布宜诺斯艾利斯最古老的一个街区，也是作者居住的地方。原先那里有许多字体有特色的手工制作的海报，然而伴随着城市的发展逐渐消失了。作为抢救性的记录，作者制作了这款字体来记录他心中这个街区应有的字体。 | |
--->
+10.29 | Hammersmith One | HammersmithOne-Regular.ttf | 乍一看以为是伦敦地铁所使用的#Johnston，再仔细一看……果然是一款学习了 Johnston 的字体。 |  |
+10.30 | Eater | Eater-Regular.ttf | Trick or Treat! | 无论是个吃糖的捣蛋鬼还是个吃可怕东西的魔#鬼，Eater 这个名字还蛮符合今天这个节日的。 |
+10.31 | Montserrat Alternates | MontserratAlternates-Regular.ttf | Montserrat 是布宜诺斯艾利斯最古老的一个街区，也是作者居住的地方。原先那里有许多字体有特色的手工制作的海报，然而伴随着城市的发展逐渐消失了。作为抢救性的记录，作者制作了这款字体来记录他心中这个街区应有的字体。 | |
 
+11.1 | Share | Share-Regular.ttf | 11 月到了，你手上的这份「2019字体日历」也就只剩两个月的生命了。这十个月你过得如何呢？和我们分享一下你的故事吧！ ||
+11.2 | Rochester | Rochester-Regular.ttf | 这款干练优雅的手写体，自带了古典高贵的气质，女王范十足！||
+11.3 | 站酷小薇体 | ZCOOLXiaoWei-Regular.ttf | 好一个骨骼清奇、古道仙风之作！ ||
+11.4 | Arvo | Arvo-Regular.ttf | 在芬兰语中，Arvo 的意思是：数字、数值、价值，用来给这样一款几何形状的 Slab 字体命名的确很有意思。| 不记得 Slab 是什么意思了吗？翻到 10 月 21 日的字体日历复习一下吧！ |
+11.5 | Pacifico | Pacifico-Regular.ttf | Pacifico 受到了 20 世纪 50 年代美国冲浪文化的启发。#让我们一起浪起来！||
+11.6 | Iceberg | Iceberg-Regular.ttf | 这款字体中很多字母缺了一块三角#形，让我们联想到冰山的断裂。||
+11.7 | Bevan | Bevan-Regular.ttf | 这是一款对 30 年代字体的复刻体。对早年的字体进行数字化，是一种常见的复刻原因。||
+11.8 | Playfair Display | PlayfairDisplay-Regular.ttf | 如果你在一款字体中看到了Display 字样，这代表该字体是为了大尺寸设计的，通常适用于大字号的标题。||
+11.9 | Passion One | PassionOne-Regular.ttf | 「请只在你最富有激情的项目中使用本字体！」#字体简介如是说。||
+11.10 | Macha | Macha | Macha 是凯尔特神话中的命运与战争的三女神之一。||
+11.11 | Bonbon | Bonbon-Regular.ttf | 棒棒糖的「棒棒」就是从这个单词的谐音来的，是小糖果的意思。 ||
+11.12 | Caveat Brush | CaveatBrush-Regular.ttf | 手写体很多，这款字体的特色则是用了较粗的笔刷。因此，它更适合用来做短的注释而非信件这样的长篇手写文字。||
+11.13 | Baloo | Baloo-Regular.ttf | 正如作者对这款字体的形容——厚厚的皮毛下覆盖着尖利的爪子，细节的设计让粗体看起来并不那么笨重，反而有几分优雅。||
+11.14 | ABeeZee | ABeeZee-Regular.ttf | ABeeZee 是一款用于给孩子读写的字体。字体的名称用心地设计成了小孩子念 ABC 发音不标准，念成 ABZ 的感觉，童趣十足！|
+-->
+11.15 | Kepler | Kepler Std | 开普勒于 1630 年 11 月 15 日逝世。||
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 ||
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 ||
 2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 ||
 2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 ||
 2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 ||
-11.15 | Kepler | | | 开普勒于 1630 年 11 月 15 日逝世。|
 12.21 | Agency FB | ||
 12.31 | Coming Soon |||
 -->
