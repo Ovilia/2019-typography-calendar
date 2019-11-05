@@ -317,13 +317,28 @@ export default `
 11.7 | Bevan | Bevan-Regular.ttf | 这是一款对 30 年代字体的复刻体。对早年的字体进行数字化，是一种常见的复刻原因。||
 11.8 | Playfair Display | PlayfairDisplay-Regular.ttf | 如果你在一款字体中看到了Display 字样，这代表该字体是为了大尺寸设计的，通常适用于大字号的标题。||
 11.9 | Passion One | PassionOne-Regular.ttf | 「请只在你最富有激情的项目中使用本字体！」#字体简介如是说。||
-11.10 | Macha | Macha | Macha 是凯尔特神话中的命运与战争的三女神之一。||
+11.10 | Chathura | Chathura-Regular.ttf | 你没有看错，羡辙也没有故意调整日历数字的字号。它就是一款留白到整个字号相当迷你的字体——以至于字号小的都快跟双十一活动的细则条款一样了。 | 剁手前夜，再小的细则也要看清楚，不要因为盲目而被反薅了哦。 |
 11.11 | Bonbon | Bonbon-Regular.ttf | 棒棒糖的「棒棒」就是从这个单词的谐音来的，是小糖果的意思。 ||
 11.12 | Caveat Brush | CaveatBrush-Regular.ttf | 手写体很多，这款字体的特色则是用了较粗的笔刷。因此，它更适合用来做短的注释而非信件这样的长篇手写文字。||
 11.13 | Baloo | Baloo-Regular.ttf | 正如作者对这款字体的形容——厚厚的皮毛下覆盖着尖利的爪子，细节的设计让粗体看起来并不那么笨重，反而有几分优雅。||
 11.14 | ABeeZee | ABeeZee-Regular.ttf | ABeeZee 是一款用于给孩子读写的字体。字体的名称用心地设计成了小孩子念 ABC 发音不标准，念成 ABZ 的感觉，童趣十足！|
 -->
 11.15 | Kepler | Kepler Std | 开普勒于 1630 年 11 月 15 日逝世。||
+11.16 | Overpass | Overpass-Regular.ttf | Overpass的灵感来源于RedHat制作的Highway Gothic。高速公路（Highway）上最常见的是什么呢？当然是超车（Overpass）啦 | |
+11.17 | Jomolhari | Jomolhari-Regular.ttf | Jomolhari是一款支持藏文的字体，而有趣的是它最初被设计时是被用于因刷不丹文。 | |
+11.18 | Zilla Slab | ZillaSlab-Regular.ttf | Zilla这个拼写看上去很眼熟…没错就是Mozilla的zilla。它是Mozilla的设计中被广泛使用的一款字体。 | |
+11.19 | Patua One | PatuaOne-Regular.ttf | 厚字重的粗衬线体总能给人一份额外的敦实的感觉，大概是因为底部的粗衬线（Slab）能够让人觉得底盘很稳？ | |
+11.20 | Song Myung | SongMyung-Regular.ttf | 又一款韩文母语的字体，和之前介绍过的Cute Font一样，最多的用户并不来自韩过。不过上次是中国台湾，而这次是...中国香港。 | |
+11.21 | Poller One | PollerOne-Regular.ttf | 如同之前曾介绍的那样，20世纪初时对比度强烈的非衬线字体是当时的潮流。而从那个时期德国海报汲取灵感的Poller One自然也继承了这种特点。 | |
+11.22 | Long Cang | LongCang-Regular.ttf | 今日小雪 | 写的好看的中文书法字体总让我忍不住放在节气日之上，因为用这些字体引用古文的时候总是能带来极大舒适。 |
+11.23 | Kalam | Kalam-Regular.ttf | Kalam是一种支持梵文字母的字体，而梵文字母的最大特点，就是大部分字母的顶上同样高的位置都有一条横线，连起来宛如一根超长晾衣杆… | |
+11.24 | Varela | Varela-Regular.ttf | 在「正确区分Arial和Helvetica」的游戏里，通关一大秘籍就是观察笔画末端的切口。而Varela区别于其他相似字体的最大特征，也正是几乎所有的切口都是水平或者垂直的。 | |
+11.25 | Didact Gothic | DidactGothic-Regular.ttf | Didact Gothic设计的唯一标准就是长得尽可能像小学课本里教大家写字母的时候用的范本——从这点看还算蛮成功的。 | | 
+11.26 | Yrsa | Yrsa-Regular.ttf | 如果你对昨天的内容觉得不能理解，那恭喜你暴露了年龄——确实，二十年前的英语课本上的印刷体还是衬线体，更接近于今天的这款Yrsa。 | |
+11.27 | Turret Road | TurretRoad-Regular.ttf | 受到早期技术条件的限制，马路上漆的字比较少使用弧线笔画。而Turret Road则模仿了这种风格，成为了一款纯直线构成的字体。 | |
+11.28 | Mouse Memoirs | MouseMemoirs-Regular.ttf | 1928年11月18日推出的「汽船威利号」中，米奇首次亮相。而迪士尼官方把这一天定为了米奇的生日。 | 这款字体来源于上世纪五六十年代迪士尼出版的动画。 |
+11.29 | Russo One | RussoOne-Regular.ttf | 「谁说咱俄罗斯人只会在冰天雪地里喝到烂醉如泥的？我们一样也能做认真严谨好看的字体！」——Russo字体作者愤愤不平地向本刊表示。 | |
+11.30 | Quattrocento Sans | QuattrocentoSans-Regular.ttf | Quattrocento Sans是Quattrocento的非衬线版本，同样致力于营造文艺复兴时期的特征。虽然那个时候并没有非衬线体，但同样宽阔圆润的字腔（特别是大写字母Q）还是能够带来优雅的感觉。 | |
 <!--
 2.1 | Vectora | Vectora LT Pro 55 Roman | Vectora的小写字母比大写字母小不了多少，使得其非常适合在小字号下使用 ||
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 ||
