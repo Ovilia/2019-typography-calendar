@@ -96,9 +96,7 @@
       "cordova-plugin-android-permissions": {},
       "cordova-plugin-taptic-engine": {},
       "cordova-plugin-shake": {},
-      "cordova-plugin-x-socialsharing": {
-        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
-      },
+      "cordova-plugin-x-socialsharing": {},
       "cordova-android-support-gradle-release": {
         "ANDROID_SUPPORT_VERSION": "27.+"
       },

@@ -337,22 +337,24 @@ export default `
 11.28 | Zilla Slab | ZillaSlab-Regular.ttf | Zilla 这个拼写看上去很眼熟……没错就是 Mozilla 的 zilla。它是 Mozilla 的设计中被广泛使用的一款字体。 | |
 11.29 | Russo One | RussoOne-Regular.ttf | 「谁说咱俄罗斯人只会在冰天雪地里喝到烂醉如泥的？我们一样也能做认真严谨好看的字体！」| —— Russo 字体作者愤愤不平地向本刊表示。 |
 11.30 | Quattrocento Sans | QuattrocentoSans-Regular.ttf | Quattrocento Sans 是 Quattrocento的非衬线版本，同样致力于营造文艺复兴时期的特征。虽然那个时候并没有非衬线体，但同样宽阔圆润的字腔（特别是大写字母 Q）还是能够带来优雅的感觉。 | |
-12.1 | Odibee Sans | OdibeeSans-Regular.ttf | 「24小时可以做多少事？」「那得看是啥时候，Deadline之前就不能和平时比。」 | Odibee是「One Day Build」的意思，作者在24小时内从零开始完成了设计这款字体的全部工作。 |
-12.2 | Public Sans | PublicSans-Regular.ttf | 虽然说众口难调，但是总有一些工作需要去调众口，比如给有关部门的网站上设计所使用的字体。 | 美国的一个机构为政府工作网站开发了一套框架，以方便各部门快速制作风格统一且易于阅读的官方网站，而Public Sans便是这套框架/VI中所推荐使用的字体。 |
-12.3 | Nanum Myeongjo | NanumMyeongjo-Regular.ttf | 如果说西文字体的衬线来源于碑刻，那么东方文字的衬线则大概来源于书法笔锋——不仅是汉字，韩文也是如此。 | 它是这本日历上出现的第三个为韩语设计的字体，这回终于是韩国用户最多了… |
-12.4 | Baloo Bhai | BalooBhai-Regular.ttf | 天冷的时候要多穿些厚实的衣服，那么是不是也要用一些厚实的字体来暖和暖和？ | | 
-12.5 | Ruda | Ruda-Regular.ttf | 传统的四线三格的字母书写的方式会使得小写字母在小字号下显得过小而难以分辨，而为产品标签这样的典型的小字号设计的Ruda自然需要提高小写字母的高度来增加辨识性。 |  |
+12.1 | Odibee Sans | OdibeeSans-Regular.ttf | 罗马不是一日建成的，#但这款字体却可以。 | Odibee 是「One Day Build」的意思，作者在 24 小时内从零开始完成了设计这款字体的全部工作。 |
+12.2 | Public Sans | PublicSans-Regular.ttf | 虽然说众口难调，但是总有一些工作需要去调众口，比如给有关部门的网站上设计所使用的字体。 | 美国的一个机构为政府网站开发了一套框架，以方便各部门快速制作风格统一且易于阅读的官方网站，而 Public Sans 便是这套框架 VI 中所推荐使用的字体。 |
+12.3 | Nanum Myeongjo | NanumMyeongjo-Regular.ttf | 如果说西文字体的衬线来源于碑刻，那么东方文字的衬线则大概来源于书法笔锋——不仅是汉字，韩文也是如此。 | 它是这本日历上出现的第三个为韩语设计的字#体，这回终于是韩国用户最多了…… |
+12.4 | Baloo Bhai | BalooBhai-Regular.ttf | 天冷的时候要多穿些厚实的衣服，那么是不是也要用一些厚实的字体来暖和暖和？ | |
+12.5 | Ruda | Ruda-Regular.ttf | 传统的四线三格的字母书写的方式会使得小写字母在小字号下显得过小而难以分辨。对于像产品标签这样的应用场景而言，小号字体的辨识度则至关重要。专为小字号设计的 Ruda 提高了小写字母的高度来增加辨识度。 |  |
 12.6 | Staatliches | Staatliches-Regular.ttf | 现代艺术史中，「包豪斯」是一个不可或缺的存在，而这款字体正是模仿了首次包豪斯举办的展览上的所用到的封面字体。 |  |
-12.7 | Reenie Beanie | ReenieBeanie-Regular.ttf | 在「书法」这件事情上，好像人们总是默认用的是毛笔或者钢笔，再不济也是特定的水笔，似乎圆珠笔处于鄙视链的底端。但圆珠笔也能写出像Reenie Beanie这样好看的字呀。 |  |
-12.8 | Quantico | Quantico-Regular.ttf | 之前已经出现过一些全部由直线构成的字体，而Quantico的强迫症似乎更重一些——所有的倾角都是30度 | 倒是很适合一把三角尺一条路走到底.. |
-12.9 | Trade Winds | TradeWinds-Regular.ttf | 「贵校校风如何？」 「很大，大到把字吹歪的那种」 | |
-12.10 | Inconsolata | Inconsolata-Regular.ttf | 「为程序开发而设计的等宽字体大多比较粗糙，打到纸上的时候看上去会因为分辨率低而不太舒服，Inconsolata就很好地解决了这个问题」 | 9102年了还有人会把代码打出来阅读吗？大概还是有的吧，不然哪来「间谍千辛万苦偷到了机密程序的最后一页代码发现全是大括号」的梗呢。 |
-12.11 | Taviraj | Taviraj-Regular.ttf | Taviraj这个名字源于曼谷王朝最后两位皇帝的名字，所以显而易见这是一款包含了泰语字母的字体。 | |
-12.12 | Pathway Gothic One | PathwayGothicOne-Regular.ttf | Gothic 直译是「哥特体」，但它并不指中世纪那种华丽繁复的哥特式字体，而是取了「野蛮的」这一个义项，因为早期的非衬线体在保守人士看来是非常离经叛道的。 |  |
-12.13 | Yeseva One | YesevaOne-Regular.ttf | 「其实爱对了人 情人节每天都过」 | 虽然衬线体多因为衬线的棱角而显得冰冷，但作者依旧试图用为其增加一份柔和的形式，来表达自己感受到妻子的爱时的心境。 |
-12.14 | Vidaloka | Vidaloka-Regular.ttf | 认真严肃的字形，充满巴洛克风格的小尾巴（以大写Q为典型），粗细对比强烈的笔画…看上去是不是特别适合放进五线谱里？ | | 
-12.15 | Nanum Pen Script | NanumPenScript-Regular.ttf | 它和两周前的Nanum Myeongjo属于同一个系列，却恰恰来自庄严和俏皮的两端。 |  |
-12.16 | Squada One | SquadaOne-Regular.ttf | 字腔如同它的名字一样——「方头方脑」说得就是它了 | |
+12.7 | Reenie Beanie | ReenieBeanie-Regular.ttf | 在「书法」这件事情上，好像人们总是默认用的是毛笔或者钢笔，再不济也是特定的水笔，似乎圆珠笔一直处于鄙视链的底端。但圆珠笔也能写出像 Reenie Beanie 这样好看的字呀！ |  |
+12.8 | Quantico | Quantico-Regular.ttf | 之前已经出现过一些全部由直线构成的字体，而 Quantico 的强迫症似乎更重一些——所有的倾角都是 30 度 | 倒是很适合一把三角尺一条路走到底…… |
+12.9 | Trade Winds | TradeWinds-Regular.ttf | 「贵校校风如何？」 #「很大，大到把字吹歪的那种……」 | |
+12.10 | Inconsolata | Inconsolata-Regular.ttf | 「为程序开发而设计的等宽字体大多比较粗糙，打到纸上的时候看上去会因为分辨率低而不太舒服，这款字体就很好地解决了这个问题。」 | 都 9102 年了，还有人会把代码打出来阅读吗？大概还是有的吧，不然哪来「间谍千辛万苦偷到了机密程序的最后一页代码，却发现全都是大括号」的梗呢？ |
+12.11 | Taviraj | Taviraj-Regular.ttf | Taviraj 这个名字源于曼谷王朝最后两位皇帝的名字，所以显而易见这是一款包含了泰语字母的字体。 | |
+-->
+12.12 | Pathway Gothic One | PathwayGothicOne-Regular.ttf | Gothic 直译是「哥特体」，但它并不特指中世纪那种华丽繁复的哥特式字体，而是取这个单词「野蛮的」的词义，因为早期的非衬线体在保守人士看来是非常离经叛道的。 |  |
+<!--
+12.13 | Yeseva One | YesevaOne-Regular.ttf | 其实爱对了人，情人节每天都过。 | 虽然衬线体多因为衬线的棱角而显得冰冷，但作者依旧试图用为其增加一份柔和的形式，来表达自己感受到的妻子的爱。 |
+12.14 | Vidaloka | Vidaloka-Regular.ttf | 认真严肃的字形，充满巴洛克风格的小尾巴（以大写 Q 为典型），粗细对比强烈的笔画……看上去是不是特别适合放进五线谱里？ | |
+12.15 | Nanum Pen Script | NanumPenScript-Regular.ttf | 它和两周前的 Nanum Myeongjo 属于同一个系列，却恰恰来自庄严和俏皮的两端。 |  |
+12.16 | Squada One | SquadaOne-Regular.ttf | 字腔如同它的名字一样——「方头方脑」说得就是它了！ | |
 
 <!--
 2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 ||
