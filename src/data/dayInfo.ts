@@ -355,13 +355,19 @@ export default `
 12.14 | Vidaloka | Vidaloka-Regular.ttf | 认真严肃的字形，充满巴洛克风格的小尾巴（以大写 Q 为典型），粗细对比强烈的笔画……看上去是不是特别适合放进五线谱里？ | |
 12.15 | Nanum Pen Script | NanumPenScript-Regular.ttf | 它和两周前的 Nanum Myeongjo 属于同一个系列，却恰恰来自庄严和俏皮的两端。 |  |
 12.16 | Squada One | SquadaOne-Regular.ttf | 字腔如同它的名字一样——「方头方脑」说得就是它了！ | |
-
-<!--
-2.20 | Grand Italic | North Type - NTF-Grand Italic.otf | 笔直的线条总给人一股冷酷的感觉，再粗一点就能拿来给碟中谍做片头了吧。 ||
-2.23 | PhotoWall Sans Shadow | PhotoWallSansShadow-Regular.otf | 利用阴影来制造立体感已经是一种古老的套路，却依旧能骗到一双双眼睛。 ||
-2.27 | Sacramento | Sacramento-Regular.ttf | 即便只有一条细线，照样能耍出花样。 ||
-2.28 | Blitz | Wiescher Design - Blitz-Thin.otf | 头重脚轻往往容易给人一种摇摇欲坠的感觉，在字体里进行这样的尝试却有意外的动感收获 ||
-12.21 | Agency FB | ||
-12.31 | Coming Soon |||
--->
+12.17 | Playball | Playball-Regular.ttf | 作者把它命名为Playball是因为他认为这样的字体最适合运动赛事场合。 | 不过，我选择把它放进来是因为，它没有利用OpenType对字母变形 依旧把书写英文字母时那些连笔处理的相当自然。 |
+12.18 | Source Code Pro | SourceCodePro-Regular.ttf | Source Code Pro是大名鼎鼎的「思源」系列为编程环境设计的等宽字体版本。尽管它主要服务于显示代码，设计师们还是很认真的完成了从极细体到极粗体所有字重的版本。 | 但是，即便我想用奇葩的字重，我的IDE也只允许我换字体不允许换字重啊= = |
+12.19 | Grand Hotel | GrandHotel-Regular.ttf | 这一字体灵感来源于一部上世纪30年代的老电影，而它和以前街边的霓虹灯上有点歪歪扭扭的字母确有几分神似 | |
+12.20 | Lusitana | Lusitana-Regular.ttf | Lusitana源于葡萄牙重要文学作品「葡国魂」1572年首次印刷时使用的字体。 | 相传诗人在澳门白鸽巢公园的石洞内完成了诗歌的一部分，每年许多葡萄牙人都会前往纪念，在澳门回归后也保留了这样的传统。 | |
+12.21 | Agency FB | Agency FB | 转眼「世界末日」的传言已经整整过去了七年，还记得七年前看2012的时候是怎样的感受吗？ | 电影2012的标题使用的就是Agency FB字体 |
+12.22 | Liu Jian Mao Cao | LiuJianMaoCao-Regular.ttf | 「冬天来了，春天还会远吗？」 | 今日冬至。我国部分地区有从冬至起数九的传统，作为对春天的一种盼望。 |
+12.23 | Itim | Itim-Regular.ttf | 「别打了！这不是Comic Sans…」 |  |
+12.24 | Ruge Boogie | RugeBoogie-Regular.ttf | 想要办个圣诞趴？Ruge Boogie这样蹦蹦跳跳的字体肯定是一个不错的选择。 | |
+12.25 | Titan One | TitanOne-Regular.ttf | Titan是希腊神话中最早统治世界的神族，后来这个词被引申做重要人物的含义。至于字体中的Titan，当然至少要实现「重量级」这个特征啦。 | | 
+12.26 | Nixie One | NixieOne-Regular.ttf | 「在这个设计里我们融合了霓虹灯字母和打字机字母的特征，就像中餐里菠萝和鸡混搭一样，听上去这个组合很诡异但事实上味道不错」 | 看来，这个字体该叫咕老肉才对 |
+12.27 | 站酷高端黑 | ZCoolGaoDuanHei.ttf | 对，这就是站酷第一款由众人合作完成的免费字体。 | 人果然是不能给自己随意挖坑，9月份在这本日历里埋得关于站酷的伏笔，到年底才想起来填上这个坑… |
+12.28 | Forum | Forum-Regular.ttf | 在论坛（Forum）这样的正式场合中，偏向传统风格的罗马字体往往有显得高端大气上档次的效果。 | 请注意定语...随随便便把Times New Roman到处放那是没有这个效果的... |
+12.29 | Tomorrow | Tomorrow-Regular.ttf | 明日复明日，但转眼之间2019年就只剩下最后三天了呢 | |
+12.30 | Coming Soon | ComingSoon-Regular.ttf | 是不是已经开始期待压轴的字体了呢？明天10点就能看到啦 | |
+12.31 | Coda | Coda-Regular.ttf | 如果这本日历是一本乐谱，那今天就是该画上终止线的时候了。 | Coda在乐谱上意为终止线 |
 `;
